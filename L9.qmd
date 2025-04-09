@@ -10,7 +10,6 @@ format:
     chalkboard: 
       buttons: false
     preview-links: auto
-    logo: img/top.png
     css: styles.css
     footer: <https://lizongzhang.github.io/deepseekcamp>
     include-before-body: header.html
