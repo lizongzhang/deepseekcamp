@@ -13,6 +13,7 @@ format:
     logo: img/top.png
     css: styles.css
     footer: <https://lizongzhang.github.io/deepseekcamp>
+    include-before-body: header.html
 ---
 
 ## 第1章 统计分析与Excel概览{auto-animate="true"}
