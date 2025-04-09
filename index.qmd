@@ -19,9 +19,6 @@ about:
 
 ![](img/wechat.png)
 
-
-
-
 <img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">B站账号  <https://space.bilibili.com/590872906>{target="_blank"}
 
 
