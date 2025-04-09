@@ -1,15 +1,15 @@
 .reveal {
-    color: #044875; /* Change #044875 to the color you want */
+  font-family: "Helvetica Neue", "Avenir", "San Francisco", "Futura", sans-serif;
+  font-size: 30px;
+  line-height: 1.6;
+  color: #044875; /* Apply color to all text inside .reveal */
 }
 
-.reveal h2 {
-    color: #044875; /* Change #044875 to the color you want */
+.reveal h1, .reveal h2, .reveal h3 {
+  font-weight: bold;
+  color: #044875
 }
 
-/* Target the <h1> element specifically on the first slide */
-.reveal .slides > section:first-child h1 {
-    color: #044875; /* Change to your desired color */
-}
 
 
 

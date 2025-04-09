@@ -7,9 +7,12 @@
 
 .reveal h1, .reveal h2, .reveal h3 {
   font-weight: bold;
-  color: #044875
 }
 
+/* Target the <h1> element specifically on the first slide */
+.reveal .slides > section:first-child h1 {
+  color: #044875; /* Color remains the same for first slide h1 */
+}
 
 
 
