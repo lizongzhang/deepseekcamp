@@ -1,8 +1,7 @@
 ---
-title: "模块s十 DeepSeek辅助R语言编程与数据分析"
+title: "模块十 DeepSeek辅助R语言编程与数据分析"
 ---
 
-<h1 style="color: #044875;"> 模块九 DeepSeek辅助傻瓜式医学统计 </h1>
 
 <img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/deepseekcamp/L9.html)
 

@@ -1,0 +1,16 @@
+.reveal {
+    color: #044875; /* Change #044875 to the color you want */
+}
+
+.reveal h2 {
+    color: #044875; /* Change #044875 to the color you want */
+}
+
+/* Target the <h1> element specifically on the first slide */
+.reveal .slides > section:first-child h1 {
+    color: #044875; /* Change to your desired color */
+}
+
+
+
+

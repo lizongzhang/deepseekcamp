@@ -2,36 +2,23 @@
 title: ""
 about:
   template: solana
-  image: img/top.jpg
-  links:
-    - text: 作者Email   
-      icon: envelope
-      href: mailto:lizongzhang9@qq.com
-    - text: 作者B站主页
-      icon: globe2
-      href: https://space.bilibili.com/590872906
+  image: img/top.png
   id: ppc
 ---
 
+[模块九 DeepSeek辅助傻瓜式医学统计](https://lizongzhang.github.io/deepseekcamp/模块九.html)
 
 
-
-
-[模块九 DeepSeek辅助傻瓜式医学统计](https://lizongzhang.github.io/deepseekcamp/docs/模块九.html)
-
-
-[模块十 DeepSeek辅助R语言编程与数据分析](https://lizongzhang.github.io/deepseekcamp/docs/模块十.html)
+[模块十 DeepSeek辅助R语言编程与数据分析](https://lizongzhang.github.io/deepseekcamp/模块十.html)
 
 
 
 
 欢迎关注微信公众号“顶刊研习社” “医课佳”！
 
-:::{#ppc style="color: #2E96DB"}
 
-![](img/wechat.png){width=50%}
+![](img/wechat.png)
 
-:::
 
 
 
