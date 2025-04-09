@@ -19,6 +19,7 @@ website:
 format:
   html:
     theme: cerulean
+    font-family: ["KaiTi", "STKaiti", "SimKai"] 
     fontcolor: "#044875"
     toc: true
 editor: source
