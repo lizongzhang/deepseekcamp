@@ -1,19 +1,54 @@
 ---
-title: "About Me"
+title: ""
 about:
-  id: me
-  template: broadside
-  image: img/profile.png
+  template: solana
+  image: img/top.jpg
+  links:
+    - text: 作者Email   
+      icon: envelope
+      href: mailto:lizongzhang9@qq.com
+    - text: 作者B站主页
+      icon: globe2
+      href: https://space.bilibili.com/590872906
+  id: ppc
 ---
 
-:::{#me}
 
-## Goals
 
-## Education
 
-## Experience
+
+[模块九 DeepSeek辅助傻瓜式医学统计](https://lizongzhang.github.io/deepseekcamp/docs/模块九.html)
+
+
+[模块十 DeepSeek辅助R语言编程与数据分析](https://lizongzhang.github.io/deepseekcamp/docs/模块十.html)
+
+
+
+
+欢迎关注微信公众号“顶刊研习社” “医课佳”！
+
+:::{#ppc style="color: #2E96DB"}
+
+![](img/wechat.png){width=50%}
 
 :::
 
-Thanks for checking out my web site!
+
+
+<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">B站账号  <https://space.bilibili.com/590872906>{target="_blank"}
+
+
+![](img/bili_up.jpg){width=20%}
+
+
+
+
+
+<div style="position: fixed; bottom: 60px; right: 70px; z-index: 1000;">
+
+   <a href='http://www.freevisitorcounters.com'>click here</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=a1b2bcf47de785ab152ba2b2353aa09bd4f80670'></script>
+  <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1174168/t/5"></script>
+
+</div>
+
+

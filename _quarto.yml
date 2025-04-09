@@ -3,25 +3,23 @@ project:
   output-dir: docs
   
 website:
-  title: "MY WEB SITE"
+  title: "DeepSeek辅助临床医学科研入门训练营"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - projects.qmd
+      - 模块九.qmd
+      - 模块十.qmd
     tools:
-      - icon: twitter
-        href: https://twitter.com/
-      - icon: github
-        href: https://github.com/YOURUSERNAME/YOURREPO
+      - icon: envelope
+        href: lizongzhang9@qq.com
   page-footer:
-    right: "Built with [Quarto](https://quarto.org/)"
-    left: "&copy; Copyright 2023, YOUR NAME"
-
+    right: "Data illuminates insights."
+    left: "&copy; Copyright 2025, Li Zongzhang"
 format:
   html:
     theme: cerulean
+    fontcolor: "#044875"
     toc: true
-
 editor: source
 
