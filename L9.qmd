@@ -1,5 +1,5 @@
 ---
-title: "<span style='font-size: 90px;'>模块九 DeepSeek辅助傻瓜式医学统计</span>"
+title:  "模块九 DeepSeek辅助傻瓜式医学统计"
 date: today
 author: "李宗璋"
 format: 
@@ -13,7 +13,17 @@ format:
     css: styles.css
     footer: <https://lizongzhang.github.io/deepseekcamp>
     include-before-body: header.html
+    title-slide-attributes: 
+      data-background-image: "img/bili_up.jpg"  # 二维码路径
+      data-background-size: "100px"        # 调整大小
+      data-background-position: "center bottom 100px"  # 调整位置
 ---
+
+
+
+
+
+
 
 ## 第1章 统计分析与Excel概览{auto-animate="true"}
 
