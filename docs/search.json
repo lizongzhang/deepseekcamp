@@ -7,88 +7,18 @@
     "text": "讲义\n下载讲义PPT"
   },
   {
-    "objectID": "模块十.html",
-    "href": "模块十.html",
-    "title": "模块十 DeepSeek辅助R语言编程与数据分析",
-    "section": "",
-    "text": "讲义\n下载讲义PPT"
-  },
-  {
-    "objectID": "projects.html#project-2",
-    "href": "projects.html#project-2",
-    "title": "Projects",
-    "section": "Project 2",
-    "text": "Project 2"
-  },
-  {
-    "objectID": "projects.html#project-3",
-    "href": "projects.html#project-3",
-    "title": "Projects",
-    "section": "Project 3",
-    "text": "Project 3"
-  },
-  {
-    "objectID": "L10.html#chapter-1-overview-of-statistical-analysis-and-excel",
-    "href": "L10.html#chapter-1-overview-of-statistical-analysis-and-excel",
+    "objectID": "L9.html#模块九-deepseek辅助傻瓜式医学统计",
+    "href": "L9.html#模块九-deepseek辅助傻瓜式医学统计",
     "title": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "section": "Chapter 1 Overview of Statistical Analysis and Excel",
-    "text": "Chapter 1 Overview of Statistical Analysis and Excel\n\n1.1 Steps of Statistical Analysis\n\n1.2 Statistical Analysis Tools in Excel\n\n1.3 Common Excel Techniques\n\n1.4 Data Cleaning Tools in Excel"
+    "section": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "text": "模块九 DeepSeek辅助傻瓜式医学统计\n\n9.1 DeepSeek辅助统计理念快速入门\n9.2 DeepSeek辅助医学统计方法的整体梳理\n9.3 DeepSeek辅助论文统计学梳理\n9.4 DeepSeek辅助统计分析的玩法\n9.5 作业互动与问答：统计再也不怕"
   },
   {
-    "objectID": "L10.html#steps-of-statistical-analysis",
-    "href": "L10.html#steps-of-statistical-analysis",
+    "objectID": "L9.html#deepseek辅助统计理念快速入门",
+    "href": "L9.html#deepseek辅助统计理念快速入门",
     "title": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "section": "1.1 Steps of Statistical Analysis",
-    "text": "1.1 Steps of Statistical Analysis\n\n\n1.1.1 Data Collection\n\n1.1.2 Data Organization\n\n1.1.3 Data Analysis\n\n1.1.4 Conclusion Extraction"
-  },
-  {
-    "objectID": "L10.html#data-collection",
-    "href": "L10.html#data-collection",
-    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "section": "1.1.1 Data Collection",
-    "text": "1.1.1 Data Collection\n\n\nMacroeconomic data\n\nMicroeconomic data\n\nCross-sectional data\n\nTime series data\n\nQualitative data\n\nQuantitative data"
-  },
-  {
-    "objectID": "L10.html#data-organization",
-    "href": "L10.html#data-organization",
-    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "section": "1.1.2 Data Organization",
-    "text": "1.1.2 Data Organization\n\nConvert data into structured tables, where each row represents an observation unit and each column represents a variable.\n\nCheck data completeness and validity, including identifying duplicates, missing values, and outliers, and converting text into numerical codes.\n\nSee: 1.4 Data Cleaning Tools in Excel"
-  },
-  {
-    "objectID": "L10.html#data-analysis",
-    "href": "L10.html#data-analysis",
-    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "section": "1.1.3 Data Analysis",
-    "text": "1.1.3 Data Analysis\n\nDescriptive statistics: Present data using tables and charts; compute descriptive measures such as mean, median, and standard deviation.\n\nInferential statistics: Draw inferences about the population based on sample data."
-  },
-  {
-    "objectID": "L10.html#section",
-    "href": "L10.html#section",
-    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "section": "1.1",
-    "text": "1.1"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "DeepSeek辅助临床医学科研入门训练营",
-    "section": "",
-    "text": "模块九 DeepSeek辅助傻瓜式医学统计\n模块十 DeepSeek辅助R语言编程与数据分析\n欢迎关注微信公众号“顶刊研习社” “医课佳”！\n\nB站账号 https://space.bilibili.com/590872906\n\n\nclick here"
-  },
-  {
-    "objectID": "L9.html#第1章-统计分析与excel概览",
-    "href": "L9.html#第1章-统计分析与excel概览",
-    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "section": "第1章 统计分析与Excel概览",
-    "text": "第1章 统计分析与Excel概览\n\n1.1 统计分析的步骤\n1.2 Excel的统计分析工具\n1.3 Excel常用技巧\n1.4 Excel的数据清洗工具"
-  },
-  {
-    "objectID": "L9.html#统计分析的步骤",
-    "href": "L9.html#统计分析的步骤",
-    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "section": "1.1 统计分析的步骤",
-    "text": "1.1 统计分析的步骤\n\n\n1.1.1 收集数据\n1.1.2 整理数据\n1.1.3 分析数据\n1.1.4 提炼结论"
+    "section": "DeepSeek辅助统计理念快速入门",
+    "text": "DeepSeek辅助统计理念快速入门\n\n医学统计常见困扰：变量太多、不会选方法、看不懂结果\n“傻瓜式”统计理念：让非专业人员也能轻松用统计\nDeepSeek工具优势：\n\n中文问答自然交互\n理解临床背景\n自动推荐方法\n\n案例：\n\n研究血压药效果，提问：“用药前后血压有差异吗？”\nDeepSeek自动识别配对t检验，解释结果"
   },
   {
     "objectID": "L9.html#收集数据",
@@ -133,11 +63,11 @@
     "text": "1.1.4 提炼结论\n\n运用统计分析方法得到的发现进行梳理和归纳，从中提炼出有价值的结论。"
   },
   {
-    "objectID": "L9.html#excel的统计分析工具",
-    "href": "L9.html#excel的统计分析工具",
+    "objectID": "L9.html#deepseek辅助医学统计方法的整体梳理",
+    "href": "L9.html#deepseek辅助医学统计方法的整体梳理",
     "title": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "section": "1.2 Excel的统计分析工具",
-    "text": "1.2 Excel的统计分析工具\n\n1.2.1 图表工具\n1.2.2 函数工具\n1.2.3 数据分析工具"
+    "section": "DeepSeek辅助医学统计方法的整体梳理",
+    "text": "DeepSeek辅助医学统计方法的整体梳理\n\n常见分析类型：\n\n描述性分析：均值、中位数、标准差等\n比较分析：t检验、方差分析、χ²检验\n回归模型：Logistic、Cox、线性回归\n生存分析、ROC分析等\n\nDeepSeek可自动：\n\n识别变量类型\n选择合适统计方法\n提供代码与解释\n\n案例：三组药物剂量比较疗效 → 推荐ANOVA或Kruskal-Wallis检验"
   },
   {
     "objectID": "L9.html#excel常用技巧",
@@ -173,5 +103,187 @@
     "title": "模块九 DeepSeek辅助傻瓜式医学统计",
     "section": "本章总结",
     "text": "本章总结"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DeepSeek临床医学科研训练营",
+    "section": "",
+    "text": "模块九 DeepSeek辅助傻瓜式医学统计\n模块十 DeepSeek辅助R语言编程与数据分析\n欢迎关注微信公众号“顶刊研习社” “医课佳”！DeepSeek辅助R语言编程与数据分析\n\n\n\nclick here"
+  },
+  {
+    "objectID": "L10.html#chapter-1-overview-of-statistical-analysis-and-excel",
+    "href": "L10.html#chapter-1-overview-of-statistical-analysis-and-excel",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "Chapter 1 Overview of Statistical Analysis and Excel",
+    "text": "Chapter 1 Overview of Statistical Analysis and Excel\n\n1.1 Steps of Statistical Analysis\n\n1.2 Statistical Analysis Tools in Excel\n\n1.3 Common Excel Techniques\n\n1.4 Data Cleaning Tools in Excel"
+  },
+  {
+    "objectID": "L10.html#steps-of-statistical-analysis",
+    "href": "L10.html#steps-of-statistical-analysis",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "1.1 Steps of Statistical Analysis",
+    "text": "1.1 Steps of Statistical Analysis\n\n\n1.1.1 Data Collection\n\n1.1.2 Data Organization\n\n1.1.3 Data Analysis\n\n1.1.4 Conclusion Extraction"
+  },
+  {
+    "objectID": "L10.html#data-collection",
+    "href": "L10.html#data-collection",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "1.1.1 Data Collection",
+    "text": "1.1.1 Data Collection\n\n\nMacroeconomic data\n\nMicroeconomic data\n\nCross-sectional data\n\nTime series data\n\nQualitative data\n\nQuantitative data"
+  },
+  {
+    "objectID": "L10.html#data-organization",
+    "href": "L10.html#data-organization",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "1.1.2 Data Organization",
+    "text": "1.1.2 Data Organization\n\nConvert data into structured tables, where each row represents an observation unit and each column represents a variable.\n\nCheck data completeness and validity, including identifying duplicates, missing values, and outliers, and converting text into numerical codes.\n\nSee: 1.4 Data Cleaning Tools in Excel"
+  },
+  {
+    "objectID": "L10.html#data-analysis",
+    "href": "L10.html#data-analysis",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "1.1.3 Data Analysis",
+    "text": "1.1.3 Data Analysis\n\nDescriptive statistics: Present data using tables and charts; compute descriptive measures such as mean, median, and standard deviation.\n\nInferential statistics: Draw inferences about the population based on sample data."
+  },
+  {
+    "objectID": "L10.html#section",
+    "href": "L10.html#section",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "1.1",
+    "text": "1.1"
+  },
+  {
+    "objectID": "projects.html#project-2",
+    "href": "projects.html#project-2",
+    "title": "Projects",
+    "section": "Project 2",
+    "text": "Project 2"
+  },
+  {
+    "objectID": "projects.html#project-3",
+    "href": "projects.html#project-3",
+    "title": "Projects",
+    "section": "Project 3",
+    "text": "Project 3"
+  },
+  {
+    "objectID": "模块十.html",
+    "href": "模块十.html",
+    "title": "模块十 DeepSeek辅助R语言编程与数据分析",
+    "section": "",
+    "text": "讲义\n下载讲义PPT"
+  },
+  {
+    "objectID": "DeepSeek_medstats_talk.html#封面页",
+    "href": "DeepSeek_medstats_talk.html#封面页",
+    "title": "DeepSeek辅助傻瓜式医学统计讲座",
+    "section": "封面页",
+    "text": "封面页\nDeepSeek辅助傻瓜式医学统计\n主讲人：李宗璋\n单位：××大学统计系\n日期：2025年4月11日"
+  },
+  {
+    "objectID": "DeepSeek_medstats_talk.html#目录",
+    "href": "DeepSeek_medstats_talk.html#目录",
+    "title": "DeepSeek辅助傻瓜式医学统计讲座",
+    "section": "目录",
+    "text": "目录\n\nDeepSeek辅助统计理念快速入门\n\nDeepSeek辅助医学统计方法的整体梳理\n\nDeepSeek辅助论文统计学梳理\n\nDeepSeek辅助统计分析的玩法\n\n作业互动与问答：统计再也不怕"
+  },
+  {
+    "objectID": "DeepSeek_medstats_talk.html#deepseek辅助统计理念快速入门",
+    "href": "DeepSeek_medstats_talk.html#deepseek辅助统计理念快速入门",
+    "title": "DeepSeek辅助傻瓜式医学统计讲座",
+    "section": "DeepSeek辅助统计理念快速入门",
+    "text": "DeepSeek辅助统计理念快速入门\n\n医学统计常见困扰：变量太多、不会选方法、看不懂结果\n“傻瓜式”统计理念：让非专业人员也能轻松用统计\nDeepSeek工具优势：\n\n中文问答自然交互\n理解临床背景\n自动推荐方法\n\n案例：\n\n研究血压药效果，提问：“用药前后血压有差异吗？”\nDeepSeek自动识别配对t检验，解释结果"
+  },
+  {
+    "objectID": "DeepSeek_medstats_talk.html#deepseek辅助医学统计方法的整体梳理",
+    "href": "DeepSeek_medstats_talk.html#deepseek辅助医学统计方法的整体梳理",
+    "title": "DeepSeek辅助傻瓜式医学统计讲座",
+    "section": "DeepSeek辅助医学统计方法的整体梳理",
+    "text": "DeepSeek辅助医学统计方法的整体梳理\n\n常见分析类型：\n\n描述性分析：均值、中位数、标准差等\n比较分析：t检验、方差分析、χ²检验\n回归模型：Logistic、Cox、线性回归\n生存分析、ROC分析等\n\nDeepSeek可自动：\n\n识别变量类型\n选择合适统计方法\n提供代码与解释\n\n案例：三组药物剂量比较疗效 → 推荐ANOVA或Kruskal-Wallis检验"
+  },
+  {
+    "objectID": "DeepSeek_medstats_talk.html#deepseek辅助论文统计学梳理",
+    "href": "DeepSeek_medstats_talk.html#deepseek辅助论文统计学梳理",
+    "title": "DeepSeek辅助傻瓜式医学统计讲座",
+    "section": "DeepSeek辅助论文统计学梳理",
+    "text": "DeepSeek辅助论文统计学梳理\n\n阅读文献时：\n\n解读多因素分析结果、P值、置信区间\n判断方法是否使用得当\n\n撰写论文时：\n\n自动生成统计学方法部分\n输出规范表达模板（符合STROBE）\n图表及描述自动生成\n\n案例：术后感染因素分析 → 自动生成logistic回归段落"
+  },
+  {
+    "objectID": "DeepSeek_medstats_talk.html#deepseek辅助统计分析的玩法",
+    "href": "DeepSeek_medstats_talk.html#deepseek辅助统计分析的玩法",
+    "title": "DeepSeek辅助傻瓜式医学统计讲座",
+    "section": "DeepSeek辅助统计分析的玩法",
+    "text": "DeepSeek辅助统计分析的玩法\n\n玩法一：自然语言分析\n\n例：“吸烟、饮酒、肥胖谁更影响心血管？”\n\n玩法二：自动生成图表\n\nROC、K-M、生存图、散点图等\n\n玩法三：模型快速迭代\n\n变量选择、模型优化\n\n案例：急性胰腺炎死亡风险预测 → 提供ROC曲线与解释"
+  },
+  {
+    "objectID": "DeepSeek_medstats_talk.html#作业互动与问答统计再也不怕",
+    "href": "DeepSeek_medstats_talk.html#作业互动与问答统计再也不怕",
+    "title": "DeepSeek辅助傻瓜式医学统计讲座",
+    "section": "作业互动与问答：统计再也不怕",
+    "text": "作业互动与问答：统计再也不怕\n\n现场实操练习：提供模拟数据（如Excel）\n\n提问：“哪些变量影响术后恢复时间？”\n使用DeepSeek完成分析、写结果段\n\n统计恐惧问答箱：\n\n医生匿名提问，现场演示DeepSeek回答\n\n分享与总结：\n\n医生讲感受，交流使用心得"
+  },
+  {
+    "objectID": "DeepSeek_medstats_talk.html#总结与资源推荐",
+    "href": "DeepSeek_medstats_talk.html#总结与资源推荐",
+    "title": "DeepSeek辅助傻瓜式医学统计讲座",
+    "section": "总结与资源推荐",
+    "text": "总结与资源推荐\n\n核心理念：让AI做助手，医生专注科研思考\n提供资源：\n\n模拟数据练习文件\n常见提问模板\n快捷指令清单\n\n欢迎关注公众号 / 网站获取更新"
+  },
+  {
+    "objectID": "DeepSeek_medstats_talk.html#致谢",
+    "href": "DeepSeek_medstats_talk.html#致谢",
+    "title": "DeepSeek辅助傻瓜式医学统计讲座",
+    "section": "致谢",
+    "text": "致谢\n感谢大家的参与！欢迎提问交流！"
+  },
+  {
+    "objectID": "L9.html#deepseek辅助论文统计学梳理",
+    "href": "L9.html#deepseek辅助论文统计学梳理",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "DeepSeek辅助论文统计学梳理",
+    "text": "DeepSeek辅助论文统计学梳理\n\n阅读文献时：\n\n解读多因素分析结果、P值、置信区间\n判断方法是否使用得当\n\n撰写论文时：\n\n自动生成统计学方法部分\n输出规范表达模板（符合STROBE）\n图表及描述自动生成\n\n案例：术后感染因素分析 → 自动生成logistic回归段落"
+  },
+  {
+    "objectID": "L9.html#deepseek辅助统计分析的玩法",
+    "href": "L9.html#deepseek辅助统计分析的玩法",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "DeepSeek辅助统计分析的玩法",
+    "text": "DeepSeek辅助统计分析的玩法\n\n玩法一：自然语言分析\n\n例：“吸烟、饮酒、肥胖谁更影响心血管？”\n\n玩法二：自动生成图表\n\nROC、K-M、生存图、散点图等\n\n玩法三：模型快速迭代\n\n变量选择、模型优化\n\n案例：急性胰腺炎死亡风险预测 → 提供ROC曲线与解释"
+  },
+  {
+    "objectID": "L9.html#作业互动与问答统计再也不怕",
+    "href": "L9.html#作业互动与问答统计再也不怕",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "作业互动与问答：统计再也不怕",
+    "text": "作业互动与问答：统计再也不怕\n\n现场实操练习：提供模拟数据（如Excel）\n\n提问：“哪些变量影响术后恢复时间？”\n使用DeepSeek完成分析、写结果段\n\n统计恐惧问答箱：\n\n医生匿名提问，现场演示DeepSeek回答\n\n分享与总结：\n\n医生讲感受，交流使用心得"
+  },
+  {
+    "objectID": "L9.html#总结与资源推荐",
+    "href": "L9.html#总结与资源推荐",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "总结与资源推荐",
+    "text": "总结与资源推荐\n\n核心理念：让AI做助手，医生专注科研思考\n提供资源：\n\n模拟数据练习文件\n常见提问模板\n快捷指令清单\n\n欢迎关注公众号 / 网站获取更新"
+  },
+  {
+    "objectID": "L9.html#致谢",
+    "href": "L9.html#致谢",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "致谢",
+    "text": "致谢\n感谢大家的参与！欢迎提问交流！"
+  },
+  {
+    "objectID": "L9.html#deepseek辅助统计理念快速入门-1",
+    "href": "L9.html#deepseek辅助统计理念快速入门-1",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "9.1 DeepSeek辅助统计理念快速入门",
+    "text": "9.1 DeepSeek辅助统计理念快速入门\n\n\n1.1.1 收集数据\n1.1.2 整理数据\n1.1.3 分析数据\n1.1.4 提炼结论"
+  },
+  {
+    "objectID": "L9.html#deepseek辅助医学统计方法的整体梳理-1",
+    "href": "L9.html#deepseek辅助医学统计方法的整体梳理-1",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "9.2 DeepSeek辅助医学统计方法的整体梳理",
+    "text": "9.2 DeepSeek辅助医学统计方法的整体梳理\n\n1.2.1 图表工具\n1.2.2 函数工具\n1.2.3 数据分析工具"
   }
 ]

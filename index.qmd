@@ -2,30 +2,19 @@
 title: ""
 about:
   template: solana
-  image: img/top.png
   id: ppc
 ---
 
-[模块九 DeepSeek辅助傻瓜式医学统计](https://lizongzhang.github.io/deepseekcamp/模块九.html)
 
+[<span style="font-size: 18px;">模块九 DeepSeek辅助傻瓜式医学统计</span>](https://lizongzhang.github.io/deepseekcamp/模块九.html)
 
-[模块十 DeepSeek辅助R语言编程与数据分析](https://lizongzhang.github.io/deepseekcamp/模块十.html)
+[<span style="font-size: 18px;">模块十 DeepSeek辅助R语言编程与数据分析</span>](https://lizongzhang.github.io/deepseekcamp/模块十.html)
 
-
-
-
-欢迎关注微信公众号“顶刊研习社” “医课佳”！
-
+<span style="font-size: 18px;color: #044875">欢迎关注微信公众号“顶刊研习社” “医课佳”！DeepSeek辅助R语言编程与数据分析</span>
 
 ![](img/wechat.png)
 
-<img src="img/link.png" style="width: 24px; height: 24px;margin-right: 10px">B站账号  <https://space.bilibili.com/590872906>{target="_blank"}
-
-
-![](img/bili_up.jpg){width=20%}
-
-
-
+[![](img/bili_up.jpg){width=10%}](https://space.bilibili.com/590872906)
 
 
 <div style="position: fixed; bottom: 60px; right: 70px; z-index: 1000;">

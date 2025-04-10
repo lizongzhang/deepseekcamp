@@ -3,7 +3,7 @@ project:
   output-dir: docs
   
 website:
-  title: "DeepSeek辅助临床医学科研入门训练营"
+  title: "DeepSeek临床医学科研训练营"
   navbar:
     left:
       - href: index.qmd
