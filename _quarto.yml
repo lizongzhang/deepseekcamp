@@ -8,14 +8,12 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - 模块九.qmd
-      - 模块十.qmd
     tools:
       - icon: envelope
         href: lizongzhang9@qq.com
   page-footer:
     right: "Data illuminates insights."
-    left: "&copy; Copyright 2025, Li Zongzhang"
+    left: "&copy; Copyright 2025, 顶刊研习社 & Li Zongzhang"
 format:
   html:
     theme: cerulean

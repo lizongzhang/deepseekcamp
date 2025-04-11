@@ -1,9 +1,0 @@
----
-title: "模块十 DeepSeek辅助R语言编程与数据分析"
----
-
-
-<img src="img/teacher.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[讲义](https://lizongzhang.github.io/deepseekcamp/L9.html)
-
-<img src="img/download.png" alt="讲义" style="width: 24px; height: 24px;margin-right: 10px">[下载讲义PPT](https://github.com/lizongzhang/deepseek/blob/main/docs/L9_slide.pptx?raw=true)
-

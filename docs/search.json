@@ -1,82 +1,5 @@
 [
   {
-    "objectID": "模块九.html",
-    "href": "模块九.html",
-    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "section": "",
-    "text": "讲义\n下载讲义PPT"
-  },
-  {
-    "objectID": "模块十.html",
-    "href": "模块十.html",
-    "title": "模块十 DeepSeek辅助R语言编程与数据分析",
-    "section": "",
-    "text": "讲义\n下载讲义PPT"
-  },
-  {
-    "objectID": "projects.html#project-2",
-    "href": "projects.html#project-2",
-    "title": "Projects",
-    "section": "Project 2",
-    "text": "Project 2"
-  },
-  {
-    "objectID": "projects.html#project-3",
-    "href": "projects.html#project-3",
-    "title": "Projects",
-    "section": "Project 3",
-    "text": "Project 3"
-  },
-  {
-    "objectID": "L10.html#chapter-1-overview-of-statistical-analysis-and-excel",
-    "href": "L10.html#chapter-1-overview-of-statistical-analysis-and-excel",
-    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "section": "Chapter 1 Overview of Statistical Analysis and Excel",
-    "text": "Chapter 1 Overview of Statistical Analysis and Excel\n\n1.1 Steps of Statistical Analysis\n\n1.2 Statistical Analysis Tools in Excel\n\n1.3 Common Excel Techniques\n\n1.4 Data Cleaning Tools in Excel"
-  },
-  {
-    "objectID": "L10.html#steps-of-statistical-analysis",
-    "href": "L10.html#steps-of-statistical-analysis",
-    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "section": "1.1 Steps of Statistical Analysis",
-    "text": "1.1 Steps of Statistical Analysis\n\n\n1.1.1 Data Collection\n\n1.1.2 Data Organization\n\n1.1.3 Data Analysis\n\n1.1.4 Conclusion Extraction"
-  },
-  {
-    "objectID": "L10.html#data-collection",
-    "href": "L10.html#data-collection",
-    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "section": "1.1.1 Data Collection",
-    "text": "1.1.1 Data Collection\n\n\nMacroeconomic data\n\nMicroeconomic data\n\nCross-sectional data\n\nTime series data\n\nQualitative data\n\nQuantitative data"
-  },
-  {
-    "objectID": "L10.html#data-organization",
-    "href": "L10.html#data-organization",
-    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "section": "1.1.2 Data Organization",
-    "text": "1.1.2 Data Organization\n\nConvert data into structured tables, where each row represents an observation unit and each column represents a variable.\n\nCheck data completeness and validity, including identifying duplicates, missing values, and outliers, and converting text into numerical codes.\n\nSee: 1.4 Data Cleaning Tools in Excel"
-  },
-  {
-    "objectID": "L10.html#data-analysis",
-    "href": "L10.html#data-analysis",
-    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "section": "1.1.3 Data Analysis",
-    "text": "1.1.3 Data Analysis\n\nDescriptive statistics: Present data using tables and charts; compute descriptive measures such as mean, median, and standard deviation.\n\nInferential statistics: Draw inferences about the population based on sample data."
-  },
-  {
-    "objectID": "L10.html#section",
-    "href": "L10.html#section",
-    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "section": "1.1",
-    "text": "1.1"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "DeepSeek临床医学科研训练营",
-    "section": "",
-    "text": "模块九 DeepSeek辅助傻瓜式医学统计\n模块十 DeepSeek辅助R语言编程与数据分析\n欢迎关注微信公众号“顶刊研习社” “医课佳”！DeepSeek辅助R语言编程与数据分析\n\n\n\nclick here"
-  },
-  {
     "objectID": "L9.html#模块九-deepseek辅助傻瓜式医学统计",
     "href": "L9.html#模块九-deepseek辅助傻瓜式医学统计",
     "title": "模块九DeepSeek辅助傻瓜式医学统计",
@@ -292,5 +215,68 @@
     "title": "模块九DeepSeek辅助傻瓜式医学统计",
     "section": "本章总结",
     "text": "本章总结"
+  },
+  {
+    "objectID": "projects.html#project-2",
+    "href": "projects.html#project-2",
+    "title": "Projects",
+    "section": "Project 2",
+    "text": "Project 2"
+  },
+  {
+    "objectID": "projects.html#project-3",
+    "href": "projects.html#project-3",
+    "title": "Projects",
+    "section": "Project 3",
+    "text": "Project 3"
+  },
+  {
+    "objectID": "L10.html#chapter-1-overview-of-statistical-analysis-and-excel",
+    "href": "L10.html#chapter-1-overview-of-statistical-analysis-and-excel",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "Chapter 1 Overview of Statistical Analysis and Excel",
+    "text": "Chapter 1 Overview of Statistical Analysis and Excel\n\n1.1 Steps of Statistical Analysis\n\n1.2 Statistical Analysis Tools in Excel\n\n1.3 Common Excel Techniques\n\n1.4 Data Cleaning Tools in Excel"
+  },
+  {
+    "objectID": "L10.html#steps-of-statistical-analysis",
+    "href": "L10.html#steps-of-statistical-analysis",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "1.1 Steps of Statistical Analysis",
+    "text": "1.1 Steps of Statistical Analysis\n\n\n1.1.1 Data Collection\n\n1.1.2 Data Organization\n\n1.1.3 Data Analysis\n\n1.1.4 Conclusion Extraction"
+  },
+  {
+    "objectID": "L10.html#data-collection",
+    "href": "L10.html#data-collection",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "1.1.1 Data Collection",
+    "text": "1.1.1 Data Collection\n\n\nMacroeconomic data\n\nMicroeconomic data\n\nCross-sectional data\n\nTime series data\n\nQualitative data\n\nQuantitative data"
+  },
+  {
+    "objectID": "L10.html#data-organization",
+    "href": "L10.html#data-organization",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "1.1.2 Data Organization",
+    "text": "1.1.2 Data Organization\n\nConvert data into structured tables, where each row represents an observation unit and each column represents a variable.\n\nCheck data completeness and validity, including identifying duplicates, missing values, and outliers, and converting text into numerical codes.\n\nSee: 1.4 Data Cleaning Tools in Excel"
+  },
+  {
+    "objectID": "L10.html#data-analysis",
+    "href": "L10.html#data-analysis",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "1.1.3 Data Analysis",
+    "text": "1.1.3 Data Analysis\n\nDescriptive statistics: Present data using tables and charts; compute descriptive measures such as mean, median, and standard deviation.\n\nInferential statistics: Draw inferences about the population based on sample data."
+  },
+  {
+    "objectID": "L10.html#section",
+    "href": "L10.html#section",
+    "title": "模块九 DeepSeek辅助傻瓜式医学统计",
+    "section": "1.1",
+    "text": "1.1"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DeepSeek临床医学科研训练营",
+    "section": "",
+    "text": "模块九 DeepSeek辅助傻瓜式医学统计\n模块十 DeepSeek辅助R语言编程与数据分析\n欢迎关注微信公众号“顶刊研习社” “医课佳”！DeepSeek辅助R语言编程与数据分析\n\n\n\nclick here"
   }
 ]
