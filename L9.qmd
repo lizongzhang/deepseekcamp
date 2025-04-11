@@ -14,7 +14,9 @@ format:
     footer: |
       <https://lizongzhang.github.io/deepseekcamp><br> 
       © 2025 顶刊研习社 
-    include-before-body: header.html
+    include-before-body: 
+      - header.html
+      - fonts.html
     title-slide-attributes: 
       data-background-image: "img/bili_up.jpg"  # 二维码路径
       data-background-size: "100px"        # 调整大小
