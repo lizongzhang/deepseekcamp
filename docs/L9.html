@@ -165,8 +165,8 @@ z-index: 1000;">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="img/bili_up.jpg" data-background-position="center bottom 100px" data-background-size="100px" class="quarto-title-block center">
-  <h1 class="title">模块九 DeepSeek辅助傻瓜式医学统计</h1>
+<section id="title-slide" data-background-image="img/bili_up.jpg" data-background-position="center bottom 120px" data-background-size="100px" class="quarto-title-block center">
+  <h1 class="title">模块九<br>DeepSeek辅助傻瓜式医学统计</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -189,24 +189,236 @@ z-index: 1000;">
 </ul>
 </section>
 <section id="deepseek辅助统计理念快速入门" class="slide level2">
-<h2>DeepSeek辅助统计理念快速入门</h2>
+<h2>9.1 DeepSeek辅助统计理念快速入门</h2>
 <ul>
-<li>医学统计常见困扰：变量太多、不会选方法、看不懂结果</li>
-<li>“傻瓜式”统计理念：让非专业人员也能轻松用统计</li>
-<li>DeepSeek工具优势：
+<li>9.1.1 理念导入：让AI成为统计学习与科研的伙伴</li>
+<li>9.1.2 DeepSeek如何助力统计学习？</li>
+<li>9.1.3 从统计学习者到提问专家：如何与DeepSeek高效对话？</li>
+</ul>
+</section>
+<section id="让deepseek成为统计学习与科研的伙伴" class="slide level2">
+<h2>9.1.1 让DeepSeek成为统计学习与科研的伙伴</h2>
+<ul>
+<li><p>不知道该用什么统计方法？</p></li>
+<li><p>困扰于看不懂统计结果或输出解释？</p></li>
+<li><p>为写论文中的统计部分而发愁？</p></li>
+</ul>
+</section>
+<section id="deepseek如何助力统计学习" class="slide level2">
+<h2>9.1.2 DeepSeek如何助力统计学习？</h2>
+<ul>
+<li>重构统计学习方式
+<ul>
+<li>互动式</li>
+<li>针对性</li>
+<li>不要撒网式学习</li>
+</ul></li>
+</ul>
+</section>
+<section id="deepseek如何助力统计学习-1" class="slide level2">
+<h2>9.1.2 DeepSeek如何助力统计学习？</h2>
+<ul>
+<li>统计学习的重心
+<ul>
+<li>基础知识
+<ul>
+<li>变量类型: 定性(无序/有序), 定量(离散/连续)</li>
+<li>参数估计: 置信水平，置信区间</li>
+<li>假设检验: 双/单侧检验，显著性水平, p值, 临界值, 检验统计量</li>
+</ul></li>
+<li>方法选择</li>
+<li>结果解读</li>
+</ul></li>
+</ul>
+</section>
+<section id="从统计学习者到提问专家如何与-deepseek-高效对话" class="slide level2">
+<h2>9.1.3 从统计学习者到提问专家：如何与 DeepSeek 高效对话？</h2>
+<ul>
+<li>DeepSeek可以回答”如何做”？</li>
+<li>选择方法, 解释结果, 润色语言</li>
+<li>DeepSeek无法判断统计分析结论的“临床或现实意义”</li>
+<li>① 它不了解临床语境
+<ul>
+<li>不知道 1.2 mmHg 的血压差异是否有意义</li>
+<li>不知道术后感染降低 3% 是否值得改变用药</li>
+<li>无法判断效果大小对患者是否“可感知”</li>
+</ul></li>
+<li>② 它无法识别研究的局限
+<ul>
+<li>样本的代表性</li>
+<li>数据质量<br>
+</li>
+<li>研究全貌</li>
+</ul></li>
+</ul>
+</section>
+<section id="举例" class="slide level2">
+<h2>🔍 举例</h2>
+<blockquote>
+<p><strong>新药组患者平均在服药后4.2小时出现咳嗽明显缓解，对照组为5.3小时，差异为1.1小时，P = 0.002。</strong></p>
+</blockquote>
+<ul>
+<li><strong>DeepSeek的判断</strong>：P值小于0.05，说明两组在缓解时间上存在统计学显著差异。</li>
+<li><strong>研究者需要进一步判断</strong>：
+<ul>
+<li>平均提前1小时缓解咳嗽，对患者体验是否足够重要？</li>
+<li>新药是否价格更高、服用方案更复杂或存在其他副作用？</li>
+<li>如果只是轻症患者，是否有必要优先推荐此类新药？</li>
+<li>在临床实践中，该差异是否足以改变现有用药指南或医生处方习惯？</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>📌 要评估“统计显著”的“现实价值”，需结合患者反馈、药物成本、安全性及对临床决策的实际影响。</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<h3 id="低质量提问的特点">① 低质量提问的特点</h3>
+<ul>
+<li><strong>太笼统</strong>：“我这组数据怎么分析？”——没有说明变量、设计、目的；</li>
+<li><strong>背景缺失</strong>：没有交代样本量、变量类型、研究目标等关键信息；</li>
+<li><strong>术语模糊</strong>：用“数字”“分组”代替“连续变量”“独立样本”等标准术语；</li>
+<li><strong>目的不清</strong>：是要选方法？还是要解释P值？甚至只是想画图？</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="如何构建高质量提问">② 如何构建高质量提问？</h3>
+<ul>
+<li><strong>研究背景</strong>：研究设计、样本量、数据来源；</li>
+<li><strong>变量信息</strong>：自变量和因变量的类型、分布特征；</li>
+<li><strong>提问目标</strong>：你希望 DeepSeek 帮你做什么？推荐方法？解释输出？润色语言？</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="示例如何提出更高质量的问题">🔍示例：如何提出更高质量的问题</h3>
+<p><strong>明确表达研究背景、变量类型和分析目的</strong></p>
+<ul>
+<li><p><strong>原问法</strong>：我做了线性回归，能不能帮我看看有没有问题？<br>
+<strong>优化提问</strong>：我用线性回归分析术后住院天数的影响因素，自变量包括年龄、手术方式和是否术前使用抗生素，模型输出如下，请帮我判断变量解释是否合理，并协助我撰写结果描述。</p></li>
+<li><p><strong>原问法</strong>：我想知道两组患者有无差异，用什么方法好？<br>
+<strong>优化提问</strong>：我想比较 A 药和 B 药对血糖控制的效果，两组样本独立，结局变量是非正态分布的 HbA1c，请问适合使用哪种非参数检验方法？</p></li>
+<li><p><strong>原问法</strong>：这个 P 值怎么解读？<br>
+<strong>优化提问</strong>：在 logistic 回归中，变量“糖尿病病史”的 OR = 1.9，95% CI 为 1.1–3.2，P = 0.025，请帮我解释这个变量在模型中的统计与临床意义。</p></li>
+<li><p><strong>原问法</strong>：帮我翻译一句统计方法的英文。<br>
+<strong>优化提问</strong>：请帮我用 SCI 医学期刊常用写法翻译这句话：我们使用 Kruskal-Wallis 检验比较了三组患者术后第 5 天 CRP 水平的分布差异。</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<p>💡 <strong>技巧提示</strong>：优化提问时尽量包括：</p>
+<ul>
+<li><p><strong>研究设计类型</strong>（如独立、配对）</p></li>
+<li><p><strong>变量类型与分布特征</strong>（如定量、定性、是否正态）</p></li>
+<li><p><strong>分析目的</strong>（比较差异、建模预测、描述分布等）</p></li>
+<li><p><strong>希望 AI 协助的具体环节</strong>（方法选择、结果解读、语言撰写等）</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="小结从工具到能力构建ai辅助统计思维">✅ 小结：从工具到能力，构建AI辅助统计思维</h3>
+<ul>
+<li>统计学习不只是掌握方法，更是形成解决问题的思维方式。</li>
+<li>DeepSeek 不只是工具，更可以成为统计学习与科研写作的智能伙伴。</li>
+<li>借助 AI，可以加速理解、提升效率，但不能替代判断与思考。</li>
+<li>真正有效的统计学习，应注重：
+<ul>
+<li>明确目标（用AI解决具体问题）；</li>
+<li>精准提问（提升与AI对话质量）；</li>
+<li>灵活应用（将建议转化为科研能力）。</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>📌 从“学习统计”到“用统计解决问题”，AI 是助力，但研究者永远是主导。</p>
+</blockquote>
+</section>
+<section id="deepseek辅助医学统计方法的整体梳理" class="slide level2">
+<h2>9.2 DeepSeek辅助医学统计方法的整体梳理</h2>
+<ul>
+<li>如何用DeepSeek辅助统计学习？
+<ul>
+<li>让非专业人员也能轻松用统计</li>
+<li>中文问答自然交互</li>
+<li>理解临床背景</li>
+<li>自动推荐方法</li>
+</ul></li>
+<li>统计方法的选择与应用</li>
+</ul>
+</section>
+<section id="医学统计常见困扰" class="slide level2">
+<h2>医学统计常见困扰</h2>
+<ul>
+<li><p>统计方法选择难题</p></li>
+<li><p>忽视方法适用前提</p></li>
+<li><p>统计结果呈现失范</p></li>
+<li><p>医学统计常见困扰：变量太多、不会选方法、看不懂结果</p></li>
+<li><p>“傻瓜式”统计理念：让非专业人员也能轻松用统计</p></li>
+<li><p>DeepSeek工具优势：</p>
 <ul>
 <li>中文问答自然交互</li>
 <li>理解临床背景</li>
 <li>自动推荐方法</li>
 </ul></li>
-<li>案例：
+<li><p>案例：</p>
 <ul>
 <li>研究血压药效果，提问：“用药前后血压有差异吗？”</li>
 <li>DeepSeek自动识别配对t检验，解释结果</li>
 </ul></li>
 </ul>
 </section>
-<section id="deepseek辅助医学统计方法的整体梳理" class="slide level2">
+<section id="统计方法选择难题" class="slide level2">
+<h2>统计方法选择难题</h2>
+<p>临床研究中常见因研究设计不清、变量类型不明、分析目的模糊，导致无法匹配合适的统计方法。</p>
+<ul>
+<li><strong>表现示例</strong>：
+<ul>
+<li>比较三组治疗方案效果，却只使用两两t检验；</li>
+<li>二分类结局数据，误用线性回归而非logistic回归。</li>
+</ul></li>
+<li><strong>建议</strong>：
+<ul>
+<li>明确变量类型（定类、定序、定量）；</li>
+<li>对照统计方法选择表，结合研究目的选择方法；</li>
+<li>重要分析建议与统计师沟通确认。</li>
+</ul></li>
+</ul>
+</section>
+<section id="忽视方法适用前提" class="slide level2">
+<h2>忽视方法适用前提</h2>
+<p>统计方法的正确使用依赖一定的前提条件，如正态性、方差齐性、比例风险假设等，但在临床研究中常被忽略。</p>
+<ul>
+<li><strong>表现示例</strong>：
+<ul>
+<li>样本量小，未检验正态性即使用t检验；</li>
+<li>Cox回归中未验证比例风险假设。</li>
+</ul></li>
+<li><strong>建议</strong>：
+<ul>
+<li>所有参数方法使用前应进行前提检验；</li>
+<li>条件不满足时，考虑非参数方法或模型调整；</li>
+<li>在方法部分中明确报告前提检验结果。</li>
+</ul></li>
+</ul>
+</section>
+<section id="统计结果呈现失范" class="slide level2">
+<h2>统计结果呈现失范</h2>
+<p>学术论文中统计结果呈现不规范，常表现为仅报P值、遗漏效应量与置信区间，或缺乏与临床意义的结合。</p>
+<ul>
+<li><strong>表现示例</strong>：
+<ul>
+<li>“A组与B组差异具有统计学意义（P=0.03）”——未报告差异值、CI；</li>
+<li>将统计显著误解为临床有效。</li>
+</ul></li>
+<li><strong>建议</strong>：
+<ul>
+<li>完整报告：效应量（如OR、HR、均值差）+ 95%置信区间 + P值；</li>
+<li>结合临床判断，讨论其现实意义；</li>
+<li>避免绝对化用语，如“有显著差异”可换为“差异具有统计学意义”。</li>
+</ul></li>
+</ul>
+</section>
+<section id="deepseek辅助医学统计方法的整体梳理-1" class="slide level2">
 <h2>DeepSeek辅助医学统计方法的整体梳理</h2>
 <ul>
 <li>常见分析类型：
@@ -354,7 +566,7 @@ z-index: 1000;">
 <li>运用统计分析方法得到的发现进行梳理和归纳，从中提炼出有价值的结论。</li>
 </ul>
 </section>
-<section id="deepseek辅助医学统计方法的整体梳理-1" class="slide level2">
+<section id="deepseek辅助医学统计方法的整体梳理-2" class="slide level2">
 <h2>9.2 DeepSeek辅助医学统计方法的整体梳理</h2>
 <ul>
 <li><p>1.2.1 图表工具</p></li>
@@ -404,7 +616,7 @@ z-index: 1000;">
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p><a href="https://lizongzhang.github.io/deepseekcamp" class="uri">https://lizongzhang.github.io/deepseekcamp</a></p>
+<p><a href="https://lizongzhang.github.io/deepseekcamp" class="uri">https://lizongzhang.github.io/deepseekcamp</a><br> © 2025 顶刊研习社</p>
 </div>
 </div></div>
 
@@ -438,7 +650,7 @@ z-index: 1000;">
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":false},
+'chalkboard': {"buttons":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
