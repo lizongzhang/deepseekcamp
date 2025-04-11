@@ -5,24 +5,33 @@ about:
   id: ppc
 ---
 
-
-[<span style="font-size: 24px;">模块九 DeepSeek辅助傻瓜式医学统计</span>](https://lizongzhang.github.io/deepseekcamp/L9.html){target="_blank"}
-
-[<span style="font-size: 24px;">模块十 DeepSeek辅助R语言编程与数据分析</span>](https://lizongzhang.github.io/deepseekcamp/L10.html){target="_blank"}
-
-<span style="font-size: 18px;color: #044875">欢迎关注微信公众号“顶刊研习社” “医课佳”！DeepSeek辅助R语言编程与数据分析</span>
-
-![](img/wechat.png){width=50%}
-
-
-[![](img/bili_up.jpg){width=10%}](https://space.bilibili.com/590872906)
-
-
-<div style="position: fixed; bottom: 60px; right: 70px; z-index: 1000;">
-
-   <a href='http://www.freevisitorcounters.com'>click here</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=a1b2bcf47de785ab152ba2b2353aa09bd4f80670'></script>
-  <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1174168/t/5"></script>
-
+<div style="font-size: 22px; line-height: 2;">
+  <p>
+    🔗 <a href="https://lizongzhang.github.io/deepseekcamp/L9.html" target="_blank">
+    模块九 DeepSeek辅助傻瓜式医学统计</a>
+  </p>
+  <p>
+    🔗 <a href="https://lizongzhang.github.io/deepseekcamp/L10.html" target="_blank">
+    模块十 DeepSeek辅助R语言编程与数据分析</a>
+  </p>
 </div>
+
+---
+
+<div style="text-align: center; margin-top: 1em;">
+  <p style="font-size: 22px; color: #044875;">
+    欢迎关注微信公众号“顶刊研习社”、“医课佳”！
+  </p>
+  <img src="img/wechat.png" alt="微信二维码" width="200">
+</div>
+
+---
+
+<div style="text-align: center; margin-top: 1.5em;">
+  <a href="https://space.bilibili.com/590872906" target="_blank">
+    <img src="img/bili_up.jpg" alt="B站头像" width="60">
+  </a>
+</div>
+
 
 
