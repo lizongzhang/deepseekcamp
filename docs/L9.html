@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.6.42">
 
   <meta name="author" content="李宗璋">
-  <meta name="dcterms.date" content="2025-04-13">
+  <meta name="dcterms.date" content="2025-04-14">
   <title>DeepSeek临床医学科研训练营 – 模块九 DeepSeek辅助傻瓜式医学统计</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -181,14 +181,14 @@ z-index: 1000;">
 </div>
 </div>
 
-  <p class="date">2025-04-13</p>
+  <p class="date">2025-04-14</p>
 </section>
 <section id="模块九-deepseek辅助傻瓜式医学统计" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">模块九 DeepSeek辅助傻瓜式医学统计</h2>
 <ul>
 <li><p>9.1 DeepSeek辅助统计理念快速入门</p></li>
-<li><p>9.2 DeepSeek辅助医学统计方法的整体梳理</p></li>
-<li><p>9.3 DeepSeek辅助论文统计学梳理</p></li>
+<li><p>9.2 DeepSeek辅助医学方法的学习和运用</p></li>
+<li><p>9.3 DeepSeek辅助医学统计写作</p></li>
 <li><p>9.4 DeepSeek辅助统计分析的玩法</p></li>
 <li><p>9.5 作业互动与问答：统计再也不怕</p></li>
 </ul>
@@ -255,15 +255,14 @@ z-index: 1000;">
 <li>② 它无法识别研究的局限
 <ul>
 <li>样本的代表性</li>
-<li>数据质量<br>
-</li>
+<li>数据质量</li>
 <li>研究全貌</li>
 </ul></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<h3 id="举例">🔍 举例</h3>
+<h3 id="示例">🔍 示例</h3>
 <blockquote>
 <p><strong>新药组患者平均在服药后4.2小时出现咳嗽明显缓解，对照组为5.3小时，差异为1.1小时，P = 0.002。</strong></p>
 </blockquote>
@@ -302,7 +301,7 @@ z-index: 1000;">
 </section>
 <section class="slide level2">
 
-<h3 id="示例如何提出更高质量的问题">🔍示例：如何提出更高质量的问题？</h3>
+<h3 id="示例-1">🔍 示例</h3>
 <p><strong>明确表达研究背景、变量类型和分析目的</strong></p>
 <ul>
 <li><p><strong>原问法</strong>：我做了线性回归，能不能帮我看看有没有问题？<br>
@@ -398,7 +397,7 @@ z-index: 1000;">
 </section>
 <section class="slide level2">
 
-<h3 id="示例1">🔍 示例1</h3>
+<h3 id="示例-2">🔍 示例</h3>
 <blockquote>
 <p>比较两种降压药对收缩压的影响，自变量为“药物类型”（两组），因变量为“收缩压”（连续变量），各组分别有40人，需要使用什么统计分析方法？</p>
 </blockquote>
@@ -431,7 +430,7 @@ z-index: 1000;">
 </section>
 <section class="slide level2">
 
-<h3 id="示例2">🔍 示例2</h3>
+<h3 id="示例-3">🔍 示例</h3>
 <h3 id="临床问题">🩺 临床问题</h3>
 <blockquote>
 <p>探讨年龄、性别、住院天数、治疗方案是否与患者出院时的功能恢复水平有关。功能恢复按医生评估分为三级：<strong>良好 / 一般 / 差</strong>。</p>
@@ -458,17 +457,29 @@ z-index: 1000;">
 </section>
 <section class="slide level2">
 
-<h3 id="示例2-1">🔍 示例2:</h3>
+<h3 id="示例-4">🔍 示例</h3>
 <blockquote>
 <p>“我有150名康复患者的数据，记录了年龄、性别、住院天数和治疗方案（3种，无序分类）。我想分析这些因素对出院时功能恢复水平（良好/一般/差）的影响。因变量是有序分类变量。需要用什么统计分析方法？”</p>
 </blockquote>
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
 <p><img data-src="img/9.2_eg2.png"></p>
 </div>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js"></pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 </section>
 <section class="slide level2">
 
-<h3 id="示例2-要求用spss实现有序logistic回归分析">🔍 示例2: 要求用SPSS实现有序logistic回归分析</h3>
+<h3 id="示例-5">🔍 示例</h3>
+<p>要求用SPSS实现有序logistic回归分析</p>
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
 <p><img data-src="img/9.2_eg2_spss.png"></p>
 </div>
@@ -580,25 +591,120 @@ z-index: 1000;">
 </ul></li>
 </ul>
 </section>
-<section id="医学统计常见困扰" class="slide level2">
-<h2>医学统计常见困扰</h2>
+<section id="deepseek辅助医学统计写作" class="slide level2">
+<h2>9.3 DeepSeek辅助医学统计写作</h2>
+<h3 id="医学统计写作的挑战">9.3.1 医学统计写作的挑战</h3>
 <ul>
-<li><p>统计方法选择难题</p></li>
-<li><p>忽视方法适用前提</p></li>
-<li><p>统计结果呈现失范</p></li>
-<li><p>医学统计常见困扰：变量太多、不会选方法、看不懂结果</p></li>
-<li><p>“傻瓜式”统计理念：让非专业人员也能轻松用统计</p></li>
-<li><p>DeepSeek工具优势：</p>
+<li>统计分析部分的重要性</li>
+<li>高水平期刊对统计分析的准确性和表达逻辑要求极高</li>
+<li>生常见困扰
 <ul>
-<li>中文问答自然交互</li>
-<li>理解临床背景</li>
-<li>自动推荐方法</li>
+<li>不熟悉统计方法的选择与表述</li>
+<li>难以准确表述结果的意义</li>
+<li>英语表达能力限制写作效率</li>
 </ul></li>
-<li><p>案例：</p>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="如何向deepseek寻求写作帮助">9.3.2 如何向DeepSeek寻求写作帮助？</h3>
+<h3 id="提问句式-4">🎯 提问句式</h3>
 <ul>
-<li>研究血压药效果，提问：“用药前后血压有差异吗？”</li>
-<li>DeepSeek自动识别配对t检验，解释结果</li>
-</ul></li>
+<li><p>输入说明 以下是***结果 / 回归输出 / 表格 / 图形</p></li>
+<li><p>目的说明 “请撰写一段医学论文中‘统计分析结果’部分的英文描述</p></li>
+<li><p>风格指定 “风格参考JAMA / The Lancet/中华医学杂志</p></li>
+<li><p>语言指定 “语言简洁、专业、英文/中文撰写；避免解释性语言</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="示例table-1">🔍 示例：table 1</h3>
+<blockquote>
+<p>Please write a concise and professional paragraph, in the style of a medical journal (e.g., The Lancet or JAMA), describing and comparing the baseline characteristics of two patient groups based on the data presented in Table 1. Use objective, scientific language appropriate for the Results section of a clinical research article.</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<h3 id="示例-table-1">🔍 示例: table 1</h3>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.3pic1.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="示例-table-1-1">🔍 示例: table 1</h3>
+<blockquote>
+<p>基于Table 1，撰写一段描述患者基线特征的段落, 重点说明两组患者基线特征的相似性与显著差异, 采用《中华医学杂志》的写作风格, 语言简洁, 专业。</p>
+</blockquote>
+</section>
+<section class="slide level2">
+
+<h3 id="示例-table-1-2">🔍 示例: table 1</h3>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.3pic2.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="示例-图形解释">🔍 示例: 图形解释</h3>
+<blockquote>
+<p>Please write a concise and professional paragraph, in the style of a medical journal (e.g., The Lancet or JAMA), describing the comparison of age between patients who survived and those who died, based on the data shown in the figure. Use objective, scientific language appropriate for the Results section of a clinical research article.</p>
+</blockquote>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.3pic2.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="示例-图形解释-1">🔍 示例: 图形解释</h3>
+<blockquote>
+<p>基于上图，撰写一段描述图中所示生存与死亡患者两组之间年龄比较的段落, 采用《中华医学杂志》的写作风格, 语言简洁, 专业。</p>
+</blockquote>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.3pic4.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="示例-有序logistic回归">🔍 示例: 有序logistic回归</h3>
+<blockquote>
+<p>Please write a concise and professional paragraph suitable for the “Discussion” section of a clinical research article, describing and interpreting the findings from a binary logistic regression analysis. Emphasize the potential clinical implications and practical relevance of the significant predictors identified in the model. Use formal scientific language similar to that found in journals such as The Lancet or JAMA. Avoid statistical jargon unless necessary, and focus on how the findings may inform clinical decision-making or patient care.</p>
+</blockquote>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.3pic5.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="示例-有序logistic回归-1">🔍 示例: 有序logistic回归</h3>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.3pic6.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="示例-有序logistic回归-2">🔍 示例: 有序logistic回归</h3>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.3pic7.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="示例-有序logistic回归-3">🔍 示例: 有序logistic回归</h3>
+<blockquote>
+<p>请撰写一段用于医学期刊论文“讨论”部分的文字，基于二元 logistic 回归模型的结果，阐述主要显著预测变量的临床意义与实际应用价值。文风应简洁、专业，表达符合《中华医学杂志》的学术规范。</p>
+</blockquote>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.3pic8.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="多轮对话优化文字段落">9.3.3 多轮对话优化文字段落</h3>
+<ul>
+<li><p>第一轮生成后继续补充显著性解释、控制混杂变量说明。</p></li>
+<li><p>提升质量与防止AI写作痕迹</p></li>
+<li><p>核对数据与描述是否匹配。</p></li>
 </ul>
 </section>
 <section id="统计方法选择难题" class="slide level2">
@@ -650,42 +756,6 @@ z-index: 1000;">
 <li>结合临床判断，讨论其现实意义；</li>
 <li>避免绝对化用语，如“有显著差异”可换为“差异具有统计学意义”。</li>
 </ul></li>
-</ul>
-</section>
-<section id="deepseek辅助医学统计方法的整体梳理-1" class="slide level2">
-<h2>DeepSeek辅助医学统计方法的整体梳理</h2>
-<ul>
-<li>常见分析类型：
-<ul>
-<li>描述性分析：均值、中位数、标准差等</li>
-<li>比较分析：t检验、方差分析、χ²检验</li>
-<li>回归模型：Logistic、Cox、线性回归</li>
-<li>生存分析、ROC分析等</li>
-</ul></li>
-<li>DeepSeek可自动：
-<ul>
-<li>识别变量类型</li>
-<li>选择合适统计方法</li>
-<li>提供代码与解释</li>
-</ul></li>
-<li>案例：三组药物剂量比较疗效 → 推荐ANOVA或Kruskal-Wallis检验</li>
-</ul>
-</section>
-<section id="deepseek辅助论文统计学梳理" class="slide level2">
-<h2>DeepSeek辅助论文统计学梳理</h2>
-<ul>
-<li>阅读文献时：
-<ul>
-<li>解读多因素分析结果、P值、置信区间</li>
-<li>判断方法是否使用得当</li>
-</ul></li>
-<li>撰写论文时：
-<ul>
-<li>自动生成统计学方法部分</li>
-<li>输出规范表达模板（符合STROBE）</li>
-<li>图表及描述自动生成</li>
-</ul></li>
-<li>案例：术后感染因素分析 → 自动生成logistic回归段落</li>
 </ul>
 </section>
 <section id="deepseek辅助统计分析的玩法" class="slide level2">

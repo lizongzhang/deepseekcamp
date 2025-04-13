@@ -4,7 +4,7 @@
     "href": "L9.html#模块九-deepseek辅助傻瓜式医学统计",
     "title": "模块九DeepSeek辅助傻瓜式医学统计",
     "section": "模块九 DeepSeek辅助傻瓜式医学统计",
-    "text": "模块九 DeepSeek辅助傻瓜式医学统计\n\n9.1 DeepSeek辅助统计理念快速入门\n9.2 DeepSeek辅助医学统计方法的整体梳理\n9.3 DeepSeek辅助论文统计学梳理\n9.4 DeepSeek辅助统计分析的玩法\n9.5 作业互动与问答：统计再也不怕"
+    "text": "模块九 DeepSeek辅助傻瓜式医学统计\n\n9.1 DeepSeek辅助统计理念快速入门\n9.2 DeepSeek辅助医学方法的学习和运用\n9.3 DeepSeek辅助医学统计写作\n9.4 DeepSeek辅助统计分析的玩法\n9.5 作业互动与问答：统计再也不怕"
   },
   {
     "objectID": "L9.html#deepseek辅助统计理念快速入门",
@@ -159,5 +159,26 @@
     "title": "DeepSeek临床医学科研训练营",
     "section": "",
     "text": "🔗  模块九 DeepSeek辅助傻瓜式医学统计\n\n\n🔗  模块十 DeepSeek辅助R语言编程与数据分析\n\n\n\n\n\n欢迎关注微信公众号“顶刊研习社”、“医课佳”！"
+  },
+  {
+    "objectID": "L9.html#deepseek辅助医学统计写作",
+    "href": "L9.html#deepseek辅助医学统计写作",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "9.3 DeepSeek辅助医学统计写作",
+    "text": "9.3 DeepSeek辅助医学统计写作\n9.3.1 医学统计写作的挑战\n\n统计分析部分的重要性\n高水平期刊对统计分析的准确性和表达逻辑要求极高\n生常见困扰\n\n不熟悉统计方法的选择与表述\n难以准确表述结果的意义\n英语表达能力限制写作效率"
+  },
+  {
+    "objectID": "L9.html#医学论文中常见统计分析写作模板",
+    "href": "L9.html#医学论文中常见统计分析写作模板",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "9.3.2 医学论文中常见统计分析写作模板",
+    "text": "9.3.2 医学论文中常见统计分析写作模板\n9.3.2 单因素与多因素分析\n\n示例：t检验、线性回归、logistic回归。\n生成段落包括：统计方法、分析流程、结果汇报。\n\n9.3.2 分组比较与方差分析\n\n示例：ANOVA、Kruskal-Wallis检验；\nDeepSeek可辅助生成：方法描述、假设检验结论、临床意义解读。\n\n9.3.2 生存分析\n\n示例：KM曲线、Cox回归。\n自动生成图形说明（如图x所示）和文字解释。\n\n9.3.2 ROC曲线与诊断性检验\n\nAUC、敏感性、特异性的常规表述格式。\nPrompt模版可写作如下：“基于ROC分析，本研究发现…”\n\n9.3.3 临床研究实例实操：从结果到完整段落\n9.3.3 输入统计输出，生成统计段落\n\n示例SPSS输出：“组1均值=130.2，组2均值=125.4，p=0.043”；\nPrompt：“请写一段描述该结果的论文句子”。\n\n9.3.3 多种语言风格控制\n\nPrompt样例：“请用《中华医学杂志》的风格重写上述内容”。\n\n9.3.3 多轮对话优化\n\n示例：第一轮生成后继续补充显著性解释、控制混杂变量说明。\n\n9.3.4 提升质量与防止AI写作痕迹\n9.3.4 审查准确性与一致性\n\n核对数据与描述是否匹配。\n\n9.3.4 避免冗长和空洞\n\n避免出现“明显差异”“具有统计意义”但未说明方向与实际差值。\n\n9.3.4 人工修订与个性化润色\n\n强调“AI辅助+人工审校”的协同方式。"
+  },
+  {
+    "objectID": "L9.html#附录与资源推荐",
+    "href": "L9.html#附录与资源推荐",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "6. 附录与资源推荐",
+    "text": "6. 附录与资源推荐\n6.1 中英常用统计术语对照\n\n例如：“显著性水平” = significance level, “置信区间” = confidence interval。\n\n6.2 Prompt模板库\n\n示例1：请用英文撰写一段描述logistic回归结果的句子。\n示例2：请用中文撰写方差分析结果，突出临床意义。\n\n6.3 期刊统计要求汇编\n\nNEJM、JAMA、中华医学杂志等期刊对统计写作有明确规范，可整理并附录。\n\n6.4 工具访问与插件推荐\n\nDeepSeek官网：https://www.deepseek.com\n推荐搭配的写作辅助插件：Zotero, Grammarly, MedCalc在线计算器等。"
   }
 ]
