@@ -53,7 +53,49 @@
     "href": "L9.html#deepseek辅助医学统计方法的整体梳理",
     "title": "模块九DeepSeek辅助傻瓜式医学统计",
     "section": "9.2 DeepSeek辅助医学统计方法的整体梳理",
-    "text": "9.2 DeepSeek辅助医学统计方法的整体梳理\n\n如何用DeepSeek辅助统计学习？\n\n让非专业人员也能轻松用统计\n中文问答自然交互\n理解临床背景\n自动推荐方法\n\n统计方法的选择与应用"
+    "text": "9.2 DeepSeek辅助医学统计方法的整体梳理\n\n9.2.1 医学统计方法全景图\n9.2.2 DeepSeek如何辅助方法选择？\n9.2.3 DeepSeek如何辅助结果解读？"
+  },
+  {
+    "objectID": "L9.html#医学统计方法全景图",
+    "href": "L9.html#医学统计方法全景图",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "9.2.1 医学统计方法全景图",
+    "text": "9.2.1 医学统计方法全景图"
+  },
+  {
+    "objectID": "L9.html#deepseek如何辅助选择统计方法",
+    "href": "L9.html#deepseek如何辅助选择统计方法",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "9.2.2 DeepSeek如何辅助选择统计方法？",
+    "text": "9.2.2 DeepSeek如何辅助选择统计方法？\n统计方法选择的依据\n\n研究目的: 描述/推断/比较/预测/因果推断\n变量的类型和关系\n\n定性变量：无序/有序分类\n定量变量：离散/连续\n自变量/因变量变量\n\n变量分布\n\n正态分布\n非正态分布\n二项分布\n泊松分布"
+  },
+  {
+    "objectID": "L9.html#如何向deepseek描述你的研究问题",
+    "href": "L9.html#如何向deepseek描述你的研究问题",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "9.2.2 ① 如何向DeepSeek描述你的研究问题？",
+    "text": "9.2.2 ① 如何向DeepSeek描述你的研究问题？\n🎯 将“临床问题”转换为“统计问题”\n临床问题：自然语言描述\n\n“本研究希望比较两种降压药对高血压患者收缩压的影响”\n“我们想知道新药是否能降低术后感染的风险”\n\n🎯 提问句式\n\n研究目的：描述 / 推断/ 比较 / 预测 / 因果推断\n研究对象：样本单位（如患者、标本等）\n自变量：变量类型：（如两组、三组、分层等）\n因变量：变量类型： 是否连续 / 分类 / 计数\n特殊说明：如样本量、分布形态、是否配对等"
+  },
+  {
+    "objectID": "L9.html#deepseek关于选择统计方法的流程图",
+    "href": "L9.html#deepseek关于选择统计方法的流程图",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "9.2.2 DeepSeek关于选择统计方法的流程图",
+    "text": "9.2.2 DeepSeek关于选择统计方法的流程图\n\n\n\n\n\ngraph TD\n    A[数据检查] --&gt; B{正态性?}\n    B --&gt;|是| C[方差齐性检验]\n    B --&gt;|否| D[Mann-Whitney U检验]\n    C --&gt;|齐| E[标准t检验]\n    C --&gt;|不齐| F[Welch t检验]\n    E & F --&gt; G[报告Cohen's d]\n    D --&gt; H[报告中位数差]"
+  },
+  {
+    "objectID": "L9.html#如何向deepseek-追问统计分析过程的细节",
+    "href": "L9.html#如何向deepseek-追问统计分析过程的细节",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "9.2.2 ② 如何向DeepSeek 追问统计分析过程的细节？",
+    "text": "9.2.2 ② 如何向DeepSeek 追问统计分析过程的细节？\n🎯 提问句式\n针对方法/模型，还可以做哪些检验或者绘制可视化图形，来深入探讨方法/模型的估计结果，提供有价值的研究发现？请参考学术文献的主流做法，回答上述问题。"
+  },
+  {
+    "objectID": "L9.html#deepseek如何辅助结果解读",
+    "href": "L9.html#deepseek如何辅助结果解读",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "9.2.3 DeepSeek如何辅助结果解读？",
+    "text": "9.2.3 DeepSeek如何辅助结果解读？"
   },
   {
     "objectID": "L9.html#医学统计常见困扰",
@@ -278,5 +320,19 @@
     "title": "DeepSeek临床医学科研训练营",
     "section": "",
     "text": "🔗  模块九 DeepSeek辅助傻瓜式医学统计\n\n\n🔗  模块十 DeepSeek辅助R语言编程与数据分析\n\n\n\n\n\n欢迎关注微信公众号“顶刊研习社”、“医课佳”！"
+  },
+  {
+    "objectID": "L9.html#如何向deepseek-追问统计分析过程的细节-1",
+    "href": "L9.html#如何向deepseek-追问统计分析过程的细节-1",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "9.2.2 ② 如何向DeepSeek 追问统计分析过程的细节？",
+    "text": "9.2.2 ② 如何向DeepSeek 追问统计分析过程的细节？"
+  },
+  {
+    "objectID": "L9.html#小结从工具到能力构建ai辅助统计思维",
+    "href": "L9.html#小结从工具到能力构建ai辅助统计思维",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "✅ 9.1 小结：从工具到能力，构建AI辅助统计思维",
+    "text": "✅ 9.1 小结：从工具到能力，构建AI辅助统计思维\n\n统计学习不只是掌握方法，更是形成解决问题的思维方式。\nDeepSeek 不只是工具，更可以成为统计学习与科研写作的智能伙伴。\n借助 AI，可以加速理解、提升效率，但不能替代判断与思考。\n真正有效的统计学习，应注重：\n\n明确目标（用AI解决具体问题）；\n精准提问（提升与AI对话质量）；\n灵活应用（将建议转化为科研能力）。\n\n\n\n📌 从“学习统计”到“用统计解决问题”，AI 是助力，但研究者永远是主导。"
   }
 ]

@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.6.42">
 
   <meta name="author" content="李宗璋">
-  <meta name="dcterms.date" content="2025-04-11">
+  <meta name="dcterms.date" content="2025-04-13">
   <title>DeepSeek临床医学科研训练营 – 模块九 DeepSeek辅助傻瓜式医学统计</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -125,6 +125,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
 <div style="
@@ -178,7 +181,7 @@ z-index: 1000;">
 </div>
 </div>
 
-  <p class="date">2025-04-11</p>
+  <p class="date">2025-04-13</p>
 </section>
 <section id="模块九-deepseek辅助傻瓜式医学统计" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">模块九 DeepSeek辅助傻瓜式医学统计</h2>
@@ -198,16 +201,18 @@ z-index: 1000;">
 <li>9.1.3 从统计学习者到提问专家：如何与DeepSeek高效对话？</li>
 </ul>
 </section>
-<section id="让deepseek成为统计学习与科研的伙伴" class="slide level2">
-<h2>9.1.1 让DeepSeek成为统计学习与科研的伙伴</h2>
+<section class="slide level2">
+
+<h3 id="让deepseek成为统计学习与科研的伙伴">9.1.1 让DeepSeek成为统计学习与科研的伙伴</h3>
 <ul>
 <li><p>不知道该用什么统计方法？</p></li>
 <li><p>困扰于看不懂统计结果或输出解释？</p></li>
 <li><p>为写论文中的统计部分而发愁？</p></li>
 </ul>
 </section>
-<section id="deepseek如何助力统计学习" class="slide level2">
-<h2>9.1.2 DeepSeek如何助力统计学习？</h2>
+<section class="slide level2">
+
+<h3 id="deepseek如何助力统计学习">9.1.2 DeepSeek如何助力统计学习？</h3>
 <ul>
 <li>重构统计学习方式
 <ul>
@@ -217,8 +222,9 @@ z-index: 1000;">
 </ul></li>
 </ul>
 </section>
-<section id="deepseek如何助力统计学习-1" class="slide level2">
-<h2>9.1.2 DeepSeek如何助力统计学习？</h2>
+<section class="slide level2">
+
+<h3 id="deepseek如何助力统计学习-1">9.1.2 DeepSeek如何助力统计学习？</h3>
 <ul>
 <li>统计学习的重心
 <ul>
@@ -233,8 +239,9 @@ z-index: 1000;">
 </ul></li>
 </ul>
 </section>
-<section id="从统计学习者到提问专家如何与-deepseek-高效对话" class="slide level2">
-<h2>9.1.3 从统计学习者到提问专家：如何与 DeepSeek 高效对话？</h2>
+<section class="slide level2">
+
+<h3 id="从统计学习者到提问专家如何与-deepseek-高效对话">9.1.3 从统计学习者到提问专家：如何与 DeepSeek 高效对话？</h3>
 <ul>
 <li>DeepSeek可以回答”如何做”？</li>
 <li>选择方法, 解释结果, 润色语言</li>
@@ -254,8 +261,9 @@ z-index: 1000;">
 </ul></li>
 </ul>
 </section>
-<section id="举例" class="slide level2">
-<h2>🔍 举例</h2>
+<section class="slide level2">
+
+<h3 id="举例">🔍 举例</h3>
 <blockquote>
 <p><strong>新药组患者平均在服药后4.2小时出现咳嗽明显缓解，对照组为5.3小时，差异为1.1小时，P = 0.002。</strong></p>
 </blockquote>
@@ -275,7 +283,7 @@ z-index: 1000;">
 </section>
 <section class="slide level2">
 
-<h3 id="低质量提问的特点">① 低质量提问的特点</h3>
+<h3 id="低质量提问的特点">9.1.3 ① 低质量提问的特点</h3>
 <ul>
 <li><strong>太笼统</strong>：“我这组数据怎么分析？”——没有说明变量、设计、目的；</li>
 <li><strong>背景缺失</strong>：没有交代样本量、变量类型、研究目标等关键信息；</li>
@@ -285,7 +293,7 @@ z-index: 1000;">
 </section>
 <section class="slide level2">
 
-<h3 id="如何构建高质量提问">② 如何构建高质量提问？</h3>
+<h3 id="如何构建高质量提问">9.1.3 ② 如何构建高质量提问？</h3>
 <ul>
 <li><strong>研究背景</strong>：研究设计、样本量、数据来源；</li>
 <li><strong>变量信息</strong>：自变量和因变量的类型、分布特征；</li>
@@ -294,7 +302,7 @@ z-index: 1000;">
 </section>
 <section class="slide level2">
 
-<h3 id="示例如何提出更高质量的问题">🔍示例：如何提出更高质量的问题</h3>
+<h3 id="示例如何提出更高质量的问题">🔍示例：如何提出更高质量的问题？</h3>
 <p><strong>明确表达研究背景、变量类型和分析目的</strong></p>
 <ul>
 <li><p><strong>原问法</strong>：我做了线性回归，能不能帮我看看有没有问题？<br>
@@ -309,7 +317,7 @@ z-index: 1000;">
 </section>
 <section class="slide level2">
 
-<p>💡 <strong>技巧提示</strong>：优化提问时尽量包括：</p>
+<h3 id="技巧提示优化提问时尽量包括">💡 <strong>技巧提示</strong>：优化提问时尽量包括：</h3>
 <ul>
 <li><p><strong>研究设计类型</strong>（如独立、配对）</p></li>
 <li><p><strong>变量类型与分布特征</strong>（如定量、定性、是否正态）</p></li>
@@ -317,9 +325,8 @@ z-index: 1000;">
 <li><p><strong>希望 AI 协助的具体环节</strong>（方法选择、结果解读、语言撰写等）</p></li>
 </ul>
 </section>
-<section class="slide level2">
-
-<h3 id="小结从工具到能力构建ai辅助统计思维">✅ 小结：从工具到能力，构建AI辅助统计思维</h3>
+<section id="小结从工具到能力构建ai辅助统计思维" class="slide level2">
+<h2>✅ 9.1 小结：从工具到能力，构建AI辅助统计思维</h2>
 <ul>
 <li>统计学习不只是掌握方法，更是形成解决问题的思维方式。</li>
 <li>DeepSeek 不只是工具，更可以成为统计学习与科研写作的智能伙伴。</li>
@@ -338,14 +345,239 @@ z-index: 1000;">
 <section id="deepseek辅助医学统计方法的整体梳理" class="slide level2">
 <h2>9.2 DeepSeek辅助医学统计方法的整体梳理</h2>
 <ul>
-<li>如何用DeepSeek辅助统计学习？
+<li><p>9.2.1 医学统计方法全景图</p></li>
+<li><p>9.2.2 DeepSeek如何辅助方法选择？</p></li>
+<li><p>9.2.3 DeepSeek如何辅助结果解读？</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="医学统计方法全景图">9.2.1 医学统计方法全景图</h3>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/map.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="deepseek如何辅助选择统计方法">9.2.2 DeepSeek如何辅助选择统计方法？</h3>
+<p><strong>统计方法选择的依据</strong></p>
 <ul>
-<li>让非专业人员也能轻松用统计</li>
-<li>中文问答自然交互</li>
-<li>理解临床背景</li>
-<li>自动推荐方法</li>
+<li>研究目的: 描述/推断/比较/预测/因果推断</li>
+<li>变量的类型和关系
+<ul>
+<li>定性变量：无序/有序分类</li>
+<li>定量变量：离散/连续</li>
+<li>自变量/因变量变量</li>
 </ul></li>
-<li>统计方法的选择与应用</li>
+<li>变量分布
+<ul>
+<li>正态分布</li>
+<li>非正态分布</li>
+<li>二项分布</li>
+<li>泊松分布</li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="如何向deepseek描述你的研究问题">9.2.2 ① 如何向DeepSeek描述你的研究问题？</h3>
+<h3 id="将临床问题转换为统计问题">🎯 将“临床问题”转换为“统计问题”</h3>
+<p>临床问题：自然语言描述</p>
+<ul>
+<li>“本研究希望比较两种降压药对高血压患者收缩压的影响”</li>
+<li>“我们想知道新药是否能降低术后感染的风险”</li>
+</ul>
+<h3 id="提问句式">🎯 提问句式</h3>
+<ol type="1">
+<li><strong>研究目的</strong>：描述 / 推断/ 比较 / 预测 / 因果推断</li>
+<li><strong>研究对象</strong>：样本单位（如患者、标本等）</li>
+<li><strong>自变量</strong>：变量类型：（如两组、三组、分层等）</li>
+<li><strong>因变量</strong>：变量类型： 是否连续 / 分类 / 计数</li>
+<li><strong>特殊说明</strong>：如样本量、分布形态、是否配对等</li>
+</ol>
+</section>
+<section class="slide level2">
+
+<h3 id="示例1">🔍 示例1</h3>
+<blockquote>
+<p>比较两种降压药对收缩压的影响，自变量为“药物类型”（两组），因变量为“收缩压”（连续变量），各组分别有40人，需要使用什么统计分析方法？</p>
+</blockquote>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.2_eg1.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="deepseek关于选择统计方法的流程图">9.2.2 ② DeepSeek关于选择统计方法的流程图</h3>
+<div class="cell" data-reveal="true" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TD
+    A[数据检查] --&gt; B{正态性?}
+    B --&gt;|是| C[方差齐性检验]
+    B --&gt;|否| D[Mann-Whitney U检验]
+    C --&gt;|齐| E[标准t检验]
+    C --&gt;|不齐| F[Welch t检验]
+    E &amp; F --&gt; G[报告Cohen's d]
+    D --&gt; H[报告中位数差]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="示例2">🔍 示例2</h3>
+<h3 id="临床问题">🩺 临床问题</h3>
+<blockquote>
+<p>探讨年龄、性别、住院天数、治疗方案是否与患者出院时的功能恢复水平有关。功能恢复按医生评估分为三级：<strong>良好 / 一般 / 差</strong>。</p>
+</blockquote>
+<h3 id="提问句式-1">🎯 提问句式</h3>
+<ol type="1">
+<li><strong>研究目的</strong>：预测 + 推断<br>
+</li>
+<li><strong>研究对象</strong>：康复科出院患者<br>
+</li>
+<li><strong>因变量</strong>：功能恢复水平（有序分类变量，共3级）<br>
+</li>
+<li><strong>自变量</strong>：年龄（连续）、性别（二分类）、住院天数（连续）、治疗方案（无序分类，共3种）<br>
+</li>
+<li><strong>特殊说明</strong>：
+<ul>
+<li>样本量约 150 人<br>
+</li>
+<li>因变量具有自然顺序（良好 &gt; 一般 &gt; 差），但间距不等<br>
+</li>
+<li>希望控制混杂并分析预测因子</li>
+</ul></li>
+</ol>
+</section>
+<section class="slide level2">
+
+<h3 id="示例2-1">🔍 示例2:</h3>
+<blockquote>
+<p>“我有150名康复患者的数据，记录了年龄、性别、住院天数和治疗方案（3种，无序分类）。我想分析这些因素对出院时功能恢复水平（良好/一般/差）的影响。因变量是有序分类变量。需要用什么统计分析方法？”</p>
+</blockquote>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.2_eg2.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="示例2-要求用spss实现有序logistic回归分析">🔍 示例2: 要求用SPSS实现有序logistic回归分析</h3>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.2_eg2_spss.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="deepseek辅助深入学习统计方法">9.2.3 deepseek辅助深入学习统计方法</h3>
+<ul>
+<li><p>追问统计分析过程细节</p></li>
+<li><p>追问检验方法的细节</p></li>
+<li><p>追问图形工具的细节</p></li>
+<li><p>追问如何评估模型拟合效果</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="如何向deepseek-追问统计分析过程的细节">9.2.3 ① 如何向DeepSeek 追问统计分析过程的细节？</h3>
+<h3 id="提问句式-2">🎯 提问句式</h3>
+<p>针对<strong>方法/模型，还可以做哪些检验或者绘制可视化图形，来深入探讨</strong>方法/模型的估计结果，提供有价值的研究发现？请参考学术文献的主流做法，回答上述问题。</p>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.2_eg2_method_detail.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="如何向deepseek-追问统计分析过程的细节-1">9.2.3 ② 如何向DeepSeek 追问统计分析过程的细节？</h3>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.2_eg2_method_spss.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="向deepseek追问检验方法的细节">9.2.3 ③ 向deepseek追问检验方法的细节？</h3>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.2_eg2_method_detail2.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="向deepseek追问图形工具的细节">9.2.3 ③ 向deepseek追问图形工具的细节？</h3>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.2_eg2_method_detail3.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="向deepseek追问如何评估模型拟合效果">9.2.3 ④ 向deepseek追问如何评估模型拟合效果？</h3>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.2_eg2_method_detail4.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="deepseek如何辅助结果解读">9.2.3 ⑤DeepSeek如何辅助结果解读？</h3>
+<ul>
+<li>统计学意义：系数含义</li>
+<li>临床学意义：临床相关性、实际应用价值</li>
+</ul>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.2_eg2_result1.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="deepseek如何辅助结果解读-1">9.2.3 ⑤DeepSeek如何辅助结果解读？</h3>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.2_eg2_result2.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="deepseek如何辅助结果解读-2">9.2.3 ⑤DeepSeek如何辅助结果解读？</h3>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.2_eg2_result3.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="deepseek提供优化统计分析的建议">9.2.3 ⑥ DeepSeek提供优化统计分析的建议</h3>
+<h3 id="提问句式-3">🎯 提问句式</h3>
+<p>我的样本数据、选用的变量、估计方法是否存在局限性？请提出改进建议。</p>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.2_eg2_result4.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="小结">✅ 9.2 小结</h3>
+<ul>
+<li><p>将“临床问题”转换为“统计问题”</p>
+<ul>
+<li>提问句式：研究目的 + 研究对象 + 自变量 + 因变量 + 特殊说明</li>
+</ul></li>
+<li><p>追问统计分析工程的细节</p>
+<ul>
+<li>方法/模型，还可以做哪些检验或者绘制可视化图形？请参考学术文献的主流做法，回答上述问题。</li>
+</ul></li>
+<li><p>追问检验方法的细节</p></li>
+<li><p>追问图形工具的细节</p></li>
+<li><p>追问如何评估模型拟合效果</p></li>
+<li><p>关于输出结果的解读</p>
+<ul>
+<li>统计学意义：P值、效应量、置信区间</li>
+<li>临床学意义：临床相关性、实际应用价值</li>
+</ul></li>
+<li><p>优化统计分析的建议</p>
+<ul>
+<li>样本数据、选用的变量、估计方法是否存在局限性？请提出改进建议</li>
+</ul></li>
 </ul>
 </section>
 <section id="医学统计常见困扰" class="slide level2">
@@ -508,110 +740,6 @@ z-index: 1000;">
 <section id="致谢" class="slide level2">
 <h2>致谢</h2>
 <p>感谢大家的参与！欢迎提问交流！</p>
-</section>
-<section id="deepseek辅助统计理念快速入门-1" class="slide level2">
-<h2>9.1 DeepSeek辅助统计理念快速入门</h2>
-<div>
-<ul>
-<li class="fragment">1.1.1 收集数据</li>
-<li class="fragment">1.1.2 整理数据</li>
-<li class="fragment">1.1.3 分析数据</li>
-<li class="fragment">1.1.4 提炼结论</li>
-</ul>
-</div>
-</section>
-<section id="收集数据" class="slide level2">
-<h2>1.1.1 收集数据</h2>
-<div>
-<ul>
-<li>宏观数据</li>
-<li>微观数据</li>
-<li>截面数据</li>
-<li>时间序列</li>
-<li>定性数据</li>
-<li>定量数据</li>
-</ul>
-</div>
-</section>
-<section id="整理数据" class="slide level2">
-<h2>1.1.2 整理数据</h2>
-<ul>
-<li><p>将数据转化为结构化表格的形式，其中每一行代表一个观测单元，每一列代表一个变量。</p></li>
-<li><p>检查数据的完整性和合理性，包括查看是否存在重复个案、缺失值、异常值，以及将文本转化为数值代码。</p></li>
-<li><p>详见：1.4 Excel中的数据清洗工具</p></li>
-</ul>
-</section>
-<section id="分析数据" class="slide level2">
-<h2>1.1.3 分析数据</h2>
-<ul>
-<li><p>描述统计：利用表格和图形对数据进行呈现，计算均值、中位数、标准差等描述性统计量。</p></li>
-<li><p>推断统计：根据样本数据对总体特征进行推断。</p></li>
-</ul>
-</section>
-<section id="分析数据-1" class="slide level2">
-<h2>1.1.3 分析数据</h2>
-<div>
-<ul>
-<li><p>第2章-第5章：描述统计方法</p></li>
-<li><p>第6章至第8章：推断统计准备知识</p></li>
-<li><p>第9章至第15章：推断统计方法</p></li>
-<li><p>第16章：时间序列</p></li>
-</ul>
-</div>
-</section>
-<section id="全书框架" class="slide level2 scrollable">
-<h2>全书框架</h2>
-</section>
-<section id="提炼结论" class="slide level2">
-<h2>1.1.4 提炼结论</h2>
-<ul>
-<li>运用统计分析方法得到的发现进行梳理和归纳，从中提炼出有价值的结论。</li>
-</ul>
-</section>
-<section id="deepseek辅助医学统计方法的整体梳理-2" class="slide level2">
-<h2>9.2 DeepSeek辅助医学统计方法的整体梳理</h2>
-<ul>
-<li><p>1.2.1 图表工具</p></li>
-<li><p>1.2.2 函数工具</p></li>
-<li><p>1.2.3 数据分析工具</p></li>
-</ul>
-</section>
-<section id="excel常用技巧" class="slide level2">
-<h2>1.3 Excel常用技巧</h2>
-<ul>
-<li><p>1.3.1 Excel的快捷键</p></li>
-<li><p>1.3.2 单元格填充柄</p></li>
-</ul>
-</section>
-<section id="excel的快捷键" class="slide level2">
-<h2>1.3.1 Excel的快捷键</h2>
-<ul>
-<li><p>基础操作</p></li>
-<li><p>光标定位</p></li>
-<li><p>范围选择</p></li>
-<li><p>编辑计算</p></li>
-</ul>
-</section>
-<section id="单元格填充柄" class="slide level2">
-<h2>1.3.2 单元格填充柄</h2>
-</section>
-<section id="excel的数据清洗工具" class="slide level2 scrollable">
-<h2>1.4 Excel的数据清洗工具</h2>
-<ul>
-<li>1.4.1 剔除重复个案</li>
-<li>1.4.2 剔除有缺失值的个案</li>
-<li>1.4.3 英文字母的大小写转换</li>
-<li>1.4.4 删除多余的空格</li>
-<li>1.4.5 观测值的批量替换</li>
-<li>1.4.6 文本分列</li>
-<li>1.4.7 以文本形式存储的数字的转化</li>
-<li>1.4.8 快速填充</li>
-<li>1.4.9 异常值和缺失值的识别</li>
-<li>1.4.10 数值代码转换为文本</li>
-</ul>
-</section>
-<section id="本章总结" class="slide level2 scrollable">
-<h2>本章总结</h2>
 
 
 </section>
