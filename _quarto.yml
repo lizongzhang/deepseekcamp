@@ -3,11 +3,16 @@ project:
   output-dir: docs
   
 website:
+<<<<<<< HEAD
   title: "DeepSeek临床医学科研训练营"
+=======
+  title: "MY WEB SITE"
+>>>>>>> 7488518fea88692e9773f322c4f7ce2e81c9db4f
   navbar:
     left:
       - href: index.qmd
         text: Home
+<<<<<<< HEAD
     tools:
       - icon: envelope
         href: lizongzhang9@qq.com
@@ -19,5 +24,22 @@ format:
     theme: cerulean
     fontcolor: "#044875"
     toc: true
+=======
+      - projects.qmd
+    tools:
+      - icon: twitter
+        href: https://twitter.com/
+      - icon: github
+        href: https://github.com/YOURUSERNAME/YOURREPO
+  page-footer:
+    right: "Built with [Quarto](https://quarto.org/)"
+    left: "&copy; Copyright 2023, YOUR NAME"
+
+format:
+  html:
+    theme: cerulean
+    toc: true
+
+>>>>>>> 7488518fea88692e9773f322c4f7ce2e81c9db4f
 editor: source
 

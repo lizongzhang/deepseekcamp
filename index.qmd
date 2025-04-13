@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 title: ""
 about:
   template: solana
@@ -40,3 +41,23 @@ page-layout: full
 </div>
 
 
+=======
+title: "About Cat"
+about:
+  id: me
+  template: broadside
+  image: img/profile.png
+---
+
+:::{#me}
+
+## Goals
+
+## Education
+
+## Experience
+
+:::
+
+Thanks for checking out my web site!
+>>>>>>> 7488518fea88692e9773f322c4f7ce2e81c9db4f
