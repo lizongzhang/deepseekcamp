@@ -1,14 +1,9 @@
 ---
-<<<<<<< HEAD
 title: ""
 about:
   template: solana
   id: ppc
-page-layout: full
 ---
-
-<div style="text-align: left; max-width: 900px; margin-left: 1.5em;">
-
 
 <div style="font-size: 22px; line-height: 2;">
   <p>
@@ -27,37 +22,16 @@ page-layout: full
   <p style="font-size: 22px; color: #044875;">
     欢迎关注微信公众号“顶刊研习社”、“医课佳”！
   </p>
-  <img src="img/wechat.png" alt="微信二维码" width="400">
+  <img src="img/wechat.png" alt="微信二维码" width="200">
 </div>
 
 ---
 
 <div style="text-align: center; margin-top: 1.5em;">
   <a href="https://space.bilibili.com/590872906" target="_blank">
-    <img src="img/bili_up.jpg" alt="B站头像" width="100">
+    <img src="img/bili_up.jpg" alt="B站头像" width="60">
   </a>
 </div>
 
-</div>
 
 
-=======
-title: "About Cat"
-about:
-  id: me
-  template: broadside
-  image: img/profile.png
----
-
-:::{#me}
-
-## Goals
-
-## Education
-
-## Experience
-
-:::
-
-Thanks for checking out my web site!
->>>>>>> 7488518fea88692e9773f322c4f7ce2e81c9db4f
