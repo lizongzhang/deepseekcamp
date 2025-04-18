@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.6.42">
 
   <meta name="author" content="李宗璋">
-  <meta name="dcterms.date" content="2025-04-16">
+  <meta name="dcterms.date" content="2025-04-18">
   <title>DeepSeek临床医学科研训练营 – 模块九 DeepSeek辅助傻瓜式医学统计</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -178,7 +178,7 @@ z-index: 1000;">
 </div>
 </div>
 
-  <p class="date">2025-04-16</p>
+  <p class="date">2025-04-18</p>
 </section>
 <section id="模块九-deepseek辅助傻瓜式医学统计" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">模块九 DeepSeek辅助傻瓜式医学统计</h2>
@@ -266,7 +266,7 @@ z-index: 1000;">
 <ul>
 <li>统计学习的重心
 <ul>
-<li>基础知识(本科教育已涵盖)
+<li>基础知识(本科课程已涵盖)
 <ul>
 <li>变量类型: 定性(无序/有序), 定量(离散/连续)</li>
 <li>参数估计: 置信水平，置信区间</li>
@@ -556,56 +556,49 @@ z-index: 1000;">
 <h3 id="临床研究数据结构">临床研究数据结构</h3>
 <table class="caption-top">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
+<col style="width: 17%">
+<col style="width: 37%">
+<col style="width: 14%">
+<col style="width: 30%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>数据结构类型</th>
+<th>数据结构</th>
 <th>时间特征</th>
 <th>是否追踪</th>
 <th>应用场景示例</th>
-<th>常用统计分析方法</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>横断面研究</td>
-<td>单时间点<br>（无前后）</td>
-<td>❌ 无追踪</td>
+<td>单时间点</td>
+<td>无追踪</td>
 <td>现况调查、患病率估计</td>
-<td>t检验、卡方检验、单因素/多因素Logistic回归</td>
 </tr>
 <tr class="even">
 <td>病例对照研究</td>
-<td>单时间点<br>（回顾性暴露）</td>
-<td>❌ 不追踪</td>
+<td>单时间点（回顾性暴露）</td>
+<td>无追踪</td>
 <td>病因探索、罕见病研究</td>
-<td>OR估计、Logistic回归、条件Logistic回归</td>
 </tr>
 <tr class="odd">
-<td>随机对照试验（RCT）</td>
-<td>多时间点<br>（前瞻性：基线+随访）</td>
-<td>✅ 干预后追踪</td>
+<td>随机对照试验</td>
+<td>多时间点（前瞻性：基线+随访）</td>
+<td>干预后追踪</td>
 <td>药物疗效、治疗比较</td>
-<td>t检验、ANCOVA、Cox回归（生存结局）</td>
 </tr>
 <tr class="even">
 <td>队列研究</td>
-<td>多时间点<br>（前瞻或回顾）</td>
-<td>✅ 长期追踪</td>
+<td>多时间点（前瞻或回顾）</td>
+<td>长期追踪</td>
 <td>危险因素评估、预后分析</td>
-<td>Kaplan-Meier、Cox回归、Poisson回归</td>
 </tr>
 <tr class="odd">
 <td>登记研究</td>
-<td>多时间点<br>（通常前瞻）</td>
-<td>✅ 长期追踪</td>
+<td>多时间点（通常前瞻）</td>
+<td>长期追踪</td>
 <td>真实世界数据、药物监测</td>
-<td>描述统计、倾向评分匹配/加权、Logistic/Cox回归</td>
 </tr>
 </tbody>
 </table>
@@ -988,25 +981,47 @@ z-index: 1000;">
 <li><p>核对数据与描述是否匹配。</p></li>
 </ul>
 </section>
+<section id="多轮对话优化" class="slide level2">
+<h2>9.3.3 多轮对话优化</h2>
+<ul>
+<li><p>明确传达研究设计类型、变量信息、分析目的、统计方法或输出；</p></li>
+<li><p>指定写作风格（如参考 BMJ / JAMA / 中华医学杂志）；</p></li>
+<li><p>要求其输出语言风格客观、精炼、符合医学统计写作规范。</p></li>
+</ul>
+</section>
 <section class="slide level2">
 
-<h3 id="提问句式-①-数据部分">🎯 提问句式 ① 数据部分</h3>
-<p>请根据以下临床研究背景和变量信息，撰写一段用于医学论文“资料”部分的文字（中文），介绍研究对象及主要变量特征，风格参考《中华医学杂志》，语言简洁、专业：</p>
+<h3 id="提问句式-①-数据部分中文">🎯 提问句式 ① “数据”部分——中文</h3>
+<p>我正在撰写一篇临床医学学术论文，请帮我撰写“数据”部分的相关段落，内容包括：</p>
 <ul>
-<li>研究对象总人数：___</li>
-<li>分组依据（如生存/死亡）：<strong><em>组（n=</em></strong>） vs <strong><em>组（n=</em></strong>）</li>
-<li>收集变量：性别、年龄、是否合并糖尿病（dm）、收缩压（SBP）、GCS评分、脑卒中类型（stroke_type）</li>
-<li>数据采集时间与方式：入院时记录，数据完整无缺失</li>
+<li>研究设计类型（如回顾性队列、前瞻性观察、随机对照试验等）；</li>
+<li>研究对象的来源与纳入/排除标准（如某医院的连续入院患者、特定病种等）；</li>
+<li>数据收集方式（如电子病历、问卷、电话随访等）；</li>
+<li>变量名称、定义及其分类方式；</li>
+<li>所有变量测量的时间点和方式；</li>
+<li>样本量及缺失数据说明（如是否进行插补、排除等处理）；</li>
 </ul>
-<p>请描述研究样本的基本特征。</p>
+<p>写作要求： ① 语言参考《中华医学杂志》的风格，规范、简练、客观； ② 仅陈述事实，不进行解释或讨论； ③ 所用术语请医学统计规范</p>
+<p>我使用了以下变量(列出变量名称及含义)：</p>
+</section>
+<section class="slide level2">
+
+<h3 id="提问句式-①-数据部分英文">🎯 提问句式 ① “数据”部分——英文</h3>
+<p>Please help me write a paragraph suitable for the <strong>Data / Participants / Methods</strong> section of a clinical research article, describing the study data source, variables, and data collection methods.</p>
+<p>Include the following elements: - Study design: e.g., retrospective cohort / prospective observational - Study population: inclusion and exclusion criteria, hospital or registry - Data collection method: electronic medical records, interviews, etc. - Variable definitions: e.g., age (continuous), sex (binary: male/female), GCS score (continuous) - Timing of data collection: baseline at admission / discharge - Handling of missing data: deletion / imputation / no missingness</p>
+<p>Writing style: - Use concise, objective scientific language; - Follow the tone and structure of journals like BMJ or JAMA; - Avoid interpretation—just state the facts; - End with a reference to Table 1 if available (e.g., “Baseline characteristics are shown in Table 1”).</p>
+</section>
+<section class="slide level2">
+
+<h3 id="示例9-优化数据的写作">🔍 示例9 优化“数据”的写作</h3>
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
 <p><img data-src="img/9.3optimize1.png"></p>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="提问句式-②-方法部分">🎯 提问句式 ② 方法部分</h3>
-<p>请根据以下分析方法信息，撰写一段用于医学论文“方法”部分的文字，描述统计分析策略与建模流程，风格参考《中华医学杂志》写法：</p>
+<h3 id="提问句式-②-方法部分中文">🎯 提问句式 ② “方法”部分——中文</h3>
+<p>以下是我研究的一部分统计分析输出结果（如表格/图/文字），请根据医学期刊论文的写作规范（参考《中华医学杂志》），帮助我撰写“统计分析”部分的方法描述文字，要求语言规范、专业、精炼，适用于论文的“方法”章节。</p>
 <ul>
 <li>研究类型：回顾性观察研究</li>
 <li>因变量：住院期间状态（生存=1，死亡=2）</li>
@@ -1015,37 +1030,109 @@ z-index: 1000;">
 <li>模型评价方法：Omnibus检验、Hosmer-Lemeshow检验、分类预测准确率</li>
 </ul>
 <p>请撰写论文中关于“方法”的段落。</p>
+</section>
+<section class="slide level2">
+
+<h3 id="提问句式-②-方法部分英文">🎯 提问句式 ② “方法”部分——英文</h3>
+<blockquote>
+<p>Please help me write the “Statistical Analysis” section of a clinical research article in the style of <strong>BMJ or JAMA</strong>, using the data and analysis described below. Use professional, concise, and scientifically accurate language appropriate for peer-reviewed medical journals.</p>
+</blockquote>
+<p>Please include:</p>
+<ul>
+<li>Study design and population</li>
+<li>Variables involved (e.g., age, sex, disease type)</li>
+<li>Statistical methods used (e.g., t-test, Cox regression, Kaplan-Meier)</li>
+<li>Software used (e.g., SPSS, R, Stata)</li>
+<li>Significance level (e.g., two-sided P &lt; 0.05)</li>
+</ul>
+<p>Ensure that the paragraph is suitable for inclusion in the <strong>Methods section</strong> of a medical journal manuscript.</p>
+</section>
+<section class="slide level2">
+
+<h3 id="示例9-优化方法的写作">🔍 示例9 优化“方法”的写作</h3>
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
 <p><img data-src="img/9.3optimize2.png"></p>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="提问句式-③-结果部分">🎯 提问句式 ③ 结果部分</h3>
-<p>请根据以下变量与分析结果撰写一段“结果”部分，用于医学研究论文。要求客观陈述，不加入解释。风格参考《中华医学杂志》，语言规范，术语准确：</p>
-<ul>
-<li>显著变量：GCS（P&lt;0.001, OR=0.720），卒中类型（P=0.004, OR=3.548）</li>
-<li>非显著变量：性别（P=0.324），年龄（P=0.116），糖尿病（P=0.278），SBP（P=0.887）</li>
-<li>模型拟合指标：Omnibus检验 P&lt;0.001，Hosmer-Lemeshow P=0.497，预测准确率 83.6%</li>
-<li>回归表已另附</li>
-</ul>
-<p>请撰写论文中关于“结果”的段落，并表格形式汇报估计参数。</p>
+<h3 id="提问句式-③-结果部分中文">🎯 提问句式 ③ “结果”部分——中文</h3>
+<p>我正在撰写一篇医学研究论文的“结果”部分，以下是我的结果输出，请根据统计结果写出“结果”段落。</p>
+<p>写作要求如下：</p>
+<p>① 请使用医学期刊论文中“结果”部分常见的表达方式</p>
+<p>② 语言客观、精炼，不夹叙述、解释与讨论</p>
+<p>③ 表达风格参考《中华医学杂志》</p>
+<p>④ 正确描述显著性（如 P 值、置信区间、效应量）</p>
+<p>⑤ 分层/亚组分析时，请明确指出组间比较与趋势</p>
+<p>⑥ 所用术语请尽量规范，遵循医学统计表达惯例。</p>
+</section>
+<section class="slide level2">
+
+<h3 id="提问句式-③-结果部分英文">🎯 提问句式 ③ “结果”部分——英文</h3>
+<p>Please write a professional, objective, and concise paragraph suitable for the <strong>Results</strong> section of a clinical research article, based on the logistic regression results provided below.</p>
+<p>Writing style: follow the conventions used in <strong>BMJ</strong> or <strong>JAMA</strong>.</p>
+<p>Language: formal, scientific, and free from subjective interpretation or discussion.</p>
+<p>Content: include odds ratios (OR), confidence intervals (CI), and P-values.<br>
+Structure: begin with the overall result, then report on significant predictors, and conclude with non-significant findings if relevant.</p>
+<p>Do not explain or interpret the results—just report them accurately.</p>
+</section>
+<section class="slide level2">
+
+<h3 id="示例9-优化结果的写作">🔍 示例9 优化“结果”的写作</h3>
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
 <p><img data-src="img/9.3optimize3.png"></p>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="提问句式-④-讨论部分">🎯 提问句式 ④ 讨论部分</h3>
-<p>请根据以下统计结果撰写一段用于医学论文“讨论”部分的文字。要求结合显著变量的临床意义与现实应用价值进行解释。风格参考《中华医学杂志》，表达应简洁、专业，避免统计术语堆砌：</p>
+<h3 id="提问句式-④-讨论部分中文">🎯 提问句式 ④ “讨论”部分–中文</h3>
+<p>请帮助我撰写一段用于医学期刊论文“讨论”部分的文字。以下是我的研究背景与统计分析结果：</p>
 <ul>
-<li>GCS评分显著相关（P&lt;0.001, OR&lt;1）：评分越低，死亡风险越高，提示神经功能障碍为死亡预测因子；</li>
-<li>出血性卒中为危险因素（P=0.004, OR≈3.5）：死亡风险明显高于缺血性卒中；</li>
-<li>其他变量在多因素中不再显著；</li>
+<li>研究设计：前瞻性队列研究 / 回顾性研究 / 随机对照试验（请根据实际写）</li>
+<li>主要结局：</li>
+<li>统计方法：</li>
+<li>显著变量：</li>
+<li>非显著变量：</li>
 </ul>
-<p>请围绕上述信息展开医学解释，结合可能机制或临床实践启示撰写讨论段落。</p>
+<p>请根据上述信息，撰写“讨论”部分的段落，重点说明：</p>
+<p>① 显著变量的<strong>临床意义与现实应用价值</strong> ② 如何解释统计结果中显著与不显著变量的差异 ③ 如何将研究结果与既往研究进行对比 ④ 语言风格参考《中华医学杂志》，表达规范、客观 ⑤ 避免重复“结果”部分的内容，请聚焦<strong>解释与意义</strong>，不是数据罗列</p>
+<p>请以论文讨论部分的标准结构撰写该段内容。</p>
+</section>
+<section class="slide level2">
+
+<h3 id="提问句式-④-讨论部分英文">🎯 提问句式 ④ “讨论”部分–英文</h3>
+<p>Please help me write a professional, well-structured paragraph suitable for the <strong>Discussion</strong> section of a clinical research article, based on the following logistic regression results:</p>
+<ul>
+<li>Study design:</li>
+<li>Primary outcome:</li>
+<li>Significant predictors:</li>
+<li>Non-significant variables:</li>
+</ul>
+<p>Writing requirements: 1. Explain the <strong>clinical relevance and implications</strong> of statistically significant predictors; 2. Discuss potential reasons for non-significant findings; 3. Compare with findings from previous studies (if applicable); 4. Use objective and concise scientific language, modeled after BMJ or JAMA; 5. Focus on <strong>interpretation and contextualization</strong>, not repetition of numeric results.</p>
+</section>
+<section class="slide level2">
+
+<h3 id="示例9-优化讨论的写作">🔍 示例9 优化“讨论”的写作</h3>
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
 <p><img data-src="img/9.3optimize4.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="技巧基于范文驱动-ai-的写作进阶">💡 技巧：基于范文，驱动 AI 的写作进阶</h3>
+<ul>
+<li><p>选取一篇范文，发送给DeepSeek，要求DeepSeek归纳其值得借鉴之处</p></li>
+<li><p>要求DeepSeek参照“亮点”对你的段落进行润色与改写</p></li>
+</ul>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.3learn1.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="技巧deepseek进入学习改进模式">💡 技巧：DeepSeek进入“学习–改进”模式</h3>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/9.3learn2.png"></p>
 </div>
 </section>
 <section class="slide level2">
@@ -1070,17 +1157,37 @@ z-index: 1000;">
 </section>
 <section class="slide level2">
 
-<h3 id="问小白">💡 问小白</h3>
+<h3 id="问小白已接入deepseek-v3">💡 问小白：已接入DeepSeek V3</h3>
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
 <p><img data-src="img/9.4pic2.png"></p>
 </div>
 </section>
 <section class="slide level2">
 
-<h3 id="问小白-生成网页">💡 问小白: 生成网页</h3>
+<h3 id="问小白-生成网页研报">💡 问小白: 生成网页/研报</h3>
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
 <p><img data-src="img/9.4pic3.png"></p>
 </div>
+</section>
+<section id="小结-deepseek辅助医学统计写作" class="slide level2">
+<h2>✅ 9.3 小结 DeepSeek辅助医学统计写作</h2>
+<ul>
+<li><p>建立自己的提示词库</p>
+<ul>
+<li><p>方法提示词：适用条件/数据结构/样本容量/估计结果解释/需要做的检验/可视化工具</p></li>
+<li><p>写作提示词：数据/方法/结果/讨论</p></li>
+</ul></li>
+<li><p>建立自己的范文库</p>
+<ul>
+<li>高水平期刊的同类研究的范文的数据/方法/结果/讨论的写法</li>
+</ul></li>
+<li><p>不要忙于统计分析，而疏于写作</p>
+<ul>
+<li><p><strong>边分析边写作</strong>：每完成一部分统计分析，就立即转化为文字，避免遗忘。</p></li>
+<li><p><strong>初稿不求完美</strong>：先写出雏形，然后借助AI逐步润色。</p></li>
+</ul></li>
+</ul>
+<p>💡 统计写作不是“最后一步”，而是每一步统计分析的<strong>记录、反馈与构建</strong>。</p>
 </section>
 <section id="统计再也不怕" class="slide level2">
 <h2>9.4 统计再也不怕</h2>

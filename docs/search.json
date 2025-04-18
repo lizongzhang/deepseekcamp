@@ -207,7 +207,7 @@
     "href": "L9.html#deepseek如何助力统计学习-1",
     "title": "模块九DeepSeek辅助傻瓜式医学统计",
     "section": "9.1.2 DeepSeek如何助力统计学习？",
-    "text": "9.1.2 DeepSeek如何助力统计学习？\n\n统计学习的重心\n\n基础知识(本科教育已涵盖)\n\n变量类型: 定性(无序/有序), 定量(离散/连续)\n参数估计: 置信水平，置信区间\n假设检验: 双/单侧检验，显著性水平, p值, 临界值, 检验统计量\n\n方法选择\n结果解读"
+    "text": "9.1.2 DeepSeek如何助力统计学习？\n\n统计学习的重心\n\n基础知识(本科课程已涵盖)\n\n变量类型: 定性(无序/有序), 定量(离散/连续)\n参数估计: 置信水平，置信区间\n假设检验: 双/单侧检验，显著性水平, p值, 临界值, 检验统计量\n\n方法选择\n结果解读"
   },
   {
     "objectID": "L9.html#国际权威建议",
@@ -334,5 +334,47 @@
     "title": "模块九DeepSeek辅助傻瓜式医学统计",
     "section": "模块九 总结",
     "text": "模块九 总结\n\n✅ DeepSeek如何助力统计方法的学习？\n✅ DeepSeek如何助力统计方法的运用？\n✅ DeepSeek如何助力写出医学论文中的统计方法/结果/讨论段落的写作？"
+  },
+  {
+    "objectID": "L9.html#小结-deepseek辅助医学统计写作",
+    "href": "L9.html#小结-deepseek辅助医学统计写作",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "✅ 9.3 小结 DeepSeek辅助医学统计写作",
+    "text": "✅ 9.3 小结 DeepSeek辅助医学统计写作\n\n建立自己的提示词库\n\n方法提示词：适用条件/数据结构/样本容量/估计结果解释/需要做的检验/可视化工具\n写作提示词：数据/方法/结果/讨论\n\n建立自己的范文库\n\n高水平期刊的同类研究的范文的数据/方法/结果/讨论的写法\n\n不要忙于统计分析，而疏于写作\n\n边分析边写作：每完成一部分统计分析，就立即转化为文字，避免遗忘。\n初稿不求完美：先写出雏形，然后借助AI逐步润色。\n\n\n💡 统计写作不是“最后一步”，而是每一步统计分析的记录、反馈与构建。"
+  },
+  {
+    "objectID": "L9.html#多轮对话优化",
+    "href": "L9.html#多轮对话优化",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "9.3.3 多轮对话优化",
+    "text": "9.3.3 多轮对话优化\n\n明确传达研究设计类型、变量信息、分析目的、统计方法或输出；\n指定写作风格（如参考 BMJ / JAMA / 中华医学杂志）；\n要求其输出语言风格客观、精炼、符合医学统计写作规范。"
+  },
+  {
+    "objectID": "L9.html#提问句式-②-方法部分-1",
+    "href": "L9.html#提问句式-②-方法部分-1",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "📝 提问句式 ② 方法部分",
+    "text": "📝 提问句式 ② 方法部分\n\n（如表格/图/文字），请根据医学期刊论文的写作规范（参考《中华医学杂志》），帮助我撰写“统计分析”部分的方法描述文字，要求语言规范、专业、精炼，适用于论文的“方法”章节。\n\n请包括以下要素： - 研究设计（如随机对照试验、回顾性队列） - 所用统计方法（如t检验、Cox回归、Logistic回归） - 假设检验、显著性标准（如双侧检验，P &lt; 0.05） - 使用软件（如 SPSS/R/SAS）"
+  },
+  {
+    "objectID": "L9.html#提问句式-②-方法部分-2",
+    "href": "L9.html#提问句式-②-方法部分-2",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "📝 提问句式 ② 方法部分",
+    "text": "📝 提问句式 ② 方法部分\n\nPlease help me write the “Statistical Analysis” section of a clinical research article in the style of BMJ or JAMA, using the data and analysis described below. Use professional, concise, and scientifically accurate language appropriate for peer-reviewed medical journals.\n\nPlease include:\n\nStudy design and population\nVariables involved (e.g., age, sex, disease type)\nStatistical methods used (e.g., t-test, Cox regression, Kaplan-Meier)\nSoftware used (e.g., SPSS, R, Stata)\nSignificance level (e.g., two-sided P &lt; 0.05)\n\nEnsure that the paragraph is suitable for inclusion in the Methods section of a medical journal manuscript."
+  },
+  {
+    "objectID": "L9.html#提问句式-②-方法部分中文",
+    "href": "L9.html#提问句式-②-方法部分中文",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "📝 提问句式 ② 方法部分——中文",
+    "text": "📝 提问句式 ② 方法部分——中文\n\n以下是我研究的一部分统计分析输出结果（如表格/图/文字），请根据医学期刊论文的写作规范（参考《中华医学杂志》），帮助我撰写“统计分析”部分的方法描述文字，要求语言规范、专业、精炼，适用于论文的“方法”章节。\n\n请包括以下要素：\n\n研究设计（如随机对照试验、回顾性队列）\n所用统计方法（如t检验、Cox回归、Logistic回归）\n假设检验、显著性标准（如双侧检验，P &lt; 0.05）\n使用软件（如 SPSS/R/SAS）\n\n🔍 示例\n\n以下是我使用 SPSS 进行二元 logistic 回归分析的输出，主要分析影响住院死亡（1=死亡, 0=生存）的相关因素，包括年龄、性别、GCS评分、SBP、糖尿病史和中风类型。请写出统计方法部分，语言规范，参考《中华医学杂志》的写作风格。"
+  },
+  {
+    "objectID": "L9.html#提问句式-②-方法部分英文",
+    "href": "L9.html#提问句式-②-方法部分英文",
+    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "section": "📝 提问句式 ② 方法部分——英文",
+    "text": "📝 提问句式 ② 方法部分——英文\n\nPlease help me write the “Statistical Analysis” section of a clinical research article in the style of BMJ or JAMA, using the data and analysis described below. Use professional, concise, and scientifically accurate language appropriate for peer-reviewed medical journals.\n\nPlease include:\n\nStudy design and population\nVariables involved (e.g., age, sex, disease type)\nStatistical methods used (e.g., t-test, Cox regression, Kaplan-Meier)\nSoftware used (e.g., SPSS, R, Stata)\nSignificance level (e.g., two-sided P &lt; 0.05)\n\nEnsure that the paragraph is suitable for inclusion in the Methods section of a medical journal manuscript."
   }
 ]
