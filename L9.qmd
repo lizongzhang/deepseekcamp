@@ -12,8 +12,7 @@ format:
     preview-links: auto
     css: styles.css
     footer: |
-      <https://lizongzhang.github.io/deepseekcamp><br> 
-      © 2025 顶刊研习社 
+      <https://lizongzhang.github.io/deepseekcamp><br>© 2025 顶刊研习社 
     include-before-body: 
       - header.html
       - fonts.html

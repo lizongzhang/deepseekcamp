@@ -1,0 +1,16 @@
+---
+title: "测试页面"
+format:
+  revealjs:               # ⬅️ 顶层 format 的一级子项（缩进 2 空格）
+    theme: simple       # ⬅️ revealjs 的子项（缩进 4 空格）
+    css: styles.css
+    footer: |
+      <https://lizongzhang.github.io><br>
+      © 2025 顶刊研习社
+    include-before-body:  # ⬅️ 必须与 css/footer 对齐（也是 4 空格）
+      - header.html
+      - fonts.html
+---
+
+hello
+
