@@ -270,11 +270,11 @@ showtext_auto()
 
 ### Github Copilot
 
--   创建账号：https://github.com/features/copilot
+-   创建账号：https://github.com/features/copilot(https://github.com/features/copilot){target="_blank"}
 
     -   试用期1个月，10\$/month
 
--   学生/教师可申请加入 GitHub Education：https://github.com/education
+-   学生/教师可申请加入 GitHub Education：https://github.com/education(https://github.com/education){target="_blank"}
 
     -   可免费使用Github Copilot
 
@@ -743,21 +743,13 @@ head(diabetes)
 
 > AI助力，让R语言学习变得简单、高效、充满乐趣！
 
+
+>  AI助力, 形成编程思维, 独立实践才是用好R的关键。
+
+
+> 高质量的提问，源自对R的深度使用。
+\
 \
 
->  AI助力，深入思考和独立实践才是掌握R的关键。
-
-\
-
-> 将AI的智慧内化，形成自己的编程思维。
-
-
-\
-
-> 高质量提问是建立在你对R的掌握程度之上的。
-
-\
-
-\
 
 感谢大家的参与！欢迎提问交流！
