@@ -26,7 +26,7 @@ summary(model1)
 mpg %>% lm(cty ~ displ + cyl, data = .) %>% summary()
 
 # bad
-model1<-lm(cty~displ+cyl,data=mpg)
+model1<-lm(cty ~ displ+cyl,data=mpg)
 summary(model1)
 mpg%>%lm(cty~displ+cyl,data=.)%>%summary()
 

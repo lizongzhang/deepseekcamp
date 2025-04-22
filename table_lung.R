@@ -53,3 +53,6 @@ cox_model %>%
   tbl_regression(exponentiate = TRUE) %>%  # 输出 HR (风险比)
   as_gt() %>%  # 转换为 gt 表格
   gt::gtsave("cox_model_results.html")  # 保存为 HTML 文件
+
+# 
+x <- rnorm(100)

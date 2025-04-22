@@ -1,4 +1,4 @@
-# Ctrl + Shift + C 添加注释
+# Ctrl + Shift + C 代码转化为注释
 
 # Ctrl + Shift + R 添加小节
 
@@ -46,6 +46,10 @@ library(report)
 library(rstatix)
 
 
+
+
+
+
 # 单个样本 ------------------------------------------------------------------
 
 
@@ -77,10 +81,10 @@ t.test(trial$age,
 
 # report::report()解读输出结果 ------------------------------------------------------------------
 
-t.test(trial$age, 
-       mu = 45, 
-       alternative = "two.sided", 
-       conf.level = 0.95) %>% 
+t.test(trial$age,
+       mu = 45,
+       alternative = "two.sided",
+       conf.level = 0.95) %>%
   report()
 
 
