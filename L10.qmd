@@ -26,6 +26,30 @@ editor:
     wrap: 72
 ---
 
+```{r} 
+#| echo: FALSE 
+#| fig-width: 15
+#| fig-height: 8
+
+# 设置字体为 'STKaiti'
+par(family  = 'STKaiti')
+
+# 安装并加载 showtext 包
+#install.packages("showtext")
+library(showtext)
+
+# 启用 showtext 自动支持
+showtext_auto()
+
+par(family  = 'STKaiti')
+#install.packages("showtext")
+library(showtext)
+showtext_auto()
+
+```
+
+
+
 ## 模块十 DeepSeek辅助R编程与数据分析 {auto-animate="true"}
 
 -   10.1 DeepSeek辅助R语言快速入门
@@ -34,13 +58,11 @@ editor:
 
 -   10.3 R语言接入AI
 
--   10.4 DeepSeek辅助R语言编写代码
+-   10.4 DeepSeek辅助R语言统计分析
 
--   10.5 DeepSeek辅助R语言完成医学数据分析
+-   10.5 DeepSeek辅助R语言学习
 
--   10.6 DeepSeek辅助R语言实操与讨论
-
-------------------------------------------------------------------------
+-----
 
 ## 10.1 DeepSeek辅助R语言快速入门
 
@@ -50,7 +72,7 @@ editor:
 
 -   10.1.3 DeepSeek教不会什么？这几点你得自己掌握
 
-------------------------------------------------------------------------
+-------
 
 ## 10.1.1 为什么用DeepSeek学R
 
@@ -321,9 +343,9 @@ editor:
 
 -   给代码添加注释
 
-------
+-------
 
-## 10.4 DeepSeek辅助R语言编写代码
+## 10.4 DeepSeek辅助R语言统计分析
 
 10.4.1 先看看R能做什么？
 
@@ -333,259 +355,412 @@ editor:
 
 10.4.4 建模
 
-------
+10.4.5 表格化输出
+
+10.4.6 如何让DeepSeek分析自己的数据？
+
+-----
+
+### 利用R自带数据集
+
+> 🧭 R中有哪些数据集可以做XX分析？
+
+查看R中的自带的数据集
+
+R中什么包可以做生存分析？这个包中可以做生存分析的数据有哪些？
+
+``` r
+# 查看R自带数据
+data()
+
+# 查看指定的包中的数据
+data(package = "ggplot2")
+```
+
+-------
+
+
 
 ## 10.4.1 先看看R能做什么？
 
 > 🧭 利用iris数据，可以开展哪些统计分析，写出R代码。
 
-
 ::: {style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;"}
 ![](img/10.3signin.png)
 :::
 
----
+------------------------------------------------------------------------
 
 ## 10.4.2 绘图
 
-[Prompt]:按[定性变量]分组，绘制各变量的箱线图。
+> 🧭 绘图提示语
 
-[Prompt]: 用[ggplot2]绘制按[定性变量]分组后，各变量的箱线图。
+-   用R绘制iris的箱线图
 
-[Prompt]:让上述4个图形显示在同一窗口。
+-   按species定性变量分组，绘制petal.length的箱线图。
 
-[Prompt]: 用[ggpubr]绘制分组箱线图。
+-   按species分组，绘制箱线图，用ggplot2绘制。
+
+-   让上述多个个图形显示在同一窗口。
+
+-   绘制具有学术期刊风格的分组箱线图。
+
+-   用ggpubr绘制分组箱线图。
 
 
 ---
 
+###  绘制具有学术期刊风格的分组箱线图
+
+```{r}
+#| echo: TRUE
+#| fig-width: 15
+#| fig-height: 8
+#| collapse: TRUE
+
+# 加载所需的包
+library(ggpubr)
+
+# 使用内置的 iris 数据集
+data(iris)
+
+# 绘制分组箱线图
+ggboxplot(iris, x = "Species", y = "Sepal.Length", 
+          color = "Species", palette = "jco", 
+          add = "jitter", 
+          main = "Iris 数据集的分组箱线图",
+          xlab = "物种", ylab = "萼片长度")
+
+```
+
+
+---
+
+###   如何在图中标注两个总体均值的差异是否显著
+
+```{r}
+#| echo: TRUE
+#| fig-width: 15
+#| fig-height: 8
+#| collapse: TRUE
+
+# 加载所需的包
+library(ggpubr)
+
+# 使用内置的 iris 数据集
+data(iris)
+
+# 绘制分组箱线图
+ggboxplot(iris, x = "Species", y = "Sepal.Length", 
+          color = "Species", palette = "jco", 
+          add = "jitter", 
+          main = "Iris 数据集的分组箱线图",
+          xlab = "物种", ylab = "萼片长度") +
+  stat_compare_means(comparisons = list(c("setosa", "versicolor"), c("versicolor", "virginica")),
+                       method = "t.test", 
+                     label = "p.format",
+                     hide.ns = TRUE) 
+```
+
+
+---------
 
 ::: {style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;"}
 ![](img/10.3signin.png)
 :::
 
----
+-----
 
 ## 10.4.3 检验
 
-[Prompt]: 按[定性变量]分组，检验三个组别的[定量变量]的均值是否相等？。
 
-[Prompt]:该数据满足ANOVA检验的适用条件吗？
+检验：目的/数据容量/数据类型和分布/原假设和备择假设/局限/结论
 
-[Prompt]: 每个组别内的[定量变量]观测值是否近似正态分布？
+> 🧭 检验提示语
 
-[Prompt]:R 中进行方差齐性检验的函数是什么？
+-   按species分组，检验不同组别的petal.length的均值是否相等？。
 
-[Prompt]: bartlett.test()函数的结果如何看？
+-   该数据满足ANOVA检验的适用条件吗？
 
-[Prompt]:数据集不同组别之间的[定量变量]观测值方差不等，还能用ANOVA检验吗？
+-   每个组别内的petal.length观测值是否近似正态分布？
 
-[Prompt]: Welch’s ANOVA的命令是什么？
+-   如何进行方差齐性检验是什么？
+
+-   bartlett.test()函数的结果如何看？
+
+-   若不同组别之间的petal.length观测值方差不等，还能用ANOVA检验吗？
+
+-   Welch’s ANOVA的命令是什么？
+
+------
+
+## 10.4.4 建模
+
+模型：目的/数据容量/数据类型和分布/估计结果的解释/可视化工具/评估
+
+> 🧭 提示语
+
+
+描述判别函数适合的研究场景？
+
+利用iris数据，开展判别分析，写出R代码，并添加注释。 
+
+判别分析中需要做哪些检验？
+
+判别分析中有哪些可视化工具？
+
+如何评估判别分析模型？
+
+有哪些前沿方法可以替代判别分析？R中有哪些包可以实现这类前沿方法？
+
+------
+
+## 10.4.5 表格化输出
+
+> 🧭 提示语
+
+
+利用iris数据，如何输出学术论文中的表1（描述性统计表）？
+
+利用mpg数据，如何输出学术论文中的回归估计结果的表格？
+
+利用survival包中的数据lung，输出学术论文中的基线特征表？
+
+利用survival包中的数据lung，用表格报告Cox比例风险模型的估计结果？
+
+
+用别的更简便的方法吗？用专门的包实现表格化输出吗？
+
+------
+
+## 10.4.6 如何让DeepSeek分析自己的数据？
+
+- 生成模拟数据
+
+> 🧭 提示语
+
+> 我有实验组和对照组各10人的服药后7天，14天和21天的血压数据，可以开展什么统计分析，来判断药物是否有效？
+
+> 请在R中生成上述模拟数据，及实现Repeated Measures ANOVA的代码？
+
+- 数据扰动
+
+  - 给定量变量增加一个5%的随机扰动
+  
+  - =C2 * (1 + (RAND() - 0.5) * 0.1) (Excel公式)
+
+- 随机抽样 70%
+
+  - =rand() 然后排序(Excel公式)
+
 
 ----
+-----
 
-
-
-::: {style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;"}
-![](img/10.3signin.png)
-:::
-
----
-
-## 10.4. 4 建模
-
-[Prompt]:基于iris数据，建立Species的判别函数？
-[Prompt]:判别函数的输出结果如何解读？
-[Prompt]:如何利用判别函数判定一朵鸢尾花属于哪个组别？
-
-
-
-
-::: {style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;"}
-![](img/10.3signin.png)
-:::
-
----
-
-### 提问技巧
+### 🎯 提问句式
 
 如何在R中实现XX计算/检验？请用R自带的数据集举例说明。
 用XX包在R中实现XX计算/检验？请用R自带的数据集举例说明。
-指定包的名称，例如ggplot2
-XX计算/检验/方法的适用条件是什么？
+指定包的名称，例如ggplot2 XX计算/检验/方法的适用条件是什么？
 在R中如何考察XX方法/检验的适用条件是否满足？
-如何解读XX函数的输出结果的含义？
-R中的XX分析有哪些可视化工具？
+如何解读XX函数的输出结果的含义？ R中的XX分析有哪些可视化工具？
+
+-----
+
+## 10.5 DeepSeek辅助R语言学习
+
+10.5.1 理解消化代码
+
+10.5.2 代码细节的追问
+
+10.5.3 解决报错
+
+10.5.4 简化/美化代码
+
+10.5.5 整理代码/重复利用
+
+-----
+
+## 10.5.1 理解消化代码
+
+逐行阅读代码并理解每个函数
+
+逐步运行代码, 理解输出结果
+
+理解复杂符号，如管道符, [[]], 占位符.等
+
+测试不同的参数
 
 ---
 
+## 10.5.2 代码细节的追问
+
+让DeepSeek辅助理解函数帮助
+
+赋值符<- 和 等于= 的区别？
+
+%>% 和 ｜> 的区别？
+
+---
+
+## 10.5.3 解决报错
+
+错误的类型：如“未找到函数”、“对象未定义”、“无法读取文件”等
+
+确保对象存在
+
+查看环境
+
+加载相关包
+
+函数输入的参数的类型错误
+
+发送代码及报错
+
+---
+
+## 10.5.4 简化/美化代码
+
+使用适当的命名
+
+避免使用不必要的中间变量
+
+避免重复代码
+
+格式化和缩进
+
+把代码发送给AI，简化我的代码？
+
+---
+
+## 学习实例
+
+iris数据的支持向量机分析
+
+Support Vector Machine，简称SVM
+
+机器学习算法，用于分类和回归问题，找到一个最优的超平面或决策边界，将不同类别的样本点分隔开。
+
+糖尿病类型的支持向量机分析
+
+---
+
+> 基于iris数据，开展支持向量机分析，给出R代码?
+
+> 创建 500 个糖尿病患者的模拟数据，包括患者的年齢，BMI，血糖，胰岛素，腰围，锻炼，饮食，饮酒和吸烟习惯，糖尿病类型（1型，2型和隐性糖尿病型）。
 
 
-DeepSeek: “提示词”(Prompt)驱动的大语言模型(LLM)。
+---
 
-核心优势：与临床研究者进行“可解释的统计对话”。
+### 基于iris的SVM分析
 
-| 🚀 能力维度   | DeepSeek 如何支持统计协作            |
-|---------------|--------------------------------------|
-| 🧩 认知支持   | 说明统计术语、检验条件、适用场景     |
-| 📊 结果解读   | 解读OR/HR、Logistic或Cox模型         |
-| 📈 图表表达   | 解读KM曲线、森林图等                 |
-| ✍️ 文本重构   | 输出期刊风格的统计分析段落           |
-| 💬 多轮互动   | Prompt→输出→提问→优化写作            |
-| 📦 Prompt积累 | 构建个人“统计分析提示词库”，复用迁移 |
 
-------------------------------------------------------------------------
+```{r}
+#| echo: TRUE
+#| results: "hide"
+#| fig-width: 15
+#| fig-height: 8
+#| collapse: TRUE
 
-## 9.1.2 DeepSeek如何助力统计学习？
+# 1. 加载必要包
+library(e1071)    # SVM实现
+library(caret)    # 数据分割与模型评估
+library(ggplot2)  # 可视化
 
--   重构统计学习方式
+# 2. 数据准备
+data(iris)        # 加载数据集
+set.seed(123)     # 设定随机种子
 
-    -   互动式
+# 查看数据结构
+head(iris)
+summary(iris)
 
-    -   针对性
+# 划分训练集（70%）和测试集（30%）
+train_index <- createDataPartition(iris$Species, p = 0.7, list = FALSE)
+train_data <- iris[train_index, ]
+test_data <- iris[-train_index, ]
 
-    -   不要撒网式学习
+# 3. 训练SVM模型
+svm_linear <- svm(Species ~ ., 
+                  data = train_data, 
+                  kernel = "linear", 
+                  cost = 1)
+summary(svm_linear)
 
-------------------------------------------------------------------------
+# 4. 模型评估
+pred_linear <- predict(svm_linear, test_data)
 
-## 9.1.2 DeepSeek如何助力统计学习？
+# 计算准确率
+cat("线性核准确率:\n")
+print(confusionMatrix(pred_linear, test_data$Species))
 
--   统计学习的重心
-    -   基础知识(本科课程已涵盖)
-        -   变量类型: 定性(无序/有序), 定量(离散/连续)
-        -   参数估计: 置信水平，置信区间
-        -   假设检验: 双/单侧检验，显著性水平, p值, 临界值, 检验统计量
-    -   方法选择
-    -   结果解读
+```
 
-------------------------------------------------------------------------
+---
 
-### 🔍 示例1 什么是置信水平？
+### 生成模拟数据
 
-> 提问句式：用最通俗的方式解释什么是置信水平？
+```{r}
+#| echo: TRUE
+#| results: "hide"
+#| fig-width: 15
+#| fig-height: 8
+#| collapse: TRUE
 
-::: {style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;"}
-![](img/9.1eg1.png)
-:::
+# 设置随机种子
+set.seed(42)
 
-------------------------------------------------------------------------
+# 创建 500 个糖尿病患者的模拟数据
+n <- 500
 
-### 🔍 示例1 什么是置信水平？
+# 模拟数据：使用 replicate 简化生成过程
+diabetes <- data.frame(
+  age = sample(18:80, n, replace = TRUE),
+  bmi = runif(n, 18.5, 40),
+  glucose = runif(n, 70, 200),
+  insulin = runif(n, 5, 30),
+  waist = runif(n, 70, 130),
+  exercise = sample(c(0, 1), n, replace = TRUE),
+  diet = sample(c(0, 1), n, replace = TRUE),
+  alcohol = sample(c(0, 1), n, replace = TRUE),
+  smoking = sample(c(0, 1), n, replace = TRUE),
+  type = sample(c("Type1", "Type2", "LADA"), n, replace = TRUE)
+)
 
-> 提问句式：请用数值模拟上述解释过程，让我理解起来更加容易。给出数值模拟的R代码，并加以解释。
+# 查看数据的前几行
+head(diabetes)
 
-::: {style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;"}
-![](img/9.1eg2.png)
-:::
+```
 
-------------------------------------------------------------------------
 
-### 🔍 示例1 什么是置信水平？
 
-> 提问句式：请用数值模拟上述解释过程，让我理解起来更加容易。给出数值模拟的R代码，并加以解释。
 
-::: {style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;"}
-![](img/9.1eg3.png)
-:::
 
-------------------------------------------------------------------------
-
-### 🔍 示例2 se和sd的区别
-
-> 提问句式：standar error 和 standard deviation
-> 有什么区别？请用最通俗的方式解释。
-
-::: {style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;"}
-![](img/9.1eg4.png)
-:::
-
-------------------------------------------------------------------------
-
-### 🔍 示例2 se和sd的区别
-
-> 提问句式：standar error 和 standard deviation
-> 有什么区别？请用最通俗的方式解释。
-
-::: {style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;"}
-![](img/9.1eg5.png)
-:::
-
-------------------------------------------------------------------------
-
-### 📘 权威期刊建议
-
-::: {.callout-note title="推荐做法"}
-《Nature》、《Cell》、《JAMA》、《NEJM》 等权威医学与生物期刊明确建议：
-
-> 柱状图或点图的误差线应使用 **标准误差（SE）** 或
-> **置信区间（CI）**，而非 **标准差（SD）**，以避免误导读者。
-:::
-
-### 📚 参考文献
-
-Cumming G, Fidler F, Vaux DL. (2007). [Error bars in experimental
-biology](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2064100/). The
-Journal of Cell Biology, 177(1):7–11.
-
-> 该文指出：**SD
-> 描述数据变异性，而非估计均值的可信度**，因此在展示组间比较时使用 SE 或
-> CI 更有解释力。
-
-------------------------------------------------------------------------
-
-## 9.1.2 重构统计学习方式：从被动学习到主动建构
-
-\
-
-### 💡 不再是“学完了才能用”，而是“在用中学习，在问中学”
-
-\
-
-### 📕️ 传统模式：教科书主导，学生被动接受
-
--   教材编什么，读者学什么\
--   顺着教材目录走，忽视了**统计思维**的培养、“统计写作”能力的训练
-
-### 🚀 DeepSeek模式：需求驱动，Prompt引导学习
-
--   先有问题，后找方法\
--   不再强调公式/计算/软件操作，而是**围绕科研任务主动构建统计能力**
-
-> 📌
-> **统计学习的未来，不是依靠更全面系统的教材，而是善于利用AI工具的引导。**
-
-------------------------------------------------------------------------
-
-### 练习作业
-
--   上传你论文中的一张表格(如Table 1 或
-    回归模型估计表格)，请DeepSeek写作对应的统计分析段落。 \|
-
--   将你过去最头疼的统计部分（如生存分析、PSM段落）写成Prompt试试看 \|
-
-------------------------------------------------------------------------
+---
 
 ## 模块十 总结
 
--   ✅ DeepSeek如何助力统计方法的学习？
+-   ✅ DeepSeek如何助力R语言统计分析？
 
--   ✅ DeepSeek如何助力统计方法的运用？
+-   ✅ DeepSeek如何助力R语言学习？
 
--   ✅ DeepSeek如何助力写出医学论文中的统计方法/结果/讨论段落的写作？
+-   ✅ AI如何接入RStudio？
+
+-   ✅ A小技巧
 
 ------------------------------------------------------------------------
 
 ## 致谢
 
-> 医生不必精通统计，但值得拥有一位懂统计、会表达的AI助手。
+> AI助力，让R语言学习变得简单、高效、充满乐趣！
 
 \
 
-> DeepSeek不是统计学家，却总能说出你心中那句“有理有据”。
+>  AI助力，但深入思考和独立实践才是掌握R的关键。
 
 \
 
-> 把统计分析交给AI，把思考留给科学。
+> 将AI的智慧内化，形成自己的编程思维。
 
 \
 \
