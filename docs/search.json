@@ -387,7 +387,7 @@
   {
     "objectID": "L10.html#deepseek辅助r语言快速入门",
     "href": "L10.html#deepseek辅助r语言快速入门",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "10.1 DeepSeek辅助R语言快速入门",
     "text": "10.1 DeepSeek辅助R语言快速入门\n\n10.1.1 为什么用DeepSeek学R？\n10.1.2 人人都能用R了！一个简单的示例\n10.1.3 DeepSeek教不会什么？这几点你得自己掌握"
   },
@@ -408,21 +408,21 @@
   {
     "objectID": "L10.html#deepseek如何助力统计学习",
     "href": "L10.html#deepseek如何助力统计学习",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "9.1.2 DeepSeek如何助力统计学习？",
     "text": "9.1.2 DeepSeek如何助力统计学习？\n\n重构统计学习方式\n\n互动式\n针对性\n不要撒网式学习"
   },
   {
     "objectID": "L10.html#deepseek如何助力统计学习-1",
     "href": "L10.html#deepseek如何助力统计学习-1",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "9.1.2 DeepSeek如何助力统计学习？",
     "text": "9.1.2 DeepSeek如何助力统计学习？\n\n统计学习的重心\n\n基础知识(本科课程已涵盖)\n\n变量类型: 定性(无序/有序), 定量(离散/连续)\n参数估计: 置信水平，置信区间\n假设检验: 双/单侧检验，显著性水平, p值, 临界值, 检验统计量\n\n方法选择\n结果解读"
   },
   {
     "objectID": "L10.html#重构统计学习方式从被动学习到主动建构",
     "href": "L10.html#重构统计学习方式从被动学习到主动建构",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "9.1.2 重构统计学习方式：从被动学习到主动建构",
     "text": "9.1.2 重构统计学习方式：从被动学习到主动建构\n\n\n💡 不再是“学完了才能用”，而是“在用中学习，在问中学”\n\n\n📕️ 传统模式：教科书主导，学生被动接受\n\n教材编什么，读者学什么\n\n顺着教材目录走，忽视了统计思维的培养、“统计写作”能力的训练\n\n🚀 DeepSeek模式：需求驱动，Prompt引导学习\n\n先有问题，后找方法\n\n不再强调公式/计算/软件操作，而是围绕科研任务主动构建统计能力\n\n\n📌 统计学习的未来，不是依靠更全面系统的教材，而是善于利用AI工具的引导。"
   },
@@ -534,7 +534,7 @@
   {
     "objectID": "L10.html#致谢",
     "href": "L10.html#致谢",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "致谢",
     "text": "致谢\n\n医生不必精通统计，但值得拥有一位懂统计、会表达的AI助手。\n\n\n\n\nDeepSeek不是统计学家，却总能说出你心中那句“有理有据”。\n\n\n\n\n把统计分析交给AI，把思考留给科学。\n\n\n\n\n感谢大家的参与！欢迎提问交流！"
   },
@@ -548,14 +548,14 @@
   {
     "objectID": "L10.html#为什么用deepseek学r",
     "href": "L10.html#为什么用deepseek学r",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "10.1.1 为什么用DeepSeek学R",
     "text": "10.1.1 为什么用DeepSeek学R\n\nR语言是一门强大但语法灵活的编程语言，对初学者有一定门槛。\nDeepSeek具备自然语言理解与代码生成能力：\n\n快速生成代码\n自动解释代码报错或结果输出\n扩展功能包、实现复杂流程\n\n进入“AI辅助编程”时代，将改变R语言的学习方式，从”查命令”转为”提问题”。"
   },
   {
     "objectID": "L10.html#模块十-deepseek辅助r编程与数据分析",
     "href": "L10.html#模块十-deepseek辅助r编程与数据分析",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "模块十 DeepSeek辅助R编程与数据分析",
     "text": "模块十 DeepSeek辅助R编程与数据分析\n\n10.1 DeepSeek辅助R语言快速入门\n10.2 R语言编程特点\n10.3 R语言接入AI\n10.4 DeepSeek辅助R语言编写代码\n10.5 DeepSeek辅助R语言完成医学数据分析\n10.6 DeepSeek辅助R语言实操与讨论"
   },
@@ -569,14 +569,14 @@
   {
     "objectID": "L10.html#人人都能用r了一个简单的示例",
     "href": "L10.html#人人都能用r了一个简单的示例",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "10.1.2 人人都能用R了！一个简单的示例",
     "text": "10.1.2 人人都能用R了！一个简单的示例\n\n🧭 用iris数据，进行方差分析，给出R代码。"
   },
   {
     "objectID": "L10.html#deepseek教不会什么这几点你得自己掌握",
     "href": "L10.html#deepseek教不会什么这几点你得自己掌握",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "10.1.3 DeepSeek教不会什么？这几点你得自己掌握",
     "text": "10.1.3 DeepSeek教不会什么？这几点你得自己掌握\n\nRStudio主界面\n如何高效管理文件？\n\n项目project\n\n在写R代码的实践中积累的“经验”\n\n📚 如何读懂 R 的帮助文档\n📚 如何写一段”漂亮聪明”的代码\n\n简洁/可复制性\n美观/易读(代码注释、分节)\n\n📚 如何用最少的代码完成最多的任务\n\n对数据结构(阵列array/列表list)的理解(job.proj)\n学习高手的代码"
   },
@@ -590,14 +590,14 @@
   {
     "objectID": "L10.html#r语言编程特点优势",
     "href": "L10.html#r语言编程特点优势",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "10.2 R语言编程特点–优势",
     "text": "10.2 R语言编程特点–优势\n\n免费\n可重复性\n扩展包\n\n按任务浏览R包：https://cran.r-project.org/web/views/\nR包下载排行榜: https://www.r-pkg.org/\n\n学术前沿"
   },
   {
     "objectID": "L10.html#r语言编程特点挑战",
     "href": "L10.html#r语言编程特点挑战",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "10.2 R语言编程特点–挑战",
     "text": "10.2 R语言编程特点–挑战\n\n入门难\n代码容易忘\n\n注释/R自带的提示性键入\n\n包太多/难以选择\n\n问DeepSeek：R中能做XXX的有哪些包？比较这些包？哪个更好用？\n🎯 专为 R 用户定制的搜索引擎 https://rseek.org\n📚 快速找到函数用法、R 包文档、代码示例\n✅ 搜索结果只与 R 有关，不混杂其他语言\n\n报错\n\nAI可以帮你分析报错信息"
   },
@@ -611,7 +611,7 @@
   {
     "objectID": "L10.html#r语言接入ai",
     "href": "L10.html#r语言接入ai",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "10.3 R语言接入AI",
     "text": "10.3 R语言接入AI\n\nRStudio插件{gptstudio}\n\n需要设置API key(新用户5美元额度，之后按token计费)/科学上网/响应速度不稳定\n\nGithub Copilot\n\n由GitHub和OpenAI合作开发, 2021年6月发布\n2023年9月接入RStudio\n代码自动完成\n自动生成注释\n适应性学习"
   },
@@ -625,42 +625,42 @@
   {
     "objectID": "L10.html#deepseek辅助r语言编写代码",
     "href": "L10.html#deepseek辅助r语言编写代码",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "10.4 DeepSeek辅助R语言编写代码",
     "text": "10.4 DeepSeek辅助R语言编写代码\n10.4.1 先看看R能做什么？\n10.4.2 绘图\n10.4.3 检验\n10.4.4 建模"
   },
   {
     "objectID": "L10.html#先看看r能做什么",
     "href": "L10.html#先看看r能做什么",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "10.4.1 先看看R能做什么？",
     "text": "10.4.1 先看看R能做什么？\n\n🧭 利用iris数据，可以开展哪些统计分析，写出R代码。"
   },
   {
     "objectID": "L10.html#绘图",
     "href": "L10.html#绘图",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "10.4.2 绘图",
     "text": "10.4.2 绘图"
   },
   {
     "objectID": "L10.html#检验",
     "href": "L10.html#检验",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "10.4.3 检验",
     "text": "10.4.3 检验\nPrompt: 每个组别内的[定量变量]观测值是否近似正态分布？"
   },
   {
     "objectID": "L10.html#建模",
     "href": "L10.html#建模",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "10.4. 4 建模",
     "text": "10.4. 4 建模"
   },
   {
     "objectID": "L10.html#模块十-总结",
     "href": "L10.html#模块十-总结",
-    "title": "模块九DeepSeek辅助傻瓜式医学统计",
+    "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "模块十 总结",
     "text": "模块十 总结\n\n✅ DeepSeek如何助力统计方法的学习？\n✅ DeepSeek如何助力统计方法的运用？\n✅ DeepSeek如何助力写出医学论文中的统计方法/结果/讨论段落的写作？"
   }
