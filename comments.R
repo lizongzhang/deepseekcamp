@@ -1,3 +1,11 @@
+# Ctrl + Shift + C 添加注释
+
+# Ctrl + Shift + R 添加小节
+
+# ## 二级标题
+
+
+#今晚讲义：https://lizongzhang.github.io/deepseekcamp/L10.html
 
 # 需要安装和调用的包
 # install.packages("gt") 

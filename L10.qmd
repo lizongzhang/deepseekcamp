@@ -270,11 +270,11 @@ showtext_auto()
 
 ### Github Copilot
 
--   创建账号：https://github.com/features/copilot(https://github.com/features/copilot){target="_blank"}
+-   创建账号：[https://github.com/features/copilot](https://github.com/features/copilot){target="_blank"}
 
     -   试用期1个月，10\$/month
 
--   学生/教师可申请加入 GitHub Education：https://github.com/education(https://github.com/education){target="_blank"}
+-   学生/教师可申请加入 GitHub Education：[https://github.com/education](https://github.com/education){target="_blank"}
 
     -   可免费使用Github Copilot
 
