@@ -21,9 +21,6 @@ format:
       data-background-size: "80px"        
       data-background-position: "center bottom 120px"  
     plugins: [highlight, zoom, notes]
-editor: 
-  markdown: 
-    wrap: 72
 ---
 
 ```{r} 
@@ -731,9 +728,6 @@ diabetes <- data.frame(
 head(diabetes)
 
 ```
-
-
-
 
 
 ---

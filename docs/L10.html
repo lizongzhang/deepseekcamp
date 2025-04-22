@@ -1,253 +1,252 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-<meta name="author" content="李宗璋">
-<meta name="dcterms.date" content="2025-04-22">
-
-<title>模块十 DeepSeek辅助R编程与数据分析 – DeepSeek临床医学科研训练营</title>
-<style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-</style>
-
-
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<html lang="en"><head>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-49229086609d0b79d46078c832500fff.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.6.42">
 
-
+  <meta name="author" content="李宗璋">
+  <meta name="dcterms.date" content="2025-04-22">
+  <title>DeepSeek临床医学科研训练营 – 模块十 DeepSeek辅助R编程与数据分析</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-0c22b6e252e162282a19289aa8a4686d.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
 </head>
-
-<body class="nav-fixed">
-
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">DeepSeek临床医学科研训练营</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-    <a href="./lizongzhang9@qq.com" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-envelope"></i></a>
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#模块十-deepseek辅助r编程与数据分析" id="toc-模块十-deepseek辅助r编程与数据分析" class="nav-link active" data-scroll-target="#模块十-deepseek辅助r编程与数据分析">模块十 DeepSeek辅助R编程与数据分析</a></li>
-  <li><a href="#deepseek辅助r语言快速入门" id="toc-deepseek辅助r语言快速入门" class="nav-link" data-scroll-target="#deepseek辅助r语言快速入门">10.1 DeepSeek辅助R语言快速入门</a></li>
-  <li><a href="#为什么用deepseek学r" id="toc-为什么用deepseek学r" class="nav-link" data-scroll-target="#为什么用deepseek学r">10.1.1 为什么用DeepSeek学R</a>
-  <ul class="collapse">
-  <li><a href="#传统的r学习方式" id="toc-传统的r学习方式" class="nav-link" data-scroll-target="#传统的r学习方式">10.1.1 传统的R学习方式</a></li>
-  <li><a href="#deepseek为何擅长r语言教学" id="toc-deepseek为何擅长r语言教学" class="nav-link" data-scroll-target="#deepseek为何擅长r语言教学">10.1.1 DeepSeek为何擅长R语言教学？</a></li>
-  <li><a href="#r帮助文档-vs-deepseek的回答" id="toc-r帮助文档-vs-deepseek的回答" class="nav-link" data-scroll-target="#r帮助文档-vs-deepseek的回答">R帮助文档 VS DeepSeek的回答</a></li>
-  </ul></li>
-  <li><a href="#人人都能用r了一个简单的示例" id="toc-人人都能用r了一个简单的示例" class="nav-link" data-scroll-target="#人人都能用r了一个简单的示例">10.1.2 人人都能用R了！一个简单的示例</a></li>
-  <li><a href="#deepseek教不会什么这几点你得自己掌握" id="toc-deepseek教不会什么这几点你得自己掌握" class="nav-link" data-scroll-target="#deepseek教不会什么这几点你得自己掌握">10.1.3 DeepSeek教不会什么？这几点你得自己掌握</a>
-  <ul class="collapse">
-  <li><a href="#漂亮的代码" id="toc-漂亮的代码" class="nav-link" data-scroll-target="#漂亮的代码">漂亮的代码</a></li>
-  </ul></li>
-  <li><a href="#r语言编程特点优势" id="toc-r语言编程特点优势" class="nav-link" data-scroll-target="#r语言编程特点优势">10.2 R语言编程特点–优势</a></li>
-  <li><a href="#r语言编程特点挑战" id="toc-r语言编程特点挑战" class="nav-link" data-scroll-target="#r语言编程特点挑战">10.2 R语言编程特点–挑战</a>
-  <ul class="collapse">
-  <li><a href="#如何选择r包" id="toc-如何选择r包" class="nav-link" data-scroll-target="#如何选择r包">如何选择R包？</a></li>
-  </ul></li>
-  <li><a href="#r语言接入ai" id="toc-r语言接入ai" class="nav-link" data-scroll-target="#r语言接入ai">10.3 R语言接入AI</a>
-  <ul class="collapse">
-  <li><a href="#gptstudio插件" id="toc-gptstudio插件" class="nav-link" data-scroll-target="#gptstudio插件">{gptstudio}插件</a></li>
-  <li><a href="#github-copilot" id="toc-github-copilot" class="nav-link" data-scroll-target="#github-copilot">Github Copilot</a></li>
-  <li><a href="#在rstudio中绑定github-copilot账号" id="toc-在rstudio中绑定github-copilot账号" class="nav-link" data-scroll-target="#在rstudio中绑定github-copilot账号">在RStudio中绑定Github Copilot账号</a></li>
-  <li><a href="#授权" id="toc-授权" class="nav-link" data-scroll-target="#授权">授权</a></li>
-  <li><a href="#验证code-授权成功" id="toc-验证code-授权成功" class="nav-link" data-scroll-target="#验证code-授权成功">验证code, 授权成功</a></li>
-  <li><a href="#如何利用github-copilot写r代码" id="toc-如何利用github-copilot写r代码" class="nav-link" data-scroll-target="#如何利用github-copilot写r代码">如何利用github copilot写R代码？</a></li>
-  </ul></li>
-  <li><a href="#deepseek辅助r语言统计分析" id="toc-deepseek辅助r语言统计分析" class="nav-link" data-scroll-target="#deepseek辅助r语言统计分析">10.4 DeepSeek辅助R语言统计分析</a>
-  <ul class="collapse">
-  <li><a href="#利用r自带数据集" id="toc-利用r自带数据集" class="nav-link" data-scroll-target="#利用r自带数据集">利用R自带数据集</a></li>
-  </ul></li>
-  <li><a href="#先看看r能做什么" id="toc-先看看r能做什么" class="nav-link" data-scroll-target="#先看看r能做什么">10.4.1 先看看R能做什么？</a></li>
-  <li><a href="#绘图" id="toc-绘图" class="nav-link" data-scroll-target="#绘图">10.4.2 绘图</a>
-  <ul class="collapse">
-  <li><a href="#绘制具有学术期刊风格的分组箱线图" id="toc-绘制具有学术期刊风格的分组箱线图" class="nav-link" data-scroll-target="#绘制具有学术期刊风格的分组箱线图">绘制具有学术期刊风格的分组箱线图</a></li>
-  <li><a href="#如何在图中标注两个总体均值的差异是否显著" id="toc-如何在图中标注两个总体均值的差异是否显著" class="nav-link" data-scroll-target="#如何在图中标注两个总体均值的差异是否显著">如何在图中标注两个总体均值的差异是否显著</a></li>
-  </ul></li>
-  <li><a href="#检验" id="toc-检验" class="nav-link" data-scroll-target="#检验">10.4.3 检验</a></li>
-  <li><a href="#建模" id="toc-建模" class="nav-link" data-scroll-target="#建模">10.4.4 建模</a></li>
-  <li><a href="#表格化输出" id="toc-表格化输出" class="nav-link" data-scroll-target="#表格化输出">10.4.5 表格化输出</a></li>
-  <li><a href="#如何让deepseek分析自己的数据" id="toc-如何让deepseek分析自己的数据" class="nav-link" data-scroll-target="#如何让deepseek分析自己的数据">10.4.6 如何让DeepSeek分析自己的数据？</a></li>
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">—-</a>
-  <ul class="collapse">
-  <li><a href="#提问句式" id="toc-提问句式" class="nav-link" data-scroll-target="#提问句式">🎯 提问句式</a></li>
-  </ul></li>
-  <li><a href="#deepseek辅助r语言学习" id="toc-deepseek辅助r语言学习" class="nav-link" data-scroll-target="#deepseek辅助r语言学习">10.5 DeepSeek辅助R语言学习</a></li>
-  <li><a href="#理解消化代码" id="toc-理解消化代码" class="nav-link" data-scroll-target="#理解消化代码">10.5.1 理解消化代码</a></li>
-  <li><a href="#代码细节的追问" id="toc-代码细节的追问" class="nav-link" data-scroll-target="#代码细节的追问">10.5.2 代码细节的追问</a></li>
-  <li><a href="#解决报错" id="toc-解决报错" class="nav-link" data-scroll-target="#解决报错">10.5.3 解决报错</a></li>
-  <li><a href="#简化美化代码" id="toc-简化美化代码" class="nav-link" data-scroll-target="#简化美化代码">10.5.4 简化/美化代码</a></li>
-  <li><a href="#学习实例" id="toc-学习实例" class="nav-link" data-scroll-target="#学习实例">学习实例</a>
-  <ul class="collapse">
-  <li><a href="#基于iris的svm分析" id="toc-基于iris的svm分析" class="nav-link" data-scroll-target="#基于iris的svm分析">基于iris的SVM分析</a></li>
-  <li><a href="#生成模拟数据" id="toc-生成模拟数据" class="nav-link" data-scroll-target="#生成模拟数据">生成模拟数据</a></li>
-  </ul></li>
-  <li><a href="#模块十-总结" id="toc-模块十-总结" class="nav-link" data-scroll-target="#模块十-总结">模块十 总结</a></li>
-  <li><a href="#致谢" id="toc-致谢" class="nav-link" data-scroll-target="#致谢">致谢</a></li>
-  </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="L10.html"><i class="bi bi-file-slides"></i>RevealJS</a></li></ul></div></nav>
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">模块十<br>DeepSeek辅助R编程与数据分析</h1>
+<body class="quarto-light">
+<div style="
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  z-index: 1000;
+">
+  <a href="https://lizongzhang.github.io/deepseekcamp" style="
+       display: inline-block;
+       padding: 10px 20px;  /* 增加内边距，按钮更大 */
+       background-color: #007ACC;
+       color: white;
+       text-decoration: none;
+       border-radius: 8px;  /* 圆角稍微增大 */
+       font-size: 18px;  /* 增加字体大小 */
+       font-family: Arial, sans-serif;
+       box-shadow: 0 4px 8px rgba(0,0,0,0.2);  /* 增大阴影 */
+     ">
+    🏠 Home
+  </a>
 </div>
 
 
 
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>李宗璋 </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 22, 2025</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: sysfonts</code></pre>
+<!-- header.html -->
+<div style="
+position: absolute; 
+top: 20px; 
+right: 20px; 
+z-index: 1000;">
+  <img src="img/top.png" style="
+  width: 100px; 
+  height: auto;" alt="logo
+  ">
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Loading required package: showtextdb</code></pre>
+
+<!-- 加载楷体风格字体 Noto Serif SC（中国镜像） -->
+<link href="https://fonts.googleapis.cn/css2?family=Noto+Serif+SC:wght@500&amp;display=swap" rel="stylesheet">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="img/bili_up.jpg" data-background-position="center bottom 120px" data-background-size="80px" class="quarto-title-block center">
+  <h1 class="title">模块十<br>DeepSeek辅助R编程与数据分析</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+李宗璋 
 </div>
 </div>
-<section id="模块十-deepseek辅助r编程与数据分析" class="level2" data-auto-animate="true">
-<h2 data-auto-animate="true" class="anchored" data-anchor-id="模块十-deepseek辅助r编程与数据分析">模块十 DeepSeek辅助R编程与数据分析</h2>
+</div>
+
+  <p class="date">2025-04-22</p>
+</section>
+<section id="模块十-deepseek辅助r编程与数据分析" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">模块十 DeepSeek辅助R编程与数据分析</h2>
 <ul>
 <li><p>10.1 DeepSeek辅助R语言快速入门</p></li>
 <li><p>10.2 R语言编程特点</p></li>
@@ -255,19 +254,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>10.4 DeepSeek辅助R语言统计分析</p></li>
 <li><p>10.5 DeepSeek辅助R语言学习</p></li>
 </ul>
-<hr>
 </section>
-<section id="deepseek辅助r语言快速入门" class="level2">
-<h2 class="anchored" data-anchor-id="deepseek辅助r语言快速入门">10.1 DeepSeek辅助R语言快速入门</h2>
+<section id="deepseek辅助r语言快速入门" class="slide level2">
+<h2>10.1 DeepSeek辅助R语言快速入门</h2>
 <ul>
 <li><p>10.1.1 为什么用DeepSeek学R？</p></li>
 <li><p>10.1.2 人人都能用R了！一个简单的示例</p></li>
 <li><p>10.1.3 DeepSeek教不会什么？这几点你得自己掌握</p></li>
 </ul>
-<hr>
 </section>
-<section id="为什么用deepseek学r" class="level2">
-<h2 class="anchored" data-anchor-id="为什么用deepseek学r">10.1.1 为什么用DeepSeek学R</h2>
+<section id="为什么用deepseek学r" class="slide level2">
+<h2>10.1.1 为什么用DeepSeek学R</h2>
 <ul>
 <li><p>R语言是一门强大但语法灵活的编程语言，对初学者有一定门槛。</p></li>
 <li><p>DeepSeek具备自然语言理解与代码生成能力：</p>
@@ -278,19 +275,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 <li><p>进入“AI辅助编程”时代，将改变R语言的学习方式，从”查命令”转为”提问题”。</p></li>
 </ul>
-<hr>
-<section id="传统的r学习方式" class="level3">
-<h3 class="anchored" data-anchor-id="传统的r学习方式">10.1.1 传统的R学习方式</h3>
+</section>
+<section class="slide level2">
+
+<h3 id="传统的r学习方式">10.1.1 传统的R学习方式</h3>
 <ul>
 <li><p>Book：Wickham H, Grolemund G. R for data science, R for Data Science (2e) <a href="https://r4ds.hadley.nz/" target="_blank">https://r4ds.hadley.nz/</a></p></li>
 <li><p>Book：Wickham H, ggplot2: Elegant Graphics for Data Analysis (3e) <a href="https://ggplot2-book.org/" target="_blank">https://ggplot2-book.org/</a></p></li>
 <li><p>查看R帮助</p></li>
 <li><p>搜索引擎</p></li>
 </ul>
-<hr>
 </section>
-<section id="deepseek为何擅长r语言教学" class="level3">
-<h3 class="anchored" data-anchor-id="deepseek为何擅长r语言教学">10.1.1 DeepSeek为何擅长R语言教学？</h3>
+<section class="slide level2">
+
+<h3 id="deepseek为何擅长r语言教学">10.1.1 DeepSeek为何擅长R语言教学？</h3>
 <ul>
 <li><p>自然语言驱动，降低编程门槛</p></li>
 <li><p>目标导向学习，突出“做事”而非“记语法”</p></li>
@@ -305,10 +303,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>缺失值处理/t检验/画图/生成文字报告</li>
 </ul></li>
 </ul>
-<hr>
 </section>
-<section id="r帮助文档-vs-deepseek的回答" class="level3">
-<h3 class="anchored" data-anchor-id="r帮助文档-vs-deepseek的回答">R帮助文档 VS DeepSeek的回答</h3>
+<section class="slide level2">
+
+<h3 id="r帮助文档-vs-deepseek的回答">R帮助文档 VS DeepSeek的回答</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div style="max-height: 500px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
@@ -318,23 +316,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div style="max-height: 500px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
 <p><img src="img/10.1.1pic2.png" style="width: 100%;"></p>
 </div>
-</div>
-</div>
-<hr>
+</div></div>
 </section>
-</section>
-<section id="人人都能用r了一个简单的示例" class="level2">
-<h2 class="anchored" data-anchor-id="人人都能用r了一个简单的示例">10.1.2 人人都能用R了！一个简单的示例</h2>
-<blockquote class="blockquote">
+<section id="人人都能用r了一个简单的示例" class="slide level2">
+<h2>10.1.2 人人都能用R了！一个简单的示例</h2>
+<blockquote>
 <p>🧭 用iris数据，进行方差分析，给出R代码。</p>
 </blockquote>
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
-<p><img src="img/10.1.1pic3.png" class="img-fluid"></p>
+<p><img data-src="img/10.1.1pic3.png"></p>
 </div>
-<hr>
 </section>
-<section id="deepseek教不会什么这几点你得自己掌握" class="level2">
-<h2 class="anchored" data-anchor-id="deepseek教不会什么这几点你得自己掌握">10.1.3 DeepSeek教不会什么？这几点你得自己掌握</h2>
+<section id="deepseek教不会什么这几点你得自己掌握" class="slide level2">
+<h2>10.1.3 DeepSeek教不会什么？这几点你得自己掌握</h2>
 <ul>
 <li><p>RStudio主界面</p></li>
 <li><p>如何高效管理文件？</p>
@@ -356,9 +350,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul></li>
 </ul>
-<hr>
-<section id="漂亮的代码" class="level3">
-<h3 class="anchored" data-anchor-id="漂亮的代码">漂亮的代码</h3>
+</section>
+<section class="slide level2">
+
+<h3 id="漂亮的代码">漂亮的代码</h3>
 <ul>
 <li><p>赋值符用&lt;-, 不用=。=只用于函数参数的赋值</p></li>
 <li><p>逗号后面空格，逗号前不空格(与英文句子中逗号的使用一致)</p></li>
@@ -366,11 +361,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>具有高优先级的运算符包括：::、:::、$、@、[、[[、^，不用空格包围</p></li>
 <li><p>一行代码不要太长</p></li>
 </ul>
-<hr>
 </section>
-</section>
-<section id="r语言编程特点优势" class="level2">
-<h2 class="anchored" data-anchor-id="r语言编程特点优势">10.2 R语言编程特点–优势</h2>
+<section id="r语言编程特点优势" class="slide level2">
+<h2>10.2 R语言编程特点–优势</h2>
 <ul>
 <li><p>免费</p></li>
 <li><p>可重复性</p></li>
@@ -381,10 +374,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 <li><p>学术前沿</p></li>
 </ul>
-<hr>
 </section>
-<section id="r语言编程特点挑战" class="level2">
-<h2 class="anchored" data-anchor-id="r语言编程特点挑战">10.2 R语言编程特点–挑战</h2>
+<section id="r语言编程特点挑战" class="slide level2">
+<h2>10.2 R语言编程特点–挑战</h2>
 <ul>
 <li><p>入门难</p></li>
 <li><p>代码容易忘</p>
@@ -403,20 +395,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>AI可以帮你分析报错信息</li>
 </ul></li>
 </ul>
-<hr>
-<section id="如何选择r包" class="level3">
-<h3 class="anchored" data-anchor-id="如何选择r包">如何选择R包？</h3>
-<blockquote class="blockquote">
+</section>
+<section class="slide level2">
+
+<h3 id="如何选择r包">如何选择R包？</h3>
+<blockquote>
 <p>🧭 比较可以实现XXX分析的包，哪个最好？</p>
 </blockquote>
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
-<p><img src="img/10.2pic1.png" class="img-fluid"></p>
+<p><img data-src="img/10.2pic1.png"></p>
 </div>
-<hr>
 </section>
-</section>
-<section id="r语言接入ai" class="level2">
-<h2 class="anchored" data-anchor-id="r语言接入ai">10.3 R语言接入AI</h2>
+<section id="r语言接入ai" class="slide level2">
+<h2>10.3 R语言接入AI</h2>
 <ul>
 <li><p>RStudio插件{gptstudio}</p>
 <ul>
@@ -431,16 +422,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>适应性学习</p></li>
 </ul></li>
 </ul>
-<hr>
-<section id="gptstudio插件" class="level3">
-<h3 class="anchored" data-anchor-id="gptstudio插件">{gptstudio}插件</h3>
-<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
-<p><img src="img/10.3pic1.png" class="img-fluid"></p>
-</div>
-<hr>
 </section>
-<section id="github-copilot" class="level3">
-<h3 class="anchored" data-anchor-id="github-copilot">Github Copilot</h3>
+<section class="slide level2">
+
+<h3 id="gptstudio插件">{gptstudio}插件</h3>
+<div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+<p><img data-src="img/10.3pic1.png"></p>
+</div>
+</section>
+<section class="slide level2">
+
+<h3 id="github-copilot">Github Copilot</h3>
 <ul>
 <li><p>创建账号：https://github.com/features/copilot</p>
 <ul>
@@ -452,20 +444,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><a href="https://docs.github.com/zh/education/explore-the-benefits-of-teaching-and-learning-with-github-education/github-education-for-teachers/apply-to-github-education-as-a-teacher" target="_blank">如何申请?</a></p></li>
 </ul></li>
 </ul>
-<hr>
 </section>
-<section id="在rstudio中绑定github-copilot账号" class="level3">
-<h3 class="anchored" data-anchor-id="在rstudio中绑定github-copilot账号">在RStudio中绑定Github Copilot账号</h3>
+<section class="slide level2">
+
+<h3 id="在rstudio中绑定github-copilot账号">在RStudio中绑定Github Copilot账号</h3>
 <ul>
 <li>Sign In时需要科学上网，后续不需要</li>
 </ul>
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
-<p><img src="img/10.3signin.png" class="img-fluid"></p>
+<p><img data-src="img/10.3signin.png"></p>
 </div>
-<hr>
 </section>
-<section id="授权" class="level3">
-<h3 class="anchored" data-anchor-id="授权">授权</h3>
+<section class="slide level2">
+
+<h3 id="授权">授权</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div style="max-height: 500px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
@@ -475,12 +467,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div style="max-height: 500px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
 <p><img src="img/10.3entercode.png" style="width: 100%;"></p>
 </div>
-</div>
-</div>
-<hr>
+</div></div>
 </section>
-<section id="验证code-授权成功" class="level3">
-<h3 class="anchored" data-anchor-id="验证code-授权成功">验证code, 授权成功</h3>
+<section class="slide level2">
+
+<h3 id="验证code-授权成功">验证code, 授权成功</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div style="max-height: 500px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
@@ -490,12 +481,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div style="max-height: 500px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
 <p><img src="img/10.3enable.png" style="width: 100%;"></p>
 </div>
-</div>
-</div>
-<hr>
+</div></div>
 </section>
-<section id="如何利用github-copilot写r代码" class="level3">
-<h3 class="anchored" data-anchor-id="如何利用github-copilot写r代码">如何利用github copilot写R代码？</h3>
+<section class="slide level2">
+
+<h3 id="如何利用github-copilot写r代码">如何利用github copilot写R代码？</h3>
 <ul>
 <li><p>键入代码时，Copilot将根据上下文和您的输入提供自动建议。</p></li>
 <li><p>接受建议： 按 Tab 键接受建议并将其插入到代码中。</p></li>
@@ -503,46 +493,42 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>支持中文</p></li>
 <li><p>给代码添加注释</p></li>
 </ul>
-<hr>
 </section>
-</section>
-<section id="deepseek辅助r语言统计分析" class="level2">
-<h2 class="anchored" data-anchor-id="deepseek辅助r语言统计分析">10.4 DeepSeek辅助R语言统计分析</h2>
+<section id="deepseek辅助r语言统计分析" class="slide level2">
+<h2>10.4 DeepSeek辅助R语言统计分析</h2>
 <p>10.4.1 先看看R能做什么？</p>
 <p>10.4.2 绘图</p>
 <p>10.4.3 检验</p>
 <p>10.4.4 建模</p>
 <p>10.4.5 表格化输出</p>
 <p>10.4.6 如何让DeepSeek分析自己的数据？</p>
-<hr>
-<section id="利用r自带数据集" class="level3">
-<h3 class="anchored" data-anchor-id="利用r自带数据集">利用R自带数据集</h3>
-<blockquote class="blockquote">
+</section>
+<section class="slide level2">
+
+<h3 id="利用r自带数据集">利用R自带数据集</h3>
+<blockquote>
 <p>🧭 R中有哪些数据集可以做XX分析？</p>
 </blockquote>
 <p>查看R中的自带的数据集</p>
 <p>R中什么包可以做生存分析？这个包中可以做生存分析的数据有哪些？</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 查看R自带数据</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>()</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 查看指定的包中的数据</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="at">package =</span> <span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># 查看R自带数据</span></span>
+<span id="cb1-2"><a></a><span class="fu">data</span>()</span>
+<span id="cb1-3"><a></a></span>
+<span id="cb1-4"><a></a><span class="co"># 查看指定的包中的数据</span></span>
+<span id="cb1-5"><a></a><span class="fu">data</span>(<span class="at">package =</span> <span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-</section>
-<section id="先看看r能做什么" class="level2">
-<h2 class="anchored" data-anchor-id="先看看r能做什么">10.4.1 先看看R能做什么？</h2>
-<blockquote class="blockquote">
+<section id="先看看r能做什么" class="slide level2">
+<h2>10.4.1 先看看R能做什么？</h2>
+<blockquote>
 <p>🧭 利用iris数据，可以开展哪些统计分析，写出R代码。</p>
 </blockquote>
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
-<p><img src="img/10.3signin.png" class="img-fluid"></p>
+<p><img data-src="img/10.3signin.png"></p>
 </div>
-<hr>
 </section>
-<section id="绘图" class="level2">
-<h2 class="anchored" data-anchor-id="绘图">10.4.2 绘图</h2>
-<blockquote class="blockquote">
+<section id="绘图" class="slide level2">
+<h2>10.4.2 绘图</h2>
+<blockquote>
 <p>🧭 绘图提示语</p>
 </blockquote>
 <ul>
@@ -553,71 +539,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>绘制具有学术期刊风格的分组箱线图。</p></li>
 <li><p>用ggpubr绘制分组箱线图。</p></li>
 </ul>
-<hr>
-<section id="绘制具有学术期刊风格的分组箱线图" class="level3">
-<h3 class="anchored" data-anchor-id="绘制具有学术期刊风格的分组箱线图">绘制具有学术期刊风格的分组箱线图</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 加载所需的包</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Loading required package: ggplot2</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 使用内置的 iris 数据集</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(iris)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 绘制分组箱线图</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggboxplot</span>(iris, <span class="at">x =</span> <span class="st">"Species"</span>, <span class="at">y =</span> <span class="st">"Sepal.Length"</span>, </span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>          <span class="at">color =</span> <span class="st">"Species"</span>, <span class="at">palette =</span> <span class="st">"jco"</span>, </span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>          <span class="at">add =</span> <span class="st">"jitter"</span>, </span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>          <span class="at">main =</span> <span class="st">"Iris 数据集的分组箱线图"</span>,</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>          <span class="at">xlab =</span> <span class="st">"物种"</span>, <span class="at">ylab =</span> <span class="st">"萼片长度"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="L10_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="1440"></p>
-</figure>
-</div>
-</div>
-</div>
-<hr>
 </section>
-<section id="如何在图中标注两个总体均值的差异是否显著" class="level3">
-<h3 class="anchored" data-anchor-id="如何在图中标注两个总体均值的差异是否显著">如何在图中标注两个总体均值的差异是否显著</h3>
+<section class="slide level2">
+
+<h3 id="绘制具有学术期刊风格的分组箱线图">绘制具有学术期刊风格的分组箱线图</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 加载所需的包</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 使用内置的 iris 数据集</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(iris)</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 绘制分组箱线图</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggboxplot</span>(iris, <span class="at">x =</span> <span class="st">"Species"</span>, <span class="at">y =</span> <span class="st">"Sepal.Length"</span>, </span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>          <span class="at">color =</span> <span class="st">"Species"</span>, <span class="at">palette =</span> <span class="st">"jco"</span>, </span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>          <span class="at">add =</span> <span class="st">"jitter"</span>, </span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>          <span class="at">main =</span> <span class="st">"Iris 数据集的分组箱线图"</span>,</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>          <span class="at">xlab =</span> <span class="st">"物种"</span>, <span class="at">ylab =</span> <span class="st">"萼片长度"</span>) <span class="sc">+</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_compare_means</span>(<span class="at">comparisons =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">"setosa"</span>, <span class="st">"versicolor"</span>), <span class="fu">c</span>(<span class="st">"versicolor"</span>, <span class="st">"virginica"</span>)),</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>                       <span class="at">method =</span> <span class="st">"t.test"</span>, </span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>                     <span class="at">label =</span> <span class="st">"p.format"</span>,</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>                     <span class="at">hide.ns =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="L10_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="1440"></p>
-</figure>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># 加载所需的包</span></span>
+<span id="cb2-2"><a></a><span class="fu">library</span>(ggpubr)</span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a><span class="co"># 使用内置的 iris 数据集</span></span>
+<span id="cb2-5"><a></a><span class="fu">data</span>(iris)</span>
+<span id="cb2-6"><a></a></span>
+<span id="cb2-7"><a></a><span class="co"># 绘制分组箱线图</span></span>
+<span id="cb2-8"><a></a><span class="fu">ggboxplot</span>(iris, <span class="at">x =</span> <span class="st">"Species"</span>, <span class="at">y =</span> <span class="st">"Sepal.Length"</span>, </span>
+<span id="cb2-9"><a></a>          <span class="at">color =</span> <span class="st">"Species"</span>, <span class="at">palette =</span> <span class="st">"jco"</span>, </span>
+<span id="cb2-10"><a></a>          <span class="at">add =</span> <span class="st">"jitter"</span>, </span>
+<span id="cb2-11"><a></a>          <span class="at">main =</span> <span class="st">"Iris 数据集的分组箱线图"</span>,</span>
+<span id="cb2-12"><a></a>          <span class="at">xlab =</span> <span class="st">"物种"</span>, <span class="at">ylab =</span> <span class="st">"萼片长度"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 </div>
+<img data-src="L10_files/figure-revealjs/unnamed-chunk-2-1.png" width="1440" class="r-stretch"></section>
+<section class="slide level2">
+
+<h3 id="如何在图中标注两个总体均值的差异是否显著">如何在图中标注两个总体均值的差异是否显著</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># 加载所需的包</span></span>
+<span id="cb3-2"><a></a><span class="fu">library</span>(ggpubr)</span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a><span class="co"># 使用内置的 iris 数据集</span></span>
+<span id="cb3-5"><a></a><span class="fu">data</span>(iris)</span>
+<span id="cb3-6"><a></a></span>
+<span id="cb3-7"><a></a><span class="co"># 绘制分组箱线图</span></span>
+<span id="cb3-8"><a></a><span class="fu">ggboxplot</span>(iris, <span class="at">x =</span> <span class="st">"Species"</span>, <span class="at">y =</span> <span class="st">"Sepal.Length"</span>, </span>
+<span id="cb3-9"><a></a>          <span class="at">color =</span> <span class="st">"Species"</span>, <span class="at">palette =</span> <span class="st">"jco"</span>, </span>
+<span id="cb3-10"><a></a>          <span class="at">add =</span> <span class="st">"jitter"</span>, </span>
+<span id="cb3-11"><a></a>          <span class="at">main =</span> <span class="st">"Iris 数据集的分组箱线图"</span>,</span>
+<span id="cb3-12"><a></a>          <span class="at">xlab =</span> <span class="st">"物种"</span>, <span class="at">ylab =</span> <span class="st">"萼片长度"</span>) <span class="sc">+</span></span>
+<span id="cb3-13"><a></a>  <span class="fu">stat_compare_means</span>(<span class="at">comparisons =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">"setosa"</span>, <span class="st">"versicolor"</span>), <span class="fu">c</span>(<span class="st">"versicolor"</span>, <span class="st">"virginica"</span>)),</span>
+<span id="cb3-14"><a></a>                       <span class="at">method =</span> <span class="st">"t.test"</span>, </span>
+<span id="cb3-15"><a></a>                     <span class="at">label =</span> <span class="st">"p.format"</span>,</span>
+<span id="cb3-16"><a></a>                     <span class="at">hide.ns =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 </div>
-</div>
-<hr>
+<img data-src="L10_files/figure-revealjs/unnamed-chunk-3-1.png" width="1440" class="r-stretch"></section>
+<section class="slide level2">
+
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
-<p><img src="img/10.3signin.png" class="img-fluid"></p>
+<p><img data-src="img/10.3signin.png"></p>
 </div>
-<hr>
 </section>
-</section>
-<section id="检验" class="level2">
-<h2 class="anchored" data-anchor-id="检验">10.4.3 检验</h2>
+<section id="检验" class="slide level2">
+<h2>10.4.3 检验</h2>
 <p>检验：目的/数据容量/数据类型和分布/原假设和备择假设/局限/结论</p>
-<blockquote class="blockquote">
+<blockquote>
 <p>🧭 检验提示语</p>
 </blockquote>
 <ul>
@@ -629,12 +603,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>若不同组别之间的petal.length观测值方差不等，还能用ANOVA检验吗？</p></li>
 <li><p>Welch’s ANOVA的命令是什么？</p></li>
 </ul>
-<hr>
 </section>
-<section id="建模" class="level2">
-<h2 class="anchored" data-anchor-id="建模">10.4.4 建模</h2>
+<section id="建模" class="slide level2">
+<h2>10.4.4 建模</h2>
 <p>模型：目的/数据容量/数据类型和分布/估计结果的解释/可视化工具/评估</p>
-<blockquote class="blockquote">
+<blockquote>
 <p>🧭 提示语</p>
 </blockquote>
 <p>描述判别函数适合的研究场景？</p>
@@ -643,11 +616,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>判别分析中有哪些可视化工具？</p>
 <p>如何评估判别分析模型？</p>
 <p>有哪些前沿方法可以替代判别分析？R中有哪些包可以实现这类前沿方法？</p>
-<hr>
 </section>
-<section id="表格化输出" class="level2">
-<h2 class="anchored" data-anchor-id="表格化输出">10.4.5 表格化输出</h2>
-<blockquote class="blockquote">
+<section id="表格化输出" class="slide level2">
+<h2>10.4.5 表格化输出</h2>
+<blockquote>
 <p>🧭 提示语</p>
 </blockquote>
 <p>利用iris数据，如何输出学术论文中的表1（描述性统计表）？</p>
@@ -655,20 +627,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>利用survival包中的数据lung，输出学术论文中的基线特征表？</p>
 <p>利用survival包中的数据lung，用表格报告Cox比例风险模型的估计结果？</p>
 <p>用别的更简便的方法吗？用专门的包实现表格化输出吗？</p>
-<hr>
 </section>
-<section id="如何让deepseek分析自己的数据" class="level2">
-<h2 class="anchored" data-anchor-id="如何让deepseek分析自己的数据">10.4.6 如何让DeepSeek分析自己的数据？</h2>
+<section id="如何让deepseek分析自己的数据" class="slide level2">
+<h2>10.4.6 如何让DeepSeek分析自己的数据？</h2>
 <ul>
 <li>生成模拟数据</li>
 </ul>
-<blockquote class="blockquote">
+<blockquote>
 <p>🧭 提示语</p>
 </blockquote>
-<blockquote class="blockquote">
+<blockquote>
 <p>我有实验组和对照组各10人的服药后7天，14天和21天的血压数据，可以开展什么统计分析，来判断药物是否有效？</p>
 </blockquote>
-<blockquote class="blockquote">
+<blockquote>
 <p>请在R中生成上述模拟数据，及实现Repeated Measures ANOVA的代码？</p>
 </blockquote>
 <ul>
@@ -683,161 +654,152 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">—-</h2>
-<section id="提问句式" class="level3">
-<h3 class="anchored" data-anchor-id="提问句式">🎯 提问句式</h3>
+<section id="section" class="slide level2">
+<h2>—-</h2>
+<h3 id="提问句式">🎯 提问句式</h3>
 <p>如何在R中实现XX计算/检验？请用R自带的数据集举例说明。 用XX包在R中实现XX计算/检验？请用R自带的数据集举例说明。 指定包的名称，例如ggplot2 XX计算/检验/方法的适用条件是什么？ 在R中如何考察XX方法/检验的适用条件是否满足？ 如何解读XX函数的输出结果的含义？ R中的XX分析有哪些可视化工具？</p>
-<hr>
 </section>
-</section>
-<section id="deepseek辅助r语言学习" class="level2">
-<h2 class="anchored" data-anchor-id="deepseek辅助r语言学习">10.5 DeepSeek辅助R语言学习</h2>
+<section id="deepseek辅助r语言学习" class="slide level2">
+<h2>10.5 DeepSeek辅助R语言学习</h2>
 <p>10.5.1 理解消化代码</p>
 <p>10.5.2 代码细节的追问</p>
 <p>10.5.3 解决报错</p>
 <p>10.5.4 简化/美化代码</p>
 <p>10.5.5 整理代码/重复利用</p>
-<hr>
 </section>
-<section id="理解消化代码" class="level2">
-<h2 class="anchored" data-anchor-id="理解消化代码">10.5.1 理解消化代码</h2>
+<section id="理解消化代码" class="slide level2">
+<h2>10.5.1 理解消化代码</h2>
 <p>逐行阅读代码并理解每个函数</p>
 <p>逐步运行代码, 理解输出结果</p>
 <p>理解复杂符号，如管道符, [[]], 占位符.等</p>
 <p>测试不同的参数</p>
-<hr>
 </section>
-<section id="代码细节的追问" class="level2">
-<h2 class="anchored" data-anchor-id="代码细节的追问">10.5.2 代码细节的追问</h2>
+<section id="代码细节的追问" class="slide level2">
+<h2>10.5.2 代码细节的追问</h2>
 <p>让DeepSeek辅助理解函数帮助</p>
 <p>赋值符&lt;- 和 等于= 的区别？</p>
 <p>%&gt;% 和 ｜&gt; 的区别？</p>
-<hr>
 </section>
-<section id="解决报错" class="level2">
-<h2 class="anchored" data-anchor-id="解决报错">10.5.3 解决报错</h2>
+<section id="解决报错" class="slide level2">
+<h2>10.5.3 解决报错</h2>
 <p>错误的类型：如“未找到函数”、“对象未定义”、“无法读取文件”等</p>
 <p>确保对象存在</p>
 <p>查看环境</p>
 <p>加载相关包</p>
 <p>函数输入的参数的类型错误</p>
 <p>发送代码及报错</p>
-<hr>
 </section>
-<section id="简化美化代码" class="level2">
-<h2 class="anchored" data-anchor-id="简化美化代码">10.5.4 简化/美化代码</h2>
+<section id="简化美化代码" class="slide level2">
+<h2>10.5.4 简化/美化代码</h2>
 <p>使用适当的命名</p>
 <p>避免使用不必要的中间变量</p>
 <p>避免重复代码</p>
 <p>格式化和缩进</p>
 <p>把代码发送给AI，简化我的代码？</p>
-<hr>
 </section>
-<section id="学习实例" class="level2">
-<h2 class="anchored" data-anchor-id="学习实例">学习实例</h2>
+<section id="学习实例" class="slide level2">
+<h2>学习实例</h2>
 <p>iris数据的支持向量机分析</p>
 <p>Support Vector Machine，简称SVM</p>
 <p>机器学习算法，用于分类和回归问题，找到一个最优的超平面或决策边界，将不同类别的样本点分隔开。</p>
 <p>糖尿病类型的支持向量机分析</p>
-<hr>
-<blockquote class="blockquote">
+</section>
+<section class="slide level2">
+
+<blockquote>
 <p>基于iris数据，开展支持向量机分析，给出R代码?</p>
 </blockquote>
-<blockquote class="blockquote">
+<blockquote>
 <p>创建 500 个糖尿病患者的模拟数据，包括患者的年齢，BMI，血糖，胰岛素，腰围，锻炼，饮食，饮酒和吸烟习惯，糖尿病类型（1型，2型和隐性糖尿病型）。</p>
 </blockquote>
-<hr>
-<section id="基于iris的svm分析" class="level3">
-<h3 class="anchored" data-anchor-id="基于iris的svm分析">基于iris的SVM分析</h3>
+</section>
+<section class="slide level2">
+
+<h3 id="基于iris的svm分析">基于iris的SVM分析</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. 加载必要包</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(e1071)    <span class="co"># SVM实现</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)    <span class="co"># 数据分割与模型评估</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Loading required package: lattice</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)  <span class="co"># 可视化</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. 数据准备</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(iris)        <span class="co"># 加载数据集</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)     <span class="co"># 设定随机种子</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 查看数据结构</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iris)</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(iris)</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 划分训练集（70%）和测试集（30%）</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>train_index <span class="ot">&lt;-</span> <span class="fu">createDataPartition</span>(iris<span class="sc">$</span>Species, <span class="at">p =</span> <span class="fl">0.7</span>, <span class="at">list =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>train_data <span class="ot">&lt;-</span> iris[train_index, ]</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>test_data <span class="ot">&lt;-</span> iris[<span class="sc">-</span>train_index, ]</span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. 训练SVM模型</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>svm_linear <span class="ot">&lt;-</span> <span class="fu">svm</span>(Species <span class="sc">~</span> ., </span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>                  <span class="at">data =</span> train_data, </span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>                  <span class="at">kernel =</span> <span class="st">"linear"</span>, </span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>                  <span class="at">cost =</span> <span class="dv">1</span>)</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(svm_linear)</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. 模型评估</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>pred_linear <span class="ot">&lt;-</span> <span class="fu">predict</span>(svm_linear, test_data)</span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="co"># 计算准确率</span></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"线性核准确率:</span><span class="sc">\n</span><span class="st">"</span>)</span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">confusionMatrix</span>(pred_linear, test_data<span class="sc">$</span>Species))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># 1. 加载必要包</span></span>
+<span id="cb4-2"><a></a><span class="fu">library</span>(e1071)    <span class="co"># SVM实现</span></span>
+<span id="cb4-3"><a></a><span class="fu">library</span>(caret)    <span class="co"># 数据分割与模型评估</span></span>
+<span id="cb4-4"><a></a><span class="fu">library</span>(ggplot2)  <span class="co"># 可视化</span></span>
+<span id="cb4-5"><a></a></span>
+<span id="cb4-6"><a></a><span class="co"># 2. 数据准备</span></span>
+<span id="cb4-7"><a></a><span class="fu">data</span>(iris)        <span class="co"># 加载数据集</span></span>
+<span id="cb4-8"><a></a><span class="fu">set.seed</span>(<span class="dv">123</span>)     <span class="co"># 设定随机种子</span></span>
+<span id="cb4-9"><a></a></span>
+<span id="cb4-10"><a></a><span class="co"># 查看数据结构</span></span>
+<span id="cb4-11"><a></a><span class="fu">head</span>(iris)</span>
+<span id="cb4-12"><a></a><span class="fu">summary</span>(iris)</span>
+<span id="cb4-13"><a></a></span>
+<span id="cb4-14"><a></a><span class="co"># 划分训练集（70%）和测试集（30%）</span></span>
+<span id="cb4-15"><a></a>train_index <span class="ot">&lt;-</span> <span class="fu">createDataPartition</span>(iris<span class="sc">$</span>Species, <span class="at">p =</span> <span class="fl">0.7</span>, <span class="at">list =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb4-16"><a></a>train_data <span class="ot">&lt;-</span> iris[train_index, ]</span>
+<span id="cb4-17"><a></a>test_data <span class="ot">&lt;-</span> iris[<span class="sc">-</span>train_index, ]</span>
+<span id="cb4-18"><a></a></span>
+<span id="cb4-19"><a></a><span class="co"># 3. 训练SVM模型</span></span>
+<span id="cb4-20"><a></a>svm_linear <span class="ot">&lt;-</span> <span class="fu">svm</span>(Species <span class="sc">~</span> ., </span>
+<span id="cb4-21"><a></a>                  <span class="at">data =</span> train_data, </span>
+<span id="cb4-22"><a></a>                  <span class="at">kernel =</span> <span class="st">"linear"</span>, </span>
+<span id="cb4-23"><a></a>                  <span class="at">cost =</span> <span class="dv">1</span>)</span>
+<span id="cb4-24"><a></a><span class="fu">summary</span>(svm_linear)</span>
+<span id="cb4-25"><a></a></span>
+<span id="cb4-26"><a></a><span class="co"># 4. 模型评估</span></span>
+<span id="cb4-27"><a></a>pred_linear <span class="ot">&lt;-</span> <span class="fu">predict</span>(svm_linear, test_data)</span>
+<span id="cb4-28"><a></a></span>
+<span id="cb4-29"><a></a><span class="co"># 计算准确率</span></span>
+<span id="cb4-30"><a></a><span class="fu">cat</span>(<span class="st">"线性核准确率:</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb4-31"><a></a><span class="fu">print</span>(<span class="fu">confusionMatrix</span>(pred_linear, test_data<span class="sc">$</span>Species))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<hr>
 </section>
-<section id="生成模拟数据" class="level3">
-<h3 class="anchored" data-anchor-id="生成模拟数据">生成模拟数据</h3>
+<section class="slide level2">
+
+<h3 id="生成模拟数据">生成模拟数据</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 设置随机种子</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 创建 500 个糖尿病患者的模拟数据</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">500</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 模拟数据：使用 replicate 简化生成过程</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>diabetes <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">age =</span> <span class="fu">sample</span>(<span class="dv">18</span><span class="sc">:</span><span class="dv">80</span>, n, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">bmi =</span> <span class="fu">runif</span>(n, <span class="fl">18.5</span>, <span class="dv">40</span>),</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">glucose =</span> <span class="fu">runif</span>(n, <span class="dv">70</span>, <span class="dv">200</span>),</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">insulin =</span> <span class="fu">runif</span>(n, <span class="dv">5</span>, <span class="dv">30</span>),</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">waist =</span> <span class="fu">runif</span>(n, <span class="dv">70</span>, <span class="dv">130</span>),</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">exercise =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), n, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">diet =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), n, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">alcohol =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), n, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">smoking =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), n, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"Type1"</span>, <span class="st">"Type2"</span>, <span class="st">"LADA"</span>), n, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 查看数据的前几行</span></span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(diabetes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># 设置随机种子</span></span>
+<span id="cb5-2"><a></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb5-3"><a></a></span>
+<span id="cb5-4"><a></a><span class="co"># 创建 500 个糖尿病患者的模拟数据</span></span>
+<span id="cb5-5"><a></a>n <span class="ot">&lt;-</span> <span class="dv">500</span></span>
+<span id="cb5-6"><a></a></span>
+<span id="cb5-7"><a></a><span class="co"># 模拟数据：使用 replicate 简化生成过程</span></span>
+<span id="cb5-8"><a></a>diabetes <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb5-9"><a></a>  <span class="at">age =</span> <span class="fu">sample</span>(<span class="dv">18</span><span class="sc">:</span><span class="dv">80</span>, n, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb5-10"><a></a>  <span class="at">bmi =</span> <span class="fu">runif</span>(n, <span class="fl">18.5</span>, <span class="dv">40</span>),</span>
+<span id="cb5-11"><a></a>  <span class="at">glucose =</span> <span class="fu">runif</span>(n, <span class="dv">70</span>, <span class="dv">200</span>),</span>
+<span id="cb5-12"><a></a>  <span class="at">insulin =</span> <span class="fu">runif</span>(n, <span class="dv">5</span>, <span class="dv">30</span>),</span>
+<span id="cb5-13"><a></a>  <span class="at">waist =</span> <span class="fu">runif</span>(n, <span class="dv">70</span>, <span class="dv">130</span>),</span>
+<span id="cb5-14"><a></a>  <span class="at">exercise =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), n, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb5-15"><a></a>  <span class="at">diet =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), n, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb5-16"><a></a>  <span class="at">alcohol =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), n, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb5-17"><a></a>  <span class="at">smoking =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>), n, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb5-18"><a></a>  <span class="at">type =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"Type1"</span>, <span class="st">"Type2"</span>, <span class="st">"LADA"</span>), n, <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb5-19"><a></a>)</span>
+<span id="cb5-20"><a></a></span>
+<span id="cb5-21"><a></a><span class="co"># 查看数据的前几行</span></span>
+<span id="cb5-22"><a></a><span class="fu">head</span>(diabetes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<hr>
 </section>
-</section>
-<section id="模块十-总结" class="level2">
-<h2 class="anchored" data-anchor-id="模块十-总结">模块十 总结</h2>
+<section id="模块十-总结" class="slide level2">
+<h2>模块十 总结</h2>
 <ul>
 <li><p>✅ DeepSeek如何助力R语言统计分析？</p></li>
 <li><p>✅ DeepSeek如何助力R语言学习？</p></li>
 <li><p>✅ AI如何接入RStudio？</p></li>
 <li><p>✅ A小技巧</p></li>
 </ul>
-<hr>
 </section>
-<section id="致谢" class="level2">
-<h2 class="anchored" data-anchor-id="致谢">致谢</h2>
-<blockquote class="blockquote">
+<section id="致谢" class="slide level2">
+<h2>致谢</h2>
+<blockquote>
 <p>AI助力，让R语言学习变得简单、高效、充满乐趣！</p>
 </blockquote>
 <p><br>
 </p>
-<blockquote class="blockquote">
+<blockquote>
 <p>AI助力，但深入思考和独立实践才是掌握R的关键。</p>
 </blockquote>
 <p><br>
 </p>
-<blockquote class="blockquote">
+<blockquote>
 <p>将AI的智慧内化，形成自己的编程思维。</p>
 </blockquote>
 <p><br>
@@ -847,441 +809,446 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 </section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+<p><a href="https://lizongzhang.github.io/deepseekcamp" class="uri">https://lizongzhang.github.io/deepseekcamp</a><br>© 2025 顶刊研习社</p>
+</div>
+</div></div>
 
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
         }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
-        return container.innerHTML
-      } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
         }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
       }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
       }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
       });
-    }
-  }
-});
-</script>
-</div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-<p>© Copyright 2025, 顶刊研习社 &amp; Li Zongzhang</p>
-</div>   
-    <div class="nav-footer-center">
-      &nbsp;
-    </div>
-    <div class="nav-footer-right">
-<p>Data illuminates insights.</p>
-</div>
-  </div>
-</footer>
-
-
-
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
 
 </body></html>
