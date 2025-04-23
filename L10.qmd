@@ -1,7 +1,9 @@
 ---
 title:  "模块十<br>DeepSeek辅助R编程与数据分析"
 date: today
-author: "李宗璋"
+author: 
+  name: "李宗璋"
+  url: https://space.bilibili.com/590872906/
 format: 
   revealjs:
     incremental: FALSE
