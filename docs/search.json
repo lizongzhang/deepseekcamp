@@ -277,7 +277,7 @@
     "href": "L10.html#如何让deepseek分析自己的数据",
     "title": "模块十DeepSeek辅助R编程与数据分析",
     "section": "10.4.6 如何让DeepSeek分析自己的数据？",
-    "text": "10.4.6 如何让DeepSeek分析自己的数据？\n\n生成模拟数据\n\n\n🧭 提示语: 我有实验组和对照组各10人的服药后7天，14天和21天的血压数据，可以开展什么统计分析，来判断药物是否有效？\n\n\n🧭 提示语: 请在R中生成上述模拟数据，及实现Repeated Measures ANOVA的代码？\n\n\n数据脱敏\n\n数据扰动: 给定量变量增加一个5%的随机扰动\n\n=C2 * (1 + (RAND() - 0.5) * 0.1) (Excel公式)\n\n随机抽样 30% ~ 70%\n\n=rand() 然后排序 (Excel)\n\n点击下载数据脱敏练习文件: stroke.xlsx"
+    "text": "10.4.6 如何让DeepSeek分析自己的数据？\n\n生成模拟数据\n\n\n🧭 提示语: 我有实验组和对照组各10人的服药后7天，14天和21天的血压数据，可以开展什么统计分析，来判断药物是否有效？\n\n\n🧭 提示语: 请在R中生成上述模拟数据，及实现Repeated Measures ANOVA的代码？\n\n\n数据脱敏\n\n数据扰动: 给定量变量增加一个5%的随机扰动\n\n=C2 * (1 + (RAND() - 0.5) * 0.1) (Excel公式)\n\n随机抽样 30% ~ 70%： =rand() 然后排序 (Excel)\n点击下载数据脱敏练习文件: stroke.xlsx"
   },
   {
     "objectID": "L10.html#section",

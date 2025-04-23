@@ -538,9 +538,7 @@ ggboxplot(iris, x = "Species", y = "Sepal.Length",
 
         -   =C2 \* (1 + (RAND() - 0.5) \* 0.1) (Excel公式)
 
-    -   随机抽样 30% \~ 70%
-
-        -   =rand() 然后排序 (Excel)
+    -   随机抽样 30% \~ 70%： =rand() 然后排序 (Excel)
 
     -   <a href="https://github.com/lizongzhang/deepseekcamp/raw/main/stroke.xlsx" download="stroke.xlsx">点击下载数据脱敏练习文件: stroke.xlsx</a>
 
