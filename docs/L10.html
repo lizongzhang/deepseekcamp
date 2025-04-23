@@ -270,7 +270,7 @@ z-index: 1000;">
 <li><p>DeepSeek具备自然语言理解与代码生成能力：</p>
 <ul>
 <li><p>快速生成代码</p></li>
-<li><p>自动解释代码报错或结果输出</p></li>
+<li><p>解释代码, 报错寻因, 解读结果</p></li>
 <li><p>扩展功能包、实现复杂流程</p></li>
 </ul></li>
 <li><p>进入“AI辅助编程”时代，将改变R语言的学习方式，从”查命令”转为”提问题”。</p></li>
@@ -300,13 +300,13 @@ z-index: 1000;">
 </ul></li>
 <li><p>支持复合任务，一步生成完整工作流</p>
 <ul>
-<li>缺失值处理/t检验/画图/生成文字报告</li>
+<li>缺失值处理/画图/计算和检验/生成文字报告</li>
 </ul></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<h3 id="r帮助文档-vs-deepseek的回答">R帮助文档 VS DeepSeek的回答</h3>
+<h3 id="r帮助文档-vs-deepseek的回答对比">R帮助文档 VS DeepSeek的回答对比</h3>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div style="max-height: 500px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
@@ -321,7 +321,7 @@ z-index: 1000;">
 <section id="人人都能用r了一个简单的示例" class="slide level2">
 <h2>10.1.2 人人都能用R了！一个简单的示例</h2>
 <blockquote>
-<p>🧭 用iris数据，进行方差分析，给出R代码。</p>
+<p>🧭 提示语: 用iris数据，进行方差分析，给出R代码。</p>
 </blockquote>
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
 <p><img data-src="img/10.1.1pic3.png"></p>
@@ -345,8 +345,8 @@ z-index: 1000;">
 </ul></li>
 <li><p>📚 如何用最少的代码完成最多的任务</p>
 <ul>
-<li><p>对数据结构(阵列array/列表list)的理解(job.proj)</p></li>
-<li><p>学习高手的代码</p></li>
+<li><p>编程思维的形成</p></li>
+<li><p>学习高手写的代码</p></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -386,9 +386,11 @@ z-index: 1000;">
 <li><p>包太多/难以选择</p>
 <ul>
 <li>问DeepSeek：R中能做XXX的有哪些包？比较这些包？哪个更好用？</li>
-<li>🎯 专为 R 用户定制的搜索引擎 <a href="https://rseek.org" data-blank="_blank">https://rseek.org</a></li>
+<li>🎯 专为 R 用户定制的搜索引擎 <a href="https://rseek.org" data-blank="_blank">https://rseek.org</a>
+<ul>
 <li>📚 快速找到函数用法、R 包文档、代码示例</li>
 <li>✅ 搜索结果只与 R 有关，不混杂其他语言</li>
+</ul></li>
 </ul></li>
 <li><p>报错</p>
 <ul>
@@ -400,7 +402,7 @@ z-index: 1000;">
 
 <h3 id="如何选择r包">如何选择R包？</h3>
 <blockquote>
-<p>🧭 比较可以实现XXX分析的包，哪个最好？</p>
+<p>🧭 提示语：比较可以实现XXX分析的包，哪个最好？</p>
 </blockquote>
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
 <p><img data-src="img/10.2pic1.png"></p>
@@ -411,7 +413,8 @@ z-index: 1000;">
 <ul>
 <li><p>RStudio插件{gptstudio}</p>
 <ul>
-<li>需要设置API key(新用户5美元额度，之后按token计费)/科学上网/响应速度不稳定</li>
+<li><p>需要设置API key(新用户5美元额度，之后按token计费)/科学上网/响应速度不稳定</p></li>
+<li><p>不推荐</p></li>
 </ul></li>
 <li><p>Github Copilot</p>
 <ul>
@@ -436,7 +439,7 @@ z-index: 1000;">
 <ul>
 <li><p>创建账号：<a href="https://github.com/features/copilot" target="_blank">https://github.com/features/copilot</a></p>
 <ul>
-<li>试用期1个月，10$/month</li>
+<li>试用期免费1个月，10$/month</li>
 </ul></li>
 <li><p>学生/教师可申请加入 GitHub Education：<a href="https://github.com/education" target="_blank">https://github.com/education</a></p>
 <ul>
@@ -456,7 +459,8 @@ z-index: 1000;">
 
 <h3 id="在rstudio中绑定github-copilot账号">在RStudio中绑定Github Copilot账号</h3>
 <ul>
-<li>Sign In时需要科学上网，后续不需要</li>
+<li>Sign In时需要科学上网，后续在RStudio中与Github Copilot交互不需要科学上网</li>
+<li>若在此步骤卡住，请检查网络条件</li>
 </ul>
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
 <p><img data-src="img/10.3signin.png"></p>
@@ -514,7 +518,7 @@ z-index: 1000;">
 
 <h3 id="利用r自带数据集">利用R自带数据集</h3>
 <blockquote>
-<p>🧭 R中有哪些数据集可以做XX分析？</p>
+<p>🧭 提示语：R中有哪些数据集可以做XX分析？</p>
 </blockquote>
 <p>查看R中的自带的数据集</p>
 <p>R中什么包可以做生存分析？这个包中可以做生存分析的数据有哪些？</p>
@@ -527,7 +531,7 @@ z-index: 1000;">
 <section id="先看看r能做什么" class="slide level2">
 <h2>10.4.1 先看看R能做什么？</h2>
 <blockquote>
-<p>🧭 利用iris数据，可以开展哪些统计分析，写出R代码。</p>
+<p>🧭 提示语：利用iris数据，可以开展哪些统计分析，写出R代码。</p>
 </blockquote>
 <div style="height: 600px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
 <p><img data-src="img/10.3signin.png"></p>
@@ -549,7 +553,8 @@ z-index: 1000;">
 </section>
 <section class="slide level2">
 
-<h3 id="绘制具有学术期刊风格的分组箱线图">绘制具有学术期刊风格的分组箱线图</h3>
+<h3 id="提示语-利用iris-绘制具有学术期刊风格的分组箱线图">🧭 提示语: 利用iris, 绘制具有学术期刊风格的分组箱线图</h3>
+<p>DeepSeek输出的代码</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># 加载所需的包</span></span>
 <span id="cb2-2"><a></a><span class="fu">library</span>(ggpubr)</span>
@@ -568,7 +573,8 @@ z-index: 1000;">
 <img data-src="L10_files/figure-revealjs/unnamed-chunk-2-1.png" width="1440" class="r-stretch"></section>
 <section class="slide level2">
 
-<h3 id="如何在图中标注两个总体均值的差异是否显著">如何在图中标注两个总体均值的差异是否显著</h3>
+<h3 id="提示语-如何在图中标注两个总体均值的差异是否显著">🧭 提示语: 如何在图中标注两个总体均值的差异是否显著？</h3>
+<p>继续追问，提出对图形细节上的要求，DeepSeek修改前一段代码。</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># 加载所需的包</span></span>
 <span id="cb3-2"><a></a><span class="fu">library</span>(ggpubr)</span>
@@ -593,7 +599,7 @@ z-index: 1000;">
 <h2>10.4.3 检验</h2>
 <p>检验：目的/数据容量/数据类型和分布/原假设和备择假设/局限/结论</p>
 <blockquote>
-<p>🧭 检验提示语</p>
+<p>🧭 提示语</p>
 </blockquote>
 <ul>
 <li><p>按species分组，检验不同组别的petal.length的均值是否相等？。</p></li>
@@ -639,23 +645,23 @@ z-index: 1000;">
 <li>生成模拟数据</li>
 </ul>
 <blockquote>
-<p>🧭 提示语</p>
+<p>🧭 提示语: 我有实验组和对照组各10人的服药后7天，14天和21天的血压数据，可以开展什么统计分析，来判断药物是否有效？</p>
 </blockquote>
 <blockquote>
-<p>我有实验组和对照组各10人的服药后7天，14天和21天的血压数据，可以开展什么统计分析，来判断药物是否有效？</p>
-</blockquote>
-<blockquote>
-<p>请在R中生成上述模拟数据，及实现Repeated Measures ANOVA的代码？</p>
+<p>🧭 提示语: 请在R中生成上述模拟数据，及实现Repeated Measures ANOVA的代码？</p>
 </blockquote>
 <ul>
-<li><p>数据扰动</p>
+<li><p>数据脱敏</p>
 <ul>
-<li><p>给定量变量增加一个5%的随机扰动</p></li>
-<li><p>=C2 * (1 + (RAND() - 0.5) * 0.1) (Excel公式)</p></li>
+<li><p>数据扰动: 给定量变量增加一个5%的随机扰动</p>
+<ul>
+<li>=C2 * (1 + (RAND() - 0.5) * 0.1) (Excel公式)</li>
 </ul></li>
-<li><p>随机抽样 70%</p>
+<li><p>随机抽样 30% ~ 70%</p>
 <ul>
-<li>=rand() 然后排序(Excel公式)</li>
+<li>=rand() 然后排序 (Excel)</li>
+</ul></li>
+<li><p><a href="https://github.com/lizongzhang/deepseekcamp/raw/main/stroke.xlsx" download="stroke.xlsx">点击下载数据脱敏练习文件: stroke.xlsx</a></p></li>
 </ul></li>
 </ul>
 </section>
@@ -687,21 +693,30 @@ z-index: 1000;">
 <section id="解决报错" class="slide level2">
 <h2>10.5.3 解决报错</h2>
 <ul>
-<li><p>错误的类型：如“未找到函数”、“对象未定义”、“无法读取文件”等</p></li>
-<li><p>确保对象存在</p></li>
-<li><p>查看环境</p></li>
+<li><p>典型报错错：“未找到函数”、“对象未定义”、“无法读取文件”等</p>
+<ul>
+<li><p>查看环境：确保对象存在</p></li>
 <li><p>加载相关包</p></li>
+</ul></li>
 <li><p>函数输入的参数的类型错误</p></li>
-<li><p>发送代码及报错</p></li>
+<li><p>复制Console中的代码及报错, 发送给DeepSeek</p></li>
 </ul>
 </section>
 <section id="简化美化代码" class="slide level2">
 <h2>10.5.4 简化/美化代码</h2>
 <ul>
-<li><p>使用适当的命名</p></li>
-<li><p>可以包含字母, 数字,下划线_和小圆点., 但不能以数字开头，不能有中划线-，特殊符号$,<span class="citation" data-cites="等">@等</span></p></li>
-<li><p>避免使用不必要的中间变量</p></li>
-<li><p>避免重复代码</p></li>
+<li><p>使用适当的命名</p>
+<ul>
+<li>可以包含字母, 数字,下划线_和小圆点., 但不能以数字开头，不能有中划线-，特殊符号$,<span class="citation" data-cites="等">@等</span></li>
+</ul></li>
+<li><p>避免使用不必要的中间变量</p>
+<ul>
+<li>管道符</li>
+</ul></li>
+<li><p>避免重复代码</p>
+<ul>
+<li>优化数据结构/循环语句</li>
+</ul></li>
 <li><p>格式化和缩进</p></li>
 <li><p>把代码发送给AI，简化我的代码？</p></li>
 </ul>
@@ -711,24 +726,28 @@ z-index: 1000;">
 <h3 id="实例如何把ai生成的代码内化成自己的代码">实例：如何把AI生成的代码内化成自己的代码？</h3>
 <ul>
 <li><p>iris数据的支持向量机分析</p></li>
-<li><p>Support Vector Machine，简称SVM</p></li>
-<li><p>机器学习算法，用于分类和回归问题，找到一个最优的超平面或决策边界，将不同类别的样本点分隔开。</p></li>
+<li><p>Support Vector Machine，简称SVM</p>
+<ul>
+<li>机器学习算法，用于分类和回归问题，找到一个最优的超平面或决策边界，将不同类别的样本点分隔开。</li>
+</ul></li>
 <li><p>糖尿病类型的支持向量机分析</p></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<h3 id="提示语svm分析">提示语：SVM分析</h3>
+<h3 id="提示语思路">提示语：思路</h3>
+<p>从R自带数据过渡到模拟数据，再过渡到自己的真实数据</p>
 <blockquote>
-<p>基于iris数据，开展支持向量机分析，给出R代码?</p>
+<p>🧭 提示语: 基于iris数据，开展支持向量机分析，给出R代码?</p>
 </blockquote>
 <blockquote>
-<p>创建 500 个糖尿病患者的模拟数据，包括患者的年齢，BMI，血糖，胰岛素，腰围，锻炼，饮食，饮酒和吸烟习惯，糖尿病类型（1型，2型和隐性糖尿病型）。</p>
+<p>🧭 提示语: 创建 500 个糖尿病患者的模拟数据，包括患者的年齢，BMI，血糖，胰岛素，腰围，锻炼，饮食，饮酒和吸烟习惯，糖尿病类型（1型，2型和隐性糖尿病型）。</p>
 </blockquote>
 </section>
 <section class="slide level2">
 
-<h3 id="基于iris的svm分析">基于iris的SVM分析</h3>
+<h3 id="提示语-基于iris数据开展支持向量机分析给出r代码">🧭 提示语: 基于iris数据，开展支持向量机分析，给出R代码?</h3>
+<p>DeepSeek输出的代码</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># 1. 加载必要包</span></span>
 <span id="cb4-2"><a></a><span class="fu">library</span>(e1071)    <span class="co"># SVM实现</span></span>
@@ -765,7 +784,11 @@ z-index: 1000;">
 </section>
 <section class="slide level2">
 
-<h3 id="生成模拟数据">生成模拟数据</h3>
+<h3 id="请求deepseek生成模拟数据">请求DeepSeek生成模拟数据</h3>
+<blockquote>
+<p>🧭 提示语: 创建 500 个糖尿病患者的模拟数据，包括患者的年齢，BMI，血糖，胰岛素，腰围，锻炼，饮食，饮酒和吸烟习惯，糖尿病类型（1型，2型和隐性糖尿病型）。</p>
+</blockquote>
+<p>DeepSeek输出的代码</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="co"># 设置随机种子</span></span>
 <span id="cb5-2"><a></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
