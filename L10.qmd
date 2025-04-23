@@ -1,5 +1,5 @@
 ---
-title:  "模块十<br>DeepSeek辅助R编程与数据分析"
+title:  "模块十<br>DeepSeek<br>辅助R编程与数据分析"
 date: today
 author: 
   name: "李宗璋"
