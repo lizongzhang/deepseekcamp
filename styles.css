@@ -25,6 +25,27 @@
   color: #044875 !important;
 }
 
+.reveal::before {
+  content: "顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 ";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  font-size: 3em;
+  line-height: 1.5;
+  color: #000;
+  opacity: 0.04;
+  transform: rotate(-45deg);
+  z-index: 0;
+  pointer-events: none;
+  white-space: pre-wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 
 
 
