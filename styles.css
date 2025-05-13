@@ -26,16 +26,16 @@
 }
 
 .reveal::before {
-  content: "顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 ";
+  content: "顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 ";
   position: fixed;
   top: -50%;
   left: -50%;
   width: 200%;
   height: 200%;
-  font-size: 3em;
+  font-size: 2em;
   line-height: 1.5;
   color: #000;
-  opacity: 0.04;
+  opacity: 0.1;
   transform: rotate(-45deg);
   z-index: 0;
   pointer-events: none;
@@ -47,5 +47,14 @@
 }
 
 
-
+.reveal {
+  background-image: url("data:image/svg+xml;utf8,
+    <svg xmlns='http://www.w3.org/2000/svg' width='300' height='200'>
+      <text x='0' y='150' font-size='30' fill='black' opacity='0.05' transform='rotate(-45, 150, 100)'>
+        顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社 顶刊研习社
+      </text>
+    </svg>
+  ");
+  background-repeat: repeat;
+  
 
